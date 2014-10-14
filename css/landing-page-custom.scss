@@ -52,7 +52,9 @@ h6 {
 .circle-color {
 	position: absolute;
 	border-radius: 50%;
+	-webkit-transform: scale(0,0);
 	transform: scale(0,0);
+	-webkit-transition: -webkit-transform 3s ease, opacity 2s ease;
 	transition: transform 3s ease, opacity 2s ease;
 	background-color: blue;
 }

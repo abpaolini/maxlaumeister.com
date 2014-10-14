@@ -44,6 +44,7 @@ $(document).ready(function() {
 					height: circWidth,
 					left: (relX - circWidth / 2) + "px",
 					top: (relY - circWidth / 2) + "px",
+					"-webkit-transform": "scale(1, 1)",
 					"transform": "scale(1, 1)",
 					"background-color": bgcol
 				});
@@ -63,6 +64,7 @@ $(document).ready(function() {
 				height: circWidth,
 				left: (relX - circWidth / 2) + "px",
 				top: (relY - circWidth / 2) + "px",
+				"-webkit-transform": "scale(1, 1)",
 				"transform": "scale(1, 1)"
 			});
 			transitionEnd(oc).bind(function() {
