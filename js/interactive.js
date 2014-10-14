@@ -50,9 +50,7 @@ $(document).ready(function() {
 				$(".banner").css("background", bgcol);
 				transitionEnd(circ).bind(function() {
 					var cc = circlescont.children();
-					if (cc.length > 1) {
-						cc.get(0).remove();
-					};
+					cc.get(0).remove();
 					$(".intro-header").css("background", $(this).css("background-color"));
 					transitionEnd(circ).unbind();
 				});
