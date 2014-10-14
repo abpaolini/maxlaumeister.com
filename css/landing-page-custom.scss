@@ -34,3 +34,26 @@ h6 {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
+#interactive-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+}
+
+.intro-header {
+	position: relative;
+}
+
+#opening-circle {
+	position: absolute;
+	background-color: #6D91D4;
+	border-radius: 50%;
+	transform: scale(0,0);
+	transition: transform 3s ease;
+}
+
+
