@@ -1,0 +1,27 @@
+---
+layout: default
+img: phones.png
+category: Services
+title: Puff
+description: |
+  Overview:
+  <ul>
+  <li>PC/Mac Game</li>
+  <li>Simple vector graphics</li>
+  <li>Mouse controls</li>
+  </ul>
+
+  Attention:
+  <ul>
+  <li>Finalist: Audio Award (UCSC 2012)</li>
+  </ul>
+
+  My Role:
+  <ul>
+  <li>Created game concept</li>
+  <li>Implemented game mechanics in GML</li>
+  <li>Created all art and music</li>
+  <li>Created game trailer</li>
+  </ul>
+
+---

@@ -1,0 +1,36 @@
+---
+---
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.intro-header, .banner {
+	background: #285BB8;
+}
+
+.intro-header h3 > a {
+	color: #7DC4FF;
+	text-decoration: underline;
+}
+
+.banner h3 > a {
+	color: #7DC4FF;
+}
+
+.image-include {
+	height: 450px;
+	width: 450px;
+	border: solid black 1px;
+}
+
+.banner h3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

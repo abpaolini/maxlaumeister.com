@@ -2,11 +2,20 @@
 layout: default
 img: phones.png
 category: Services
-title: Google Web Fonts and<br>Font Awesome Icons
+title: UCSC Class Search
 description: |
-  <p class="lead">This template features the 'Lato' font,
-  part of the <a target="_blank" href="http://www.google.com/fonts">Google
-  Web Font library</a>, as well as <a target="_blank"
-  href="http://fontawesome.io">icons from Font Awesome</a>.</p>
+  Overview:
+  <ul>
+  <li>Native Android app</li>
+  <li>Lets UCSC students search for classes</li>
+  </ul>
+
+  My Role:
+  <ul>
+  <li>Designed app including all activities</li>
+  <li>Wrote asynchronous netcode, including HTML parsing routine</li>
+  <li>Wrote UI functions</li>
+  <li>Designed all art and interface elements</li>
+  </ul>
 
 ---
