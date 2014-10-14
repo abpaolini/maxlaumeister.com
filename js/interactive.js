@@ -15,12 +15,16 @@ $(document).ready(function() {
 		cornerDists.push(Math.sqrt(Math.pow(relX, 2) + Math.pow(ih - relY, 2))); // Bottom left
 		var circWidth = Math.max.apply(Math, cornerDists) * 2;
 		
-		$("#opening-circle").css({
+		var oc = $("#opening-circle");
+		oc.css({
 			width: circWidth,
 			height: circWidth,
 			left: (relX - circWidth / 2) + "px",
 			top: (relY - circWidth / 2) + "px",
 			"transform": "scale(1, 1)"
-		});
+		})
+		oc.get(0).addEventListener( 'webkitTransitionEnd', function() {
+			oc.css("opacity", "0");
+		}, false );
 	});
 });
