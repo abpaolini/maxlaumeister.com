@@ -16,15 +16,21 @@ $(document).ready(function() {
 		]
 	};
 	
-	$("#interactive-go").click(function(e) {
+	$(".interactive-go").click(function(e) {
 		e.preventDefault();
 		
 		circlecount++;
 		if (circlecount === 5) {
 			setTimeout(function(){
-				$(".intro-message-1").hide();
-				$(".intro-message-2").show();
+				$(".intro-title-1").fadeOut({complete: function(){
+					$(".intro-title-2").fadeIn();
+				}});
+				$(".intro-message-1").fadeOut({complete: function(){
+					$(".intro-message-2").fadeIn();
+				}});
 			}, 1000);
+		} else if (circlecount === 10) {
+			$(".intro-message-3").fadeIn(1000);
 		}
 		
 		// Large screen
@@ -43,7 +49,6 @@ $(document).ready(function() {
 		
 		if (/* $(document).width() < 992 */ true) { // TODO
 			// Small screen
-			console.log("small screen");
 			var circ = $("<div class='circle-color'></div>");
 			circlescont.append(circ);
 			setTimeout(function(){

@@ -12,7 +12,7 @@ h6 {
 	background: #285BB8;
 }
 
-.intro-header h3 > a {
+.intro-header h3 a {
 	color: #7DC4FF;
 	text-decoration: underline;
 }
@@ -42,6 +42,19 @@ h6 {
 
 .intro-header h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+.intro-title-2 {
+	display: none;
+}
+
+.intro-message {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .intro-message-2, .intro-message-3 {
