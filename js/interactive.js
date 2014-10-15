@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var inter = $("#interactive-container");
 	var circlescont = $("#circles-container");
 	var offset = inter.offset();
+	var circlecount = 0;
 	var color = {
 		curr: 0,
 		arr: [
@@ -17,6 +18,15 @@ $(document).ready(function() {
 	
 	$("#interactive-go").click(function(e) {
 		e.preventDefault();
+		
+		circlecount++;
+		if (circlecount === 5) {
+			setTimeout(function(){
+				$(".intro-message-1").hide();
+				$(".intro-message-2").show();
+			}, 1000);
+		}
+		
 		// Large screen
 		var relX = e.pageX - offset.left;
 		var relY = e.pageY - offset.top;

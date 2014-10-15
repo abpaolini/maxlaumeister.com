@@ -14,7 +14,13 @@
                     {{ post.description }}
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <div class="image-include img-responsive"></div>
+                    <div class="postimg img-responsive">
+						{% if post.youtubeId %}
+							<iframe width="420" height="315" src="//www.youtube.com/embed/{{ post.youtubeId }}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+						{% elsif post.img %}
+							<img src="{{ post.img }}" />
+						{% endif %}
+                    </div>
                 </div>
             </div>
 
@@ -37,7 +43,13 @@
                     {{ post.description }}
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                  <div class="image-include img-responsive"></div>
+                  <div class="postimg img-responsive">
+						{% if post.youtubeId %}
+							<iframe width="420" height="315" src="//www.youtube.com/embed/{{ post.youtubeId }}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+						{% elsif post.img %}
+							<img src="{{ post.img }}" />
+						{% endif %}
+                    </div>
                 </div>
             </div>
 

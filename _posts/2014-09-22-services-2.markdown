@@ -1,8 +1,8 @@
 ---
 layout: default
-img: dog.png
 category: Services
 title: Immunogen
+youtubeId: CahGpPaaBR0
 description: |
   Overview:
   <ul>

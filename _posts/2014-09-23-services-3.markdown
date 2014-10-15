@@ -1,8 +1,8 @@
 ---
 layout: default
-img: phones.png
 category: Services
 title: UCSC Class Search
+youtubeId: tYjO_dGAzyg
 description: |
   Overview:
   <ul>

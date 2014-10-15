@@ -24,12 +24,6 @@ h6 {
 	color: #7DC4FF;
 }
 
-.image-include {
-	height: 450px;
-	width: 450px;
-	border: solid black 1px;
-}
-
 .banner h3 {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -47,6 +41,14 @@ h6 {
 
 .intro-header {
 	position: relative;
+	
+	h3 {
+    	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+	}
+}
+
+.intro-message-2, .intro-message-3 {
+	display: none;
 }
 
 .circle-color {
@@ -63,4 +65,11 @@ h6 {
 	background-color: #6D91D4;
 }
 
+.postimg {
+	margin-top: 60px;
+	
+	> iframe {
+		width: 100%;
+	}
+}
 
