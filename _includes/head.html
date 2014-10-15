@@ -7,14 +7,15 @@
     <meta name="author" content="">
 
     <title>{% if page.pagetitle %}{{ page.pagetitle }}{% else %}{{ site.title }}{% endif %}</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/lazyYT.css" rel="stylesheet">
-    <link href="css/landing-page.css" rel="stylesheet">
-	<link href="css/landing-page-custom.css" rel="stylesheet">
+    
+	<style>
+		<!-- Bootstrap Core CSS -->
+		{% include bootstrap.min.css %}
+		<!-- Custom CSS -->
+		{% include lazyYT.css %}
+		{% include landing-page.css %}
+		{% include landing-page-custom.css %}
+	</style>
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
