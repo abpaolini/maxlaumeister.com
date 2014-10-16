@@ -1,8 +1,10 @@
 $(document).ready(function() {
-
+	
 	var inter = $("#interactive-container");
-	var circlescont = $("#circles-container");
-	var offset = inter.offset();
+	var circlescont = $("#circles-canvas");
+	var canvas = circlescont.get(0);
+    var context = canvas.getContext('2d');
+	var offset = circlescont.offset();
 	var circlecount = 0;
 	var color = {
 		curr: 0,
@@ -15,6 +17,40 @@ $(document).ready(function() {
 			$(".intro-header").css("background-color")
 		]
 	};
+	
+	function resizeCanvas() {
+		canvas.width = circlescont.width();
+		canvas.height = circlescont.height();
+	}
+	resizeCanvas();
+	$(window).resize(resizeCanvas);
+	
+	var circles = [];
+	var lastTime = Date.now();
+	function updateCircles(time) {
+		var i;
+		for (i = 0; i < circles.length; i++) {
+			var circle = circles[i];
+			var radius = circle.t;
+		
+			context.beginPath();
+			context.arc(circle.center.x, circle.center.y, radius, 0, 2 * Math.PI, false); // Circle
+			context.fillStyle = circle.color;
+			context.fill();
+			context.closePath();
+		
+			if (circle.t >= circle.maxRadius) {
+				circles.splice(i, 1); // Remove circle from array
+				i--; // Correct for the removal
+			}
+		
+			circle.t += 0.5 * (time - lastTime);
+			//console.log(circle.t);
+		}
+		lastTime = time;
+		requestAnimationFrame(updateCircles);
+	}
+	requestAnimationFrame(updateCircles);
 	
 	var tryshow2 = false;
 	var tryshow2timeout = null;
@@ -36,7 +72,6 @@ $(document).ready(function() {
 			}, 1500);
 		}
 		
-		
 		circlecount++;
 		var date = Date.now();
 		if (circlecount2 !== null && (date - cooldown) >= 300) {
@@ -57,59 +92,32 @@ $(document).ready(function() {
 			tryshow2rearm();
 		}
 		
-		// Large screen
-		var relX = e.pageX - offset.left;
-		var relY = e.pageY - offset.top;
-		var iw = inter.width();
-		var ih = inter.height();
-	
-		// Calculate optimal circle size
-		var cornerDists = [];
-		cornerDists.push(Math.sqrt(Math.pow(relX, 2) + Math.pow(relY, 2))); // Top left
-		cornerDists.push(Math.sqrt(Math.pow(iw - relX, 2) + Math.pow(relY, 2))); // Top right
-		cornerDists.push(Math.sqrt(Math.pow(iw - relX, 2) + Math.pow(ih - relY, 2))); // Bottom right
-		cornerDists.push(Math.sqrt(Math.pow(relX, 2) + Math.pow(ih - relY, 2))); // Bottom left
-		var circWidth = Math.max.apply(Math, cornerDists) * 2;
-		
-		if (/* $(document).width() < 992 */ true) { // TODO
-			// Small screen
-			var circ = $("<div class='circle-color'></div>");
-			circlescont.append(circ);
-			setTimeout(function(){
+		// Create a new circle
+		circles.push({
+			color: (function(){
 				var bgcol = color.arr[color.curr];
 				color.curr != color.arr.length - 1 ? color.curr++ : color.curr = 0; // Increment color
-				circ.css({
-					width: circWidth,
-					height: circWidth,
-					left: (relX - circWidth / 2) + "px",
-					top: (relY - circWidth / 2) + "px",
-					"-webkit-transform": "scale(1, 1)",
-					"transform": "scale(1, 1)",
-					"background-color": bgcol
-				});
-				$(".banner").css("background", bgcol);
-				transitionEnd(circ).bind(function() {
-					var cc = circlescont.children();
-					cc.get(0).remove();
-					$(".intro-header").css("background", $(this).css("background-color"));
-					transitionEnd(circ).unbind();
-				});
-			}, 50); // After repaint
-		} else {
-			// TODO
-			var oc = $("#opening-circle");
-			oc.css({
-				width: circWidth,
-				height: circWidth,
-				left: (relX - circWidth / 2) + "px",
-				top: (relY - circWidth / 2) + "px",
-				"-webkit-transform": "scale(1, 1)",
-				"transform": "scale(1, 1)"
-			});
-			transitionEnd(oc).bind(function() {
-				oc.css("opacity", "0");
-				transitionEnd(oc).unbind();
-			});
-		}
+				return bgcol;
+			})(),
+			center: {
+				x: e.pageX - offset.left,
+				y: e.pageY - offset.top
+			},
+			t: 0,
+			maxRadius: (function(){
+				var relX = e.pageX - offset.left;
+				var relY = e.pageY - offset.top;
+				var iw = circlescont.width();
+				var ih = circlescont.height();
+	
+				// Calculate optimal circle size
+				var cornerDists = [];
+				cornerDists.push(Math.sqrt(Math.pow(relX, 2) + Math.pow(relY, 2))); // Top left
+				cornerDists.push(Math.sqrt(Math.pow(iw - relX, 2) + Math.pow(relY, 2))); // Top right
+				cornerDists.push(Math.sqrt(Math.pow(iw - relX, 2) + Math.pow(ih - relY, 2))); // Bottom right
+				cornerDists.push(Math.sqrt(Math.pow(relX, 2) + Math.pow(ih - relY, 2))); // Bottom left
+				return Math.max.apply(Math, cornerDists);
+			})()
+		});
 	});
 });

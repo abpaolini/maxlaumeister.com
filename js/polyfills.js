@@ -1,102 +1,34 @@
-/*
-  * TransitionEnd
-  * author: Evandro Leopoldino Gonçalves <evandrolgoncalves@gmail.com>
-  * https://github.com/evandrolg
-  * License: MIT
-*/
-(function(window){
-    'use strict';
-
-    var Event = function(element, type){
-        this.element = element;
-        this.type = type;
-    };
-
-    Event.prototype = {
-        add: function(callback){
-            this.callback = callback;
-            this.element.addEventListener(this.type, this.callback, false);
-        },
-
-        remove: function(){
-            this.element.removeEventListener(this.type, this.callback, false);
-        }
-    };
-
-    var TransitionEnd = function(element){
-        this.element = element;
-        this.transitionEnd = this.whichTransitionEnd();
-        this.event = new Event(this.element, this.transitionEnd);
-    };
-
-    TransitionEnd.prototype = {
-        whichTransitionEnd: function(){
-            var transitions = {
-                'WebkitTransition' : 'webkitTransitionEnd',
-                'MozTransition'    : 'transitionend',
-                'OTransition'      : 'oTransitionEnd otransitionend',
-                'transition'       : 'transitionend'
-            };
-
-            for(var t in transitions){
-                if(this.element.style[t] !== undefined){
-                    return transitions[t];
-                }
-            }
-        },
-
-        bind: function(callback){
-            this.event.add(callback);
-        },
-
-        unbind: function(){
-            this.event.remove();
-        }
-    };
-
-    var Cache = {
-        list: [],
-        
-        getPosition: function(element){
-            if(Array.prototype.indexOf){
-                return this.list.indexOf(element);
-            }
-
-            for(var i = 0, size = this.list.length; i < size; i++){
-                if(this.list[i] === element){
-                    return i;
-                } 
-            }
-
-            return -1;
-        },
-
-        insert: function(element){
-            var positonElement = this.getPosition(element);
-            var isCached = positonElement !== -1;
-
-            if(!isCached){
-                this.list.push(element);
-                this.list.push(new TransitionEnd(element));
-
-                positonElement = this.getPosition(element);
-            }
-
-            return this.list[positonElement+1];
-        }
-    };
-
-    window.transitionEnd = function(el){
-        if(!el){
-            throw 'You need to pass an element as parameter!';
-        }
-
-        var element = el[0] || el;
-        var instance = Cache.insert(element);
-
-        return instance;
-    };
-}(window));
+// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+ 
+// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+ 
+// MIT license
+ 
+(function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+ 
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+ 
+    if (!window.cancelAnimationFrame)
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+}());
 
 /*! LazyYT (lazy load Youtube videos plugin) - v0.3.4 - 2014-06-30
 * Usage: <div class="lazyYT" data-youtube-id="laknj093n" ratio="16:9" data-parameters="rel=0">loading...</div>
