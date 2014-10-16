@@ -19,6 +19,7 @@ $(document).ready(function() {
 	var tryshow2 = false;
 	var tryshow2timeout = null;
 	var circlecount2 = null;
+	var cooldown = 0;
 	
 	$(".interactive-go").click(function(e) {
 		e.preventDefault();
@@ -30,21 +31,25 @@ $(document).ready(function() {
 					$(".intro-title-2").fadeIn(500);
 					$(".intro-message-2").fadeIn(500);
 					circlecount2 = 0;
+					tryshow2 = false;
 				}});
 			}, 1500);
 		}
 		
+		
 		circlecount++;
-		if (circlecount2 !== null) {
+		var date = Date.now();
+		if (circlecount2 !== null && (date - cooldown) >= 300) {
 			circlecount2++;
+			cooldown = date;
 		}
 		
-		if (circlecount === 5) {
+		if (circlecount === 3) {
 			tryshow2 = true;
 		}
-		if (circlecount2 === 15) {
+		if (circlecount2 === 5) {
 			$(".intro-message-3").fadeIn(1000);
-		} else if (circlecount2 === 40) {
+		} else if (circlecount2 === 20) {
 			$(".intro-message-4").fadeIn(1000);
 		}
 		
