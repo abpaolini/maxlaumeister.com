@@ -105,7 +105,7 @@ $(document).ready(function(){
 /*! LazyYT (lazy load Youtube videos plugin) - v0.3.4 - 2014-06-30
 * Usage: <div class="lazyYT" data-youtube-id="laknj093n" ratio="16:9" data-parameters="rel=0">loading...</div>
 * Copyright (c) 2014 Tyler Pearson; Licensed MIT */
-
+// Modified for this project
 
 ;(function ($) {
     'use strict';
@@ -147,7 +147,8 @@ $(document).ready(function(){
             if (!$el.hasClass('lazyYT-video-loaded') && $el.hasClass('lazyYT-image-loaded')) {
                 $el.html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/' + id + '?autoplay=1&' + youtubeParameters + '" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allowfullscreen></iframe>')
                     .removeClass('lazyYT-image-loaded')
-                    .addClass('lazyYT-video-loaded');
+                    .addClass('lazyYT-video-loaded')
+                    .css("background", "black");
             }
         });
 

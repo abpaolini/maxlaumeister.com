@@ -40,6 +40,7 @@ $(document).ready(function() {
 			context.closePath();
 		
 			if (circle.t >= circle.maxRadius) {
+				$(".intro-header").css("background", circle.color); // Update header color
 				circles.splice(i, 1); // Remove circle from array
 				i--; // Correct for the removal
 			}
@@ -101,6 +102,7 @@ $(document).ready(function() {
 			color: (function(){
 				var bgcol = color.arr[color.curr];
 				color.curr != color.arr.length - 1 ? color.curr++ : color.curr = 0; // Increment color
+				$(".banner").css("background", bgcol); // Update header color
 				return bgcol;
 			})(),
 			center: {

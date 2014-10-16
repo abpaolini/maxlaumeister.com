@@ -9,6 +9,12 @@ h6 {
     font-weight: initial;
 }
 
+@media(max-width:500px) {
+    h3, .h3 {
+    	font-size: 18px;
+    }
+}
+
 .intro-header, .banner {
 	background: #285BB8;
 }
