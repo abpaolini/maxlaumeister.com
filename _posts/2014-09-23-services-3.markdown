@@ -2,7 +2,7 @@
 layout: default
 category: Services
 title: UCSC Class Search
-youtubeId: tYjO_dGAzyg
+youtubeId: dvpW7P2QRyk
 description: |
   Overview:
   <ul>
