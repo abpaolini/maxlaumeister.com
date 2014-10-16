@@ -16,21 +16,40 @@ $(document).ready(function() {
 		]
 	};
 	
+	var tryshow2 = false;
+	var tryshow2timeout = null;
+	var circlecount2 = null;
+	
 	$(".interactive-go").click(function(e) {
 		e.preventDefault();
+		function tryshow2rearm() {
+			clearTimeout(tryshow2timeout);
+			tryshow2timeout = setTimeout(function(){
+				$(".intro-title-1").fadeOut(500);
+				$(".intro-message-1").fadeOut({duration: 500, complete: function(){
+					$(".intro-title-2").fadeIn(500);
+					$(".intro-message-2").fadeIn(500);
+					circlecount2 = 0;
+				}});
+			}, 1500);
+		}
 		
 		circlecount++;
+		if (circlecount2 !== null) {
+			circlecount2++;
+		}
+		
 		if (circlecount === 5) {
-			setTimeout(function(){
-				$(".intro-title-1").fadeOut({complete: function(){
-					$(".intro-title-2").fadeIn();
-				}});
-				$(".intro-message-1").fadeOut({complete: function(){
-					$(".intro-message-2").fadeIn();
-				}});
-			}, 1000);
-		} else if (circlecount === 10) {
+			tryshow2 = true;
+		}
+		if (circlecount2 === 15) {
 			$(".intro-message-3").fadeIn(1000);
+		} else if (circlecount2 === 40) {
+			$(".intro-message-4").fadeIn(1000);
+		}
+		
+		if (tryshow2) {
+			tryshow2rearm();
 		}
 		
 		// Large screen

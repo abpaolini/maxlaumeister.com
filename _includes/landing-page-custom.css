@@ -57,7 +57,7 @@ h6 {
     user-select: none;
 }
 
-.intro-message-2, .intro-message-3 {
+.message-hidden {
 	display: none;
 }
 
