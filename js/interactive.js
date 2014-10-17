@@ -67,7 +67,7 @@ $(document).ready(function() {
 				$(".intro-title-1").fadeOut(500);
 				$(".intro-message-1").fadeOut({duration: 500, complete: function(){
 					setTimeout(function() {
-						$(".intro-text").css("pointer-events", "initial");
+						$(".intro-text").css("pointer-events", "auto");
 					}, 1000);
 					$(".intro-title-2").fadeIn(500);
 					$(".intro-message-2").fadeIn(500);
