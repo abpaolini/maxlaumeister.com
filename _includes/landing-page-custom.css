@@ -78,6 +78,15 @@ h6 {
     user-select: none;
 }
 
+.intro-text-noclick {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
 .message-hidden {
 	display: none;
 }
