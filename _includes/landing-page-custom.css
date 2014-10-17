@@ -78,6 +78,10 @@ h6 {
     user-select: none;
 }
 
+.intro-text {
+	position: relative;
+}
+
 .intro-text-noclick {
 	display: none;
 	position: absolute;
@@ -85,6 +89,10 @@ h6 {
 	left: 0;
 	bottom: 0;
 	right: 0;
+	/* For IE < 11 */
+	background: #FFF;
+	opacity: 0;
+	filter: alpha(opacity = 0);
 }
 
 .message-hidden {
