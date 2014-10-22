@@ -23,13 +23,13 @@ permalink: pretty
 # ----------------------- #
 
 social:
-  - title: resume
+  - title: Resume
     icon: file-text-o
     url: downloads/resume-laumeister.pdf
-  - title: linkedin
+  - title: Linkedin
     icon: linkedin
     url: https://www.linkedin.com/in/maxlaumeister
-  - title: github
+  - title: Github
     icon: github
     url: https://github.com/MaxLaumeister/
 
