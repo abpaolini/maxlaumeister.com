@@ -27,9 +27,10 @@ $(document).ready(function() {
 	
 	var circles = [];
 	var lastTime = Date.now();
-	function updateCircles(time) {
-		var i;
-		for (i = 0; i < circles.length; i++) {
+	function updateCircles() {
+		var time = Date.now();
+		var i = 0;
+		while (i < circles.length) {
 			var circle = circles[i];
 			var radius = circle.t;
 		
@@ -42,16 +43,16 @@ $(document).ready(function() {
 			if (circle.t >= circle.maxRadius) {
 				$(".intro-header").css("background", circle.color); // Update header color
 				circles.splice(i, 1); // Remove circle from array
-				i--; // Correct for the removal
+			} else {
+				circle.t += 0.5 * (time - lastTime);
+				i++;
 			}
-		
-			circle.t += 0.5 * (time - lastTime);
-			//console.log(circle.t);
 		}
-		lastTime = time;
-		requestAnimationFrame(updateCircles);
+		if (circles.length > 0) {
+			lastTime = time;
+			requestAnimationFrame(updateCircles);
+		}
 	}
-	requestAnimationFrame(updateCircles);
 	
 	var tryshow2 = false;
 	var tryshow2timeout = null;
@@ -125,5 +126,11 @@ $(document).ready(function() {
 				return Math.max.apply(Math, cornerDists);
 			})()
 		});
+		
+		// Kick off the animation, if it isn't already working on other circles
+		if (circles.length == 1) {
+			lastTime = Date.now();
+			requestAnimationFrame(updateCircles);
+		}
 	});
 });
