@@ -8,6 +8,7 @@ description: |
   <ul>
   <li>2D physics game in Unity</li>
   <li>Team of 4 students</li>
+  <li>Project at <a href="http://www.immunogen.org/">Immunogen.org</a></li>
   </ul>
 
   Attention:
