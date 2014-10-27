@@ -7,7 +7,7 @@ description: |
   Overview:
   <ul>
   <li>PC/Mac Game</li>
-  <li>Simple vector graphics</li>
+  <li>Minimalistic vector graphics</li>
   <li>Mouse controls</li>
   </ul>
 
