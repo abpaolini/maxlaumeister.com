@@ -20,7 +20,7 @@ description: |
   <ul>
   <li>Created game concept</li>
   <li>Implemented game mechanics in GML</li>
-  <li>Created all art and music</li>
+  <li>Created all art and composed all music</li>
   <li>Created game trailer</li>
   </ul>
 

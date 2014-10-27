@@ -13,16 +13,16 @@ description: |
 
   Attention:
   <ul>
-  <li>Winner: Technical Innovation (UCSC 2014)
-  <li>Finalist: Visual Design and Grand Prize
+  <li>Winner: Technical Innovation (UCSC 2014)</li>
+  <li>Finalist: Visual Design and Grand Prize</li>
   </ul>
 
   My Role:
   <ul>
-  <li>Created game concept and mechanics
-  <li>Implemented game mechanics in C#
-  <li>Created all art and music
-  <li>Created game trailer
+  <li>Created game concept and mechanics</li>
+  <li>Implemented game mechanics in C#</li>
+  <li>Created all art and composed all music</li>
+  <li>Created game trailer</li>
   </ul>
 
 ---
