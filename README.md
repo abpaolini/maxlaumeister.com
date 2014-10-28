@@ -1,4 +1,4 @@
-Maximillian Laumeister - Portfolio
+Portfolio of Maximillian Laumeister
 =======================
 
-A portfolio of my work, hosted at [maxlaumeister.com](http://www.maxlaumeister.com).
+This GitHub repo hosts my portfolio at [maxlaumeister.com](http://www.maxlaumeister.com).

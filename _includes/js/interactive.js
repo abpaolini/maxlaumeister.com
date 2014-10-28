@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var inter = $("#interactive-container");
 	var circlescont = $("#circles-canvas");
 	var canvas = circlescont.get(0);
-    var context = canvas.getContext('2d');
+	var context = canvas.getContext('2d');
 	var offset = circlescont.offset();
 	var circlecount = 0;
 	var color = {
