@@ -125,3 +125,21 @@ h6 {
 	display: none !important;
 }
 
+.intro-message {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+@media (max-height: 870px) {
+    .intro-message {
+        padding-top: 15vh;
+        padding-bottom: 10vh;
+    }
+}
+
+@media (max-height: 700px) {
+    .intro-message {
+        padding-top: 10vh;
+        padding-bottom: 0;
+    }
+}
