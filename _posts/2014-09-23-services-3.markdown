@@ -8,6 +8,7 @@ description: |
   <ul>
   <li>Native Android app</li>
   <li>Lets UCSC students search for classes</li>
+  <li>Source code <a href="https://github.com/MaxLaumeister/UCSCClassSearch">on GitHub</a></li>
   </ul>
 
   My Role:
