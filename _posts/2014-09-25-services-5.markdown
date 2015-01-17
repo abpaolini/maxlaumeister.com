@@ -1,0 +1,15 @@
+---
+layout: default
+category: Services
+title: Automatune
+youtubeId: rU6m4N4Okv8
+description: |
+  Overview:
+  <ul>
+  <li>HTML5 procedural music editor</li>
+  <li>Simplified, accessible interface</li>
+  <li>Create music with no coding knowledge</li>
+  <li>Project at <a href="http://www.automatune.com/">Automatune.com</a></li>
+  </ul>
+
+---
