@@ -16,7 +16,7 @@ description: |
   <li>Featured on NPR (National Public Radio)</li>
   <li>Highlighted on <a href="http://www.theverge.com/2013/3/31/4168542/listen-to-bitcoin-in-real-time">The Verge</a></li>
   <li>127,000 unique visitors</li>
-  <li>29 forks and 80 stars <a href="https://github.com/MaxLaumeister/bitlisten">on GitHub</a></li>
+  <li>30 forks and 90 stars <a href="https://github.com/MaxLaumeister/bitlisten">on GitHub</a></li>
   <li>Code forked into <a href="http://blog.hatnote.com/post/56856315107/listen-to-wikipedia">Listen to Wikipedia</a></li>
   </ul>
 
