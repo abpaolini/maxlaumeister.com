@@ -1,3 +1,41 @@
 /*- Custom style -*/
 
 // -- Put custom style under this point -- //
+
+#nav-bio {
+    p {
+        margin-left: 1em;
+        margin-right: 1em;
+        text-align: left;
+    }
+    a {
+        display: inline;
+        text-decoration: underline;
+        padding: 0;
+        font-weight: bold;
+    }
+}
+
+#nav-menu {
+    left:25px;
+}
+
+$menu-width: 25rem;
+
+#nav {
+    width: $menu-width;
+    left: -$menu-width;
+    
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#nav.menu-open {
+  -webkit-transform: translateX($menu-width);
+  -moz-transform: translateX($menu-width);
+  -ms-transform: translateX($menu-width);
+  transform: translateX($menu-width);
+  width: $menu-width;
+}

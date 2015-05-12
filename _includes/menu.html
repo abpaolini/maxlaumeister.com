@@ -1,6 +1,6 @@
 <nav {% if site.reverse == true %}id="nav-left"{% else %}id="nav"{% endif %}>
 	<div id="nav-list">
-		<a href="{{ site.baseurl }}">Home</a>
+		<a href="{{ site.baseurl }}">Blog Home</a>
 
 		<!-- Nav pages -->
 	  {% for page in site.pages %}
@@ -12,6 +12,12 @@
     <!-- Nav links -->
 	  {% include link.html %}
 
+	</div>
+	
+	<div id="nav-bio">
+	    <h3>Bio</h3>
+	    <p>Hi! My name is Maximillian, and I'm a Web Developer living in Santa Cruz, CA. I like to spend my free time drawing, composing music, and tinkering with web technologies.</p>
+	    <p>To get in touch, send me an email at <a href="mailto:max.laumeister@gmail.com">max.laumeister@gmail.com</a></p>
 	</div>
   
   <!-- Nav footer -->
