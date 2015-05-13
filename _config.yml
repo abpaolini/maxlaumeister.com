@@ -6,6 +6,8 @@ author:
   name: "Maximillian Laumeister"
   email: "max.laumeister@gmail.com"
   url: "http://www.maxlaumeister.com/"
+  
+analytics-id: UA-24440376-11
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
