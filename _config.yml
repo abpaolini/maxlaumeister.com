@@ -32,4 +32,7 @@ social:
   - title: Github
     icon: github
     url: https://github.com/MaxLaumeister/
+  - title: Blog
+    icon: align-left
+    url: http://blog.maxlaumeister.com/
 

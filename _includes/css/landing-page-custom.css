@@ -130,6 +130,15 @@ h6 {
     padding-bottom: 20vh;
 }
 
+a.btn > .fa, a.btn > .network-name {
+    vertical-align: middle;
+}
+
+.banner-social-buttons > li {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
 @media (max-height: 870px) {
     .intro-message {
         padding-top: 15vh;
@@ -143,3 +152,4 @@ h6 {
         padding-bottom: 0;
     }
 }
+
