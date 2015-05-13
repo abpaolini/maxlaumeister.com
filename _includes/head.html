@@ -3,14 +3,39 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
+    <meta name="author" content="Maximillian Laumeister">
+    
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+        <meta property="og:description" content="{{ page.description }}">
+    {% endif %}
+    
+    {% if page.tags %}
+      <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
+    {% endif %}
 
 	<title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	
+	<!-- OpenGraph -->
+	<meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+	{%if page.title %}
+        <meta property="og:type" content="article" />
+        {% if page.date %}
+          <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+        {% endif %}
+        <meta content="{{ site.author.url }}/" property="article:author">
+        {% if page.tags %}
+          {% for tag in page.tags %}
+            <meta content="{{ tag }}" property="article:tag">
+          {% endfor %}
+        {% endif %}
+	{% else %}
+	    <meta property="og:type" content="website" />
+	{% endif %}
+    <meta property="og:url" content="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}/" />
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'>
-
-	<!-- RSS -->
-	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
 </head>

@@ -1,5 +1,7 @@
 ---
 title: CSS &lsquo;will-change&rsquo; Property&#58; A Performance Case Study
+description: In this article, we will look at the real-world performance gains made possible by the will-change CSS property. I’ll go over some of the background behind the will-change property, what it does, and how to use it to improve the performance of web pages that rely on Javascript animation of DOM elements.
+tags: will-change CSS HTML5 performance
 ---
 
 In this article, we will look at the real-world performance gains made possible by the ``will-change`` CSS property. I’ll go over some of the background behind the ``will-change`` property, what it does, and how to use it to improve the performance of web pages that rely on Javascript animation of DOM elements.

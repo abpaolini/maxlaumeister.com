@@ -1,5 +1,11 @@
 ---
 title: Running Bitcoin Core on the Raspberry Pi
+description: So you’ve decided to run the full Bitcoin client on your Raspberry Pi. Perhaps you want give back to the Bitcoin network, maybe you just want to test how well it runs. There are no official binaries for Bitcoin-qt on Raspberry Pi, so this guide will focus on compiling Bitcoin from source. Fortunately, it’s not too tough – we can follow the official build instructions almost verbatim.
+tags: 
+- Raspberry Pi
+- Bitcoin
+- Bitcoin-qt
+- Full Node
 ---
 
 ![Bitcoin Raspberry Pi Logo](/img/2013-5-3-running-bitcoin-core-on-the-raspberry-pi/bitpi.png){: .floatleft}

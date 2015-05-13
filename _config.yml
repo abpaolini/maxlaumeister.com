@@ -1,11 +1,11 @@
 # Site settings
 title: Blog - Maximillian Laumeister
 description: "Notes on tech and web development by Maximillian Laumeister."
-url: "http://blog.maxlaumeister.com/"
+url: "http://blog.maxlaumeister.com"
 author:
   name: "Maximillian Laumeister"
   email: "max.laumeister@gmail.com"
-  url: "http://www.maxlaumeister.com/"
+  url: "http://www.maxlaumeister.com"
   
 analytics-id: UA-24440376-11
 
