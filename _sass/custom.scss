@@ -2,6 +2,30 @@
 
 // -- Put custom style under this point -- //
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#wrap {
+    padding-bottom: 6rem;
+}
+
+#wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+#posts, .post > p {
+    margin-bottom: 0;
+}
+
+.floatleft {
+    float: left;
+    margin: 0 24px 15px 24px;
+}
+
 #nav-bio {
     p {
         margin-left: 1em;
@@ -17,7 +41,8 @@
 }
 
 #nav-menu {
-    left:25px;
+    left: 25px;
+    right: auto;
 }
 
 $menu-width: 25rem;
@@ -38,4 +63,23 @@ $menu-width: 25rem;
   -ms-transform: translateX($menu-width);
   transform: translateX($menu-width);
   width: $menu-width;
+}
+
+hr {
+    border-color: #d4d4d4;
+    border-style: solid;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
