@@ -10,8 +10,11 @@
 	  	{% include menu.html %}
     
     <!-- Icon menu -->
-	  <a href="#" {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
-	  	<div id="menu"></div>
+	  <a href="javascript:void(0)" {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
+	    <div id="menu-icon">
+	  	    <div id="menu"></div>
+	  	</div>
+	  	<span id="menu-text">Menu</span>
 	  </a>
 
       <!-- Header -->
