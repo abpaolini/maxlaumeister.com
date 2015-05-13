@@ -17,6 +17,29 @@ html, body {
     position: relative;
 }
 
+.sharebuttons {
+    display: inline-block;
+    height: 20px;
+}
+
+.sharebuttons > div, .sharebuttons > iframe {
+    margin-right: 0.5em;
+}
+
+.fb-share-button, .fb-share-button > span {
+    vertical-align: top !important;
+}
+
+.pagetitle {
+    margin-bottom: 0.5rem;
+}
+
+.by-line > time, .by-line > span {
+    vertical-align: top;
+    line-height: 20px;
+    margin-right: 1em;
+}
+
 #posts, .post > p {
     margin-bottom: 0;
 }
