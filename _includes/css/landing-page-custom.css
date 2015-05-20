@@ -139,6 +139,34 @@ a.btn > .fa, a.btn > .network-name {
     padding-right: 3px;
 }
 
+#extraScroll {
+    height: 120vh;
+    width: 100%;
+    position: relative;
+}
+
+#codeFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: -1;
+}
+
+#pageContent {
+    background-color: white;
+}
+
+.navbar {
+    transition: transform 1s ease;
+}
+
+.navbar.tucked {
+    transform: translate(0, -50px);
+}
+
 @media (max-height: 870px) {
     .intro-message {
         padding-top: 15vh;
@@ -152,4 +180,62 @@ a.btn > .fa, a.btn > .network-name {
         padding-bottom: 0;
     }
 }
+
+/* PAGE CONTENT ANIMATION */
+
+#pageContainer {
+    perspective: 600px;
+    perspective-origin: 50% 50%;
+    
+    width: 100%;
+}
+
+#pageContainer.presenting {
+    height: 600px;
+    width: 50vw;
+    transition: all 1s ease;
+}
+
+#pageContent {
+    overflow: hidden;
+    
+}
+
+#pageContent.presenting {
+    height: 70vh;
+    transform: rotateY(10deg) translate3d(80px, 0, 0);
+    transition: all 1s ease;
+}
+
+#presentText {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 70vh;
+    color: white;
+    padding: 50px 70px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#presentText.presenting {
+    opacity: 1;
+    transition: opacity none;
+}
+
+#presentText h1 {
+    font-size: 4em;
+}
+
+#presentText p {
+    font-size: 2em;
+}
+
+#presentText a {
+    text-decoration: underline;
+    color: white;
+}
+
 
