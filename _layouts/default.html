@@ -7,66 +7,68 @@
 		
 		</div>
 		<div id="pageWrapper">
-		<div id="pageContainer">
-		    <div id="pageContent">
-		    {% include header.html %}
-		    {% include page_content.html %}
-		    {% include contact.html %}
-		    {% include footer.html %}
-		    </div>
-		    
-		</div>
-		<div id="extraScroll">
+		    <div id="pageContainer">
+		        <div id="pageContent">
+		        {% include header.html %}
+		        {% include page_content.html %}
+		        {% include contact.html %}
+		        {% include footer.html %}
+		        </div>
 		        
 		    </div>
-		    <div id="presentText">
-		        <h1>Your Software is Next.</h1>
-		        <p>Together we can build something great.<br>Let's get in touch: <a href="mailto:maxlaumeister@gmail.com">max.laumeister@gmail.com</a>
+		    <div id="extraScroll">
+		        <div id="presentText">
+	                <h1>Your Project is Next.</h1>
+	                <p>Together we can build something great.<br>Let's get in touch: <a href="mailto:maxlaumeister@gmail.com">max.laumeister@gmail.com</a>
+	            </div>
+	            <div id="iframeWrapper">
+	                <div id="iframeInner">
+	                </div>
 		        </div>
+            </div>
 		</div>
 		<script>
 		    var pageWrapperEl = document.getElementById("pageWrapper");
 		    var pageContainerEl = document.getElementById("pageContainer");
 		    var pageContentEl = document.getElementById("pageContent");
 		    var presentTextEl = document.getElementById("presentText");
-		    
+		    var iframeWrapperEl = document.getElementById("iframeWrapper");
+		    var iframeInnerEl = document.getElementById("iframeInner");
 		    
 		    var pageHeight = pageContentEl.offsetHeight;
-		    pageWrapper.style.height = pageWrapperEl.offsetHeight + "px";
 		    
 	        var navEl = document.getElementsByClassName("navbar")[0];
 	        
 	        var navIsHidden = false;
+	        var iframeLoaded = false;
 	        
-	        window.onscroll = function() {
-	            
-	            console.log("scrolly", window.scrollY);
-	            console.log("pageHeight", pageHeight);
-	            
-	            if (window.scrollY > pageHeight && !navIsHidden) {
+	        function scrollChange() {
+	            if (window.scrollY >= pageHeight && !navIsHidden) {
 	                navEl.classList.add("tucked");
-	                //pageContentEl.style.transform = "";
 	                pageContainerEl.classList.add("presenting");
-	                pageContainerEl.style.transform = "translate(0, " + (pageHeight + 150) + "px)";
-	                presentTextEl.style.transform = "translate(0, " + (pageHeight + 150) + "px)";
-	                
+	                iframeWrapperEl.classList.add("presenting");
 	                presentTextEl.classList.add("presenting");
-	                pageContentEl.classList.add("presenting");
 	                navIsHidden = true;
 	            } else if (window.scrollY < pageHeight && navIsHidden) {
 	                navEl.classList.remove("tucked");
-	                //pageContentEl.style.transform = "";
-	                
 	                pageContainerEl.classList.remove("presenting");
-	                pageContainerEl.style.transform = "translate(0, 0)";
+	                iframeWrapperEl.classList.remove("presenting");
 	                presentTextEl.classList.remove("presenting");
-	                pageContentEl.classList.remove("presenting");
-	                
 	                navIsHidden = false;
 	            }
+	            
+	            if (window.scrollY >= pageHeight && !iframeLoaded) {
+	                var ciframe = document.createElement("iframe");
+	                ciframe.className = "recursiveFrame";
+	                ciframe.src = "index.html";
+	                iframeInnerEl.appendChild(ciframe);
+	                iframeLoaded = true;
+	            }
 	        }
+	        
+	        window.onscroll = scrollChange;
+	        scrollChange();
 		</script>
-		
 		{% include js.html %}
 	</body>
 </html>
