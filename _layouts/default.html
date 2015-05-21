@@ -62,9 +62,11 @@
 	        var iframeLoaded = false;
 	        
 	        var pageHeight;
+	        var windowHeight;
 	        
 	        function resize() {
 	            pageHeight = pageContentEl.offsetHeight;
+	            windowHeight = window.innerHeight;
 	        }
 	         window.addEventListener("resize", resize, false);
 	         resize();
@@ -73,8 +75,7 @@
 	         var appearingTimeout;
 	        
 	        function scrollChange() {
-	            
-	            var scrollBottom = window.innerHeight + window.scrollY;
+	            var scrollBottom = windowHeight + window.scrollY;
 	            
 	            if (window.scrollY >= pageHeight && !navIsHidden) {
 	                iframeWrapperEl.style.visibility = "visible";
