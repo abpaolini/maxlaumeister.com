@@ -22,7 +22,28 @@
 	                <p>Together we can build something great.<br>Let's get in touch: <a href="mailto:maxlaumeister@gmail.com">max.laumeister@gmail.com</a>
 	            </div>
 	            <div id="iframeWrapper">
+	                
 	                <div id="iframeInner">
+	                    <div id="browserDecoration">
+	                        <div id="bbuttons">
+	                            <div class="bbutton bbutton1">
+	                            </div>
+	                            <div class="bbutton bbutton2">
+	                            </div>
+	                            <div class="bbutton bbutton3">
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div id="browserURL">
+	                        <div>
+	                            <div id="browserForwardBack">
+	                                <img id="browserBack" src="images/backbutton.svg"><img id="browserForward" src="images/backbutton.svg">
+	                            </div>
+	                            <div id="browserURLinputcell">
+	                                <input id="browserURLinput" type="text">
+	                            </div>
+	                        </div>
+	                    </div>
 	                </div>
 		        </div>
             </div>
@@ -34,8 +55,8 @@
 		    var presentTextEl = document.getElementById("presentText");
 		    var iframeWrapperEl = document.getElementById("iframeWrapper");
 		    var iframeInnerEl = document.getElementById("iframeInner");
-		    
-		    var pageHeight = pageContentEl.offsetHeight;
+		    var browserURLinput = document.getElementById("browserURLinput");
+		    var ciframe;
 		    
 	        var navEl = document.getElementsByClassName("navbar")[0];
 	        
@@ -43,31 +64,54 @@
 	        var iframeLoaded = false;
 	        
 	        function scrollChange() {
+	            var pageHeight = pageContentEl.offsetHeight;
 	            if (window.scrollY >= pageHeight && !navIsHidden) {
 	                navEl.classList.add("tucked");
 	                pageContainerEl.classList.add("presenting");
 	                iframeWrapperEl.classList.add("presenting");
+	                iframeInnerEl.classList.add("presenting");
 	                presentTextEl.classList.add("presenting");
 	                navIsHidden = true;
 	            } else if (window.scrollY < pageHeight && navIsHidden) {
 	                navEl.classList.remove("tucked");
 	                pageContainerEl.classList.remove("presenting");
 	                iframeWrapperEl.classList.remove("presenting");
+	                iframeInnerEl.classList.remove("presenting");
 	                presentTextEl.classList.remove("presenting");
 	                navIsHidden = false;
 	            }
 	            
 	            if (window.scrollY >= pageHeight && !iframeLoaded) {
-	                var ciframe = document.createElement("iframe");
+	                ciframe = document.createElement("iframe");
 	                ciframe.className = "recursiveFrame";
+	                ciframe.frameBorder = "0";
 	                ciframe.src = "index.html";
 	                iframeInnerEl.appendChild(ciframe);
+	                browserURLinput.value = window.location;
 	                iframeLoaded = true;
 	            }
 	        }
 	        
 	        window.onscroll = scrollChange;
 	        scrollChange();
+	        
+	        /* Let's make a browser! */
+	        
+	        browserURLinput.onchange = function() {
+	            var lastVal = ciframe.src;
+	            ciframe.src = browserURLinput.value;
+	            
+	            console.log("src", ciframe.src);
+	            if (ciframe.src == lastVal) {
+	                console.log("Site " + browserURLinput.value + " not allowed to be embedded.");
+	                ciframe.src = "noiframe.html?" + encodeURI(browserURLinput.value);
+	            }
+	            
+	            ciframe.onload = function() {
+	                console.log("loaded", ciframe.src);
+	            }
+	        }
+	        
 		</script>
 		{% include js.html %}
 	</body>
