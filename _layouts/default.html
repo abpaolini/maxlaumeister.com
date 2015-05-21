@@ -54,11 +54,13 @@
 		    var browserURLinput = document.getElementById("browserURLinput");
 		    var downArrowEl = document.getElementById("downArrow");
 		    var extraScrollEl = document.getElementById("extraScroll");
+		    var fixedBackground = document.getElementById("codeFixed");
 		    var ciframe;
 		    
 	        var navEl = document.getElementsByClassName("navbar")[0];
 	        
 	        var navIsHidden = false;
+	        var backgroundIsHidden = true;
 	        var iframeLoaded = false;
 	        
 	        var pageHeight;
@@ -76,6 +78,14 @@
 	        
 	        function scrollChange() {
 	            var scrollBottom = windowHeight + window.scrollY;
+	            
+	            if (scrollBottom >= pageHeight && backgroundIsHidden) {
+	                fixedBackground.style.visibility = "visible";
+	                backgroundIsHidden = false;
+	            } else if (scrollBottom < pageHeight && !backgroundIsHidden) {
+	                fixedBackground.style.visibility = "hidden";
+	                backgroundIsHidden = true;
+	            }
 	            
 	            if (window.scrollY >= pageHeight && !navIsHidden) {
 	                iframeWrapperEl.style.visibility = "visible";
