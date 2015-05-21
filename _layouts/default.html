@@ -43,6 +43,7 @@
 	                    </div>
 	                </div>
 		        </div>
+		{% include js.html %}
 		<script>
 		    var pageWrapperEl = document.getElementById("pageWrapper");
 		    var pageContentEl = document.getElementById("pageContent");
@@ -75,19 +76,20 @@
 	        }
 	         window.addEventListener("resize", resize, false);
 	         resize();
-	         
-	        var hidingTimeout;
 	        
 	        var revealing = false;
+	        
 	        function revealPresentation() {
 	           revealing = true;
 	           $('html, body').animate({
                    scrollTop: $("#contact").offset().top
-                 }, 1000, function() {
+                 }, 750, function() {
                     revealing = false;
                  });
                  
 	        }
+	        
+	        var scrollingTimeout;
 	        
 	        function scrollChange() {
 	            var currScroll = window.scrollY;
@@ -96,24 +98,31 @@
 	            
 	            var scrollBottom = windowHeight + window.scrollY;
 	            
-	            if (scrollBottom >= pageHeight + extraScrollHeight / 2 && !revealing && scrollDelta > 0) {
-	                revealPresentation();
+	            if (scrollBottom >= pageHeight + extraScrollHeight / 3 && !revealing && scrollDelta > 0) {
+	                clearTimeout(scrollingTimeout);
+	                scrollingTimeout = setTimeout(revealPresentation, 500);
+	                revealing = true;
 	            }
 	            
+	            if (scrollBottom >= pageHeight + extraScrollHeight / 3 && revealing && scrollDelta < 0) {
+	                $('html, body').stop();
+	                revealing = false;
+	            }
 	            
 	            if (currScroll + 10 >= pageHeight && !navIsHidden) {
-	                clearTimeout(hidingTimeout);
 	                function checkiframeReadyState() {
 	                    if (!iframeLoaded) {
 	                        requestAnimationFrame(checkiframeReadyState);
 	                        return;
 	                    }
+	                    if (!navIsHidden) return;
 	                    navEl.classList.add("tucked");
 	                    iframeWrapperEl.classList.add("presenting");
 	                    iframeInnerEl.classList.add("presenting");
-	                    presentTextEl.classList.add("presenting");
-	                    downArrowEl.classList.add("presenting");
+	                    
 	                }
+	                presentTextEl.classList.add("presenting");
+	                downArrowEl.classList.add("presenting");
 	                requestAnimationFrame(checkiframeReadyState);
 	                navIsHidden = true;
 	            } else if (currScroll + 10 < pageHeight && navIsHidden) {
@@ -122,8 +131,6 @@
 	                iframeInnerEl.classList.remove("presenting");
 	                presentTextEl.classList.remove("presenting");
 	                downArrowEl.classList.remove("presenting");
-	                hidingTimeout = window.setTimeout(function() {
-	                }, 1000);
 	                navIsHidden = false;
 	            }
 	            
@@ -131,12 +138,12 @@
 	                ciframe = document.createElement("iframe");
 	                ciframe.className = "recursiveFrame";
 	                ciframe.frameBorder = "0";
-	                ciframe.src = "index.html";
+	                ciframe.src = window.location.href.replace(location.hash,"") + "?";
 	                ciframe.onload = function() {
 	                    iframeLoaded = true;
 	                };
 	                iframeInnerEl.appendChild(ciframe);
-	                browserURLinput.value = window.location;
+	                browserURLinput.value = top.location.href.replace(top.location.hash,"");
 	                iframeRequested = true;
 	            }
 	        }
@@ -147,6 +154,6 @@
 	        scrollChange();
 	        
 		</script>
-		{% include js.html %}
+		
 	</body>
 </html>

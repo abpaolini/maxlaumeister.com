@@ -227,7 +227,7 @@ a.btn > .fa, a.btn > .network-name {
     perspective-origin: 50% 50%;
     transform-style: preserve-3d;
     transform: scale(.75, .75);
-    transition: all 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
     opacity: 0;
     pointer-events: none;
 }
