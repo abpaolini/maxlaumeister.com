@@ -9,6 +9,11 @@ h6 {
     font-weight: initial;
 }
 
+html {
+    background-color: black;
+    background: url(images/stressed_linen.png);
+}
+
 @media(max-width:500px) {
     h3, .h3 {
     	font-size: 18px;
@@ -146,17 +151,6 @@ a.btn > .fa, a.btn > .network-name {
     overflow: hidden;
 }
 
-#codeFixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    background: url(images/stressed_linen.png);
-    z-index: -1;
-}
-
 .navbar {
     transition: transform 1s ease;
 }
@@ -236,7 +230,6 @@ a.btn > .fa, a.btn > .network-name {
     transition: all 1s ease;
     opacity: 0;
     pointer-events: none;
-    visibility: hidden;
 }
 
 #iframeWrapper.presenting {
@@ -304,6 +297,7 @@ a.btn > .fa, a.btn > .network-name {
 #browserURLinput {
     width: calc(100% - 20px);
     margin: 5px;
+    background-color: white;
 }
 
 #bbuttons {
@@ -367,6 +361,12 @@ a.btn > .fa, a.btn > .network-name {
 
 @media (max-width: 1000px), (max-height: 500px) {
     #extraScroll {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 500px) {
+    .banner {
         display: none;
     }
 }

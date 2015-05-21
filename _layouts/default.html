@@ -3,15 +3,13 @@
 	{% include head.html %}
 
 	<body>
-		<div id="codeFixed">
-		
-		</div>
 		        <div id="pageContent">
 		        {% include header.html %}
 		        {% include page_content.html %}
 		        {% include contact.html %}
 		        {% include footer.html %}
 		        </div>
+		        
 		    <div id="extraScroll">
 		        <img id="downArrow" src="images/downarrow.svg">
 		        <div id="presentText">
@@ -54,7 +52,10 @@
 		    var browserURLinput = document.getElementById("browserURLinput");
 		    var downArrowEl = document.getElementById("downArrow");
 		    var extraScrollEl = document.getElementById("extraScroll");
-		    var fixedBackground = document.getElementById("codeFixed");
+		    var scrollDelta = 0;
+		    var lastScroll = 0;
+		    var extraScrollHeight;
+		    
 		    var ciframe;
 		    
 	        var navEl = document.getElementsByClassName("navbar")[0];
@@ -70,31 +71,43 @@
 	        function resize() {
 	            pageHeight = pageContentEl.offsetHeight;
 	            windowHeight = window.innerHeight;
+	            extraScrollHeight = extraScrollEl.offsetHeight;
 	        }
 	         window.addEventListener("resize", resize, false);
 	         resize();
 	         
-	         var hidingTimeout;
+	        var hidingTimeout;
+	        
+	        var revealing = false;
+	        function revealPresentation() {
+	           revealing = true;
+	           $('html, body').animate({
+                   scrollTop: $("#contact").offset().top
+                 }, 1000, function() {
+                    revealing = false;
+                 });
+                 
+	        }
 	        
 	        function scrollChange() {
+	            var currScroll = window.scrollY;
+	            scrollDelta = currScroll - lastScroll;
+	            lastScroll = currScroll;
+	            
 	            var scrollBottom = windowHeight + window.scrollY;
 	            
-	            if (scrollBottom >= pageHeight && backgroundIsHidden) {
-	                fixedBackground.style.visibility = "visible";
-	                backgroundIsHidden = false;
-	            } else if (scrollBottom < pageHeight && !backgroundIsHidden) {
-	                fixedBackground.style.visibility = "hidden";
-	                backgroundIsHidden = true;
+	            if (scrollBottom >= pageHeight + extraScrollHeight / 2 && !revealing && scrollDelta > 0) {
+	                revealPresentation();
 	            }
 	            
-	            if (window.scrollY >= pageHeight && !navIsHidden) {
+	            
+	            if (currScroll + 10 >= pageHeight && !navIsHidden) {
 	                clearTimeout(hidingTimeout);
 	                function checkiframeReadyState() {
 	                    if (!iframeLoaded) {
 	                        requestAnimationFrame(checkiframeReadyState);
 	                        return;
 	                    }
-	                    iframeWrapperEl.style.visibility = "visible";
 	                    navEl.classList.add("tucked");
 	                    iframeWrapperEl.classList.add("presenting");
 	                    iframeInnerEl.classList.add("presenting");
@@ -103,19 +116,18 @@
 	                }
 	                requestAnimationFrame(checkiframeReadyState);
 	                navIsHidden = true;
-	            } else if (window.scrollY < pageHeight && navIsHidden) {
+	            } else if (currScroll + 10 < pageHeight && navIsHidden) {
 	                navEl.classList.remove("tucked");
 	                iframeWrapperEl.classList.remove("presenting");
 	                iframeInnerEl.classList.remove("presenting");
 	                presentTextEl.classList.remove("presenting");
 	                downArrowEl.classList.remove("presenting");
 	                hidingTimeout = window.setTimeout(function() {
-	                    iframeWrapperEl.style.visibility = "hidden";
 	                }, 1000);
 	                navIsHidden = false;
 	            }
 	            
-	            if (window.scrollY >= pageHeight && !iframeRequested) {
+	            if (currScroll + 10 >= pageHeight && !iframeRequested) {
 	                ciframe = document.createElement("iframe");
 	                ciframe.className = "recursiveFrame";
 	                ciframe.frameBorder = "0";
@@ -128,6 +140,8 @@
 	                iframeRequested = true;
 	            }
 	        }
+	        
+	        
 	        
 	        window.onscroll = scrollChange;
 	        scrollChange();
