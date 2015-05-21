@@ -6,20 +6,19 @@
 		<div id="codeFixed">
 		
 		</div>
-		<div id="pageWrapper">
-		    <div id="pageContainer">
 		        <div id="pageContent">
 		        {% include header.html %}
 		        {% include page_content.html %}
 		        {% include contact.html %}
 		        {% include footer.html %}
 		        </div>
-		        
-		    </div>
 		    <div id="extraScroll">
+		        <img id="downArrow" src="images/downarrow.svg">
 		        <div id="presentText">
-	                <h1>Your Project is Next.</h1>
-	                <p>Together we can build something great.<br>Let's get in touch: <a href="mailto:maxlaumeister@gmail.com">max.laumeister@gmail.com</a>
+	                <div id="presentTextInner">
+	                    <h1>Your Project is Next.</h1>
+	                    <p>Together we can build something great.<br>Let's get in touch: <a href="mailto:maxlaumeister@gmail.com">max.laumeister@gmail.com</a>
+	                </div>
 	            </div>
 	            <div id="iframeWrapper">
 	                
@@ -40,22 +39,21 @@
 	                                <img id="browserBack" src="images/backbutton.svg"><img id="browserForward" src="images/backbutton.svg">
 	                            </div>
 	                            <div id="browserURLinputcell">
-	                                <input id="browserURLinput" type="text">
+	                                <input id="browserURLinput" type="text" readonly="readonly">
 	                            </div>
 	                        </div>
 	                    </div>
 	                </div>
 		        </div>
-            </div>
-		</div>
 		<script>
 		    var pageWrapperEl = document.getElementById("pageWrapper");
-		    var pageContainerEl = document.getElementById("pageContainer");
 		    var pageContentEl = document.getElementById("pageContent");
 		    var presentTextEl = document.getElementById("presentText");
 		    var iframeWrapperEl = document.getElementById("iframeWrapper");
 		    var iframeInnerEl = document.getElementById("iframeInner");
 		    var browserURLinput = document.getElementById("browserURLinput");
+		    var downArrowEl = document.getElementById("downArrow");
+		    var extraScrollEl = document.getElementById("extraScroll");
 		    var ciframe;
 		    
 	        var navEl = document.getElementsByClassName("navbar")[0];
@@ -63,21 +61,42 @@
 	        var navIsHidden = false;
 	        var iframeLoaded = false;
 	        
+	        var pageHeight;
+	        
+	        function resize() {
+	            pageHeight = pageContentEl.offsetHeight;
+	        }
+	         window.addEventListener("resize", resize, false);
+	         resize();
+	         
+	         var hidingTimeout;
+	         var appearingTimeout;
+	        
 	        function scrollChange() {
-	            var pageHeight = pageContentEl.offsetHeight;
+	            
+	            var scrollBottom = window.innerHeight + window.scrollY;
+	            
 	            if (window.scrollY >= pageHeight && !navIsHidden) {
-	                navEl.classList.add("tucked");
-	                pageContainerEl.classList.add("presenting");
-	                iframeWrapperEl.classList.add("presenting");
-	                iframeInnerEl.classList.add("presenting");
-	                presentTextEl.classList.add("presenting");
+	                iframeWrapperEl.style.visibility = "visible";
+	                clearTimeout(hidingTimeout);
+	                appearingTimeout = window.setTimeout(function() {
+	                    navEl.classList.add("tucked");
+	                    iframeWrapperEl.classList.add("presenting");
+	                    iframeInnerEl.classList.add("presenting");
+	                    presentTextEl.classList.add("presenting");
+	                    downArrowEl.classList.add("presenting");
+	                }, 500);
 	                navIsHidden = true;
 	            } else if (window.scrollY < pageHeight && navIsHidden) {
 	                navEl.classList.remove("tucked");
-	                pageContainerEl.classList.remove("presenting");
 	                iframeWrapperEl.classList.remove("presenting");
 	                iframeInnerEl.classList.remove("presenting");
 	                presentTextEl.classList.remove("presenting");
+	                downArrowEl.classList.remove("presenting");
+	                clearTimeout(appearingTimeout);
+	                hidingTimeout = window.setTimeout(function() {
+	                    iframeWrapperEl.style.visibility = "hidden";
+	                }, 1000);
 	                navIsHidden = false;
 	            }
 	            
@@ -94,23 +113,6 @@
 	        
 	        window.onscroll = scrollChange;
 	        scrollChange();
-	        
-	        /* Let's make a browser! */
-	        
-	        browserURLinput.onchange = function() {
-	            var lastVal = ciframe.src;
-	            ciframe.src = browserURLinput.value;
-	            
-	            console.log("src", ciframe.src);
-	            if (ciframe.src == lastVal) {
-	                console.log("Site " + browserURLinput.value + " not allowed to be embedded.");
-	                ciframe.src = "noiframe.html?" + encodeURI(browserURLinput.value);
-	            }
-	            
-	            ciframe.onload = function() {
-	                console.log("loaded", ciframe.src);
-	            }
-	        }
 	        
 		</script>
 		{% include js.html %}
