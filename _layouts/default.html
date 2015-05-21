@@ -92,11 +92,11 @@
 	        var scrollingTimeout;
 	        
 	        function scrollChange() {
-	            var currScroll = window.scrollY;
+	            var currScroll = window.pageYOffset;
 	            scrollDelta = currScroll - lastScroll;
 	            lastScroll = currScroll;
 	            
-	            var scrollBottom = windowHeight + window.scrollY;
+	            var scrollBottom = windowHeight + currScroll;
 	            
 	            if (scrollBottom >= pageHeight + extraScrollHeight / 3 && !revealing && scrollDelta > 0) {
 	                clearTimeout(scrollingTimeout);
