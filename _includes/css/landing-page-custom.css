@@ -166,8 +166,6 @@ a.btn > .fa, a.btn > .network-name {
 .intro-message {
     padding-top: 20vh;
     padding-bottom: 20vh;
-    -webkit-transition: padding 500ms ease;
-    transition: padding 500ms ease;
 }
 
 @media (max-height: 870px) {
