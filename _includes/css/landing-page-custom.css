@@ -132,11 +132,6 @@ html {
 	display: none !important;
 }
 
-.intro-message {
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-}
-
 a.btn > .fa, a.btn > .network-name {
     vertical-align: middle;
 }
@@ -168,6 +163,13 @@ a.btn > .fa, a.btn > .network-name {
     background-color: white;
 }
 
+.intro-message {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    -webkit-transition: padding 500ms ease;
+    transition: padding 500ms ease;
+}
+
 @media (max-height: 870px) {
     .intro-message {
         padding-top: 15vh;
@@ -196,8 +198,8 @@ a.btn > .fa, a.btn > .network-name {
     padding: 0 70px;
     opacity: 0;
     filter: alpha(opacity=0);
-    -webkit-transition: all 1s ease;
-            transition: all 1s ease;
+    -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
+            transition: transform 1s ease, opacity 1s ease;
     -webkit-transform: translate(50px, 0);
         -ms-transform: translate(50px, 0);
             transform: translate(50px, 0);
@@ -217,11 +219,11 @@ a.btn > .fa, a.btn > .network-name {
 }
 
 #presentText h1 {
-    font-size: 3em;
+    font-size: 3.5vw;
 }
 
 #presentText p {
-    font-size: 1.5em;
+    font-size: 1.5vw;
 }
 
 #presentText a {
@@ -231,19 +233,19 @@ a.btn > .fa, a.btn > .network-name {
 
 #iframeWrapper {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 58vw;
-    height: 100vh;
+    top: -10vh;
+    left: -6vw;
+    width: 70vw;
+    height: 120vh;
     -webkit-perspective: 600px;
             perspective: 600px;
     -webkit-perspective-origin: 50% 50%;
             perspective-origin: 50% 50%;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-    -webkit-transform: scale(.75, .75);
-        -ms-transform: scale(.75, .75);
-            transform: scale(.75, .75);
+    -webkit-transform: scale(.6, .6);
+        -ms-transform: scale(.6, .6);
+            transform: scale(.6, .6);
     /*-webkit*/
     -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
             transition: transform 1s ease, opacity 1s ease;
