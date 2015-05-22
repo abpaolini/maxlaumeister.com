@@ -86,7 +86,7 @@
 	        function revealPresentation() {
 	           revealing = true;
 	           $('html, body').animate({
-                   scrollTop: $("#contact").offset().top
+                   scrollTop: $(document).height()-$(window).height()-1
                  }, 750, function() {
                     revealing = false;
                  });
