@@ -71,12 +71,12 @@
 	        
 	        var resizeFrame;
 	        function resize() {
-	            cancelAnimationFrame(resizeFrame);
-	            resizeFrame = requestAnimationFrame(function(){
+	            clearTimeout(resizeFrame);
+	            resizeFrame = setTimeout(function(){
 	                pageHeight = pageContentEl.offsetHeight;
 	                windowHeight = window.innerHeight;
 	                extraScrollHeight = extraScrollEl.offsetHeight;
-	            });
+	            }, 1000);
 	        }
 	         window.addEventListener("resize", resize, false);
 	         resize();
