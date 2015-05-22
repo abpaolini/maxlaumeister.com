@@ -69,10 +69,14 @@
 	        var pageHeight;
 	        var windowHeight;
 	        
+	        var resizeFrame;
 	        function resize() {
-	            pageHeight = pageContentEl.offsetHeight;
-	            windowHeight = window.innerHeight;
-	            extraScrollHeight = extraScrollEl.offsetHeight;
+	            cancelAnimationFrame(resizeFrame);
+	            resizeFrame = requestAnimationFrame(function(){
+	                pageHeight = pageContentEl.offsetHeight;
+	                windowHeight = window.innerHeight;
+	                extraScrollHeight = extraScrollEl.offsetHeight;
+	            });
 	        }
 	         window.addEventListener("resize", resize, false);
 	         resize();
@@ -92,7 +96,6 @@
 	        var scrollingTimeout;
 	        
 	        function scrollChange() {
-	            
 	            // Return if we're using the compact layout without the fancy box at the bottom
 	            if (window.matchMedia("(max-width: 1000px)").matches || window.matchMedia("(max-height: 500px)").matches) return;
 	            
