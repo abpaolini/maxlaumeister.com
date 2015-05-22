@@ -92,6 +92,10 @@
 	        var scrollingTimeout;
 	        
 	        function scrollChange() {
+	            
+	            // Return if we're using the compact layout without the fancy box at the bottom
+	            if (window.matchMedia("(max-width: 1000px)").matches || window.matchMedia("(max-height: 500px)").matches) return;
+	            
 	            var currScroll = window.pageYOffset;
 	            scrollDelta = currScroll - lastScroll;
 	            lastScroll = currScroll;
