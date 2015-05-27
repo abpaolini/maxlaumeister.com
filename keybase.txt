@@ -1,0 +1,76 @@
+I hereby claim:
+
+  * I am an admin of http://maxlaumeister.com
+  * I am maxlaumeister (https://keybase.io/maxlaumeister) on keybase.
+  * I have a public key with fingerprint 9476 EFF4 D105 74EA FC71  26AB 7BB6 8D95 2F09 7238
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.8"
+        },
+        "key": {
+            "fingerprint": "9476eff4d10574eafc7126ab7bb68d952f097238",
+            "host": "keybase.io",
+            "key_id": "7BB68D952F097238",
+            "uid": "dac01cb3398ef12eac97052d4961ab19",
+            "username": "maxlaumeister"
+        },
+        "merkle_root": {
+            "ctime": 1432753430,
+            "hash": "ce391175ace9db092918d66ce026c5e521d36696ebda0ba96910d19558d1dbbc95adc859374890d93a04c9912a4f4cbc2d16ab0124ae541bfd1432997221d776",
+            "seqno": 230081
+        },
+        "service": {
+            "hostname": "maxlaumeister.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1432753565,
+    "expire_in": 157680000,
+    "prev": "16c4c8d22417bc8c23b922769d292029f5815ef6ddfcb8800ea8e891363249a3",
+    "seqno": 15,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFtknlMFVcUxt9jp4ugxRSrQZyKSgScO/ulqBWpVKlJVRqkpnnOXQZG4M1j3nss
+4otG07pE4kpTtwQNbYqlSgICUolrMdqk1pZAiS2moGLFYEOrgSC0M4YuJr1/3XvP
+73znfOfevS8HO4KcFU2VVQsiTcX5za/I8Z429VgFgwxSzqRWMLhQp26fvXOrRZRJ
+ZQpoOVK9NEU34t0GoSkbvPETTBJTQk2vbrgtik2RUxQmkGTjdrKmu/Oo6TF1W4uB
+gixRTRMIYEVZoKqGZcBJKpIRkhQCRU5joczxiiWZb3h9z1Vlnmm6dGLdyunpkpJh
+8cv+4f3PAkTFLMCI56FCNcBRFUOZFTkiQAmoCEAb9FJzwlKRWlao+ouo7vVR0266
+iJoFhdRlGsYz59in2xwQeE4WeYFnrbZUb76ViSkPAZBFFVNIEAs5CBQiSZiynIRF
+KnKA8JIEJYqIyiIVShCwBEBRVAggCGEoqgQrIuRlQYEsgbzKChhCwKmCJmCEOQKs
+sbCAE1QqCgBpxG4CWmYtZVmWLB9eWuw2mFSOZ1kFBOyzWaJjavdtz+7/LKZgo8jK
+9JiGz8BGoRXO9/k8qbZzX0u5x+ZLKXJNKLmQ7ibW8/33fe1Cz09FlMQkhpZ5dJO6
+dJsQZUlhrWXXoSWWJJCwgBXCcQKQEVYwxyPIcbIECQc5loOaqACRahIhGkaKlUtV
+hSoQ8BLPCVDl//UKrFI+Nc/S9Op5btXnNykT2Bk0I8ThDHKEhQbZP9jxQmT039+6
+c3K0Y8/BQ10NIcFtZ8bQshlh9WsO7dvS/XhjIL3n7cZX1q2tDYx+1tF5rG7p/Psp
+gaDk+d9eGlidyXoXhTdUyHdnX35wr+nrKl/7g9j1rQmZc6pjuy/FTo65EOtCP/82
+d7PjtPPPrO09V0o+7ti+dIVzrGLLut3nBh/WHenwjH/fvHtfblri/dGnya5gPDNx
+4Vsj9GDWgYaoI+tLc84urcmdGdwU93rzDE908vXRtFVbB5IPN+1oRBfbXkvU1UHD
+vyeOrAGFNyO/Gsy+VTXt8eW1mf4lG8RJuNDfkfnJyrS91U7/tdvkncrs2Kmnkx71
+/Xgnm6y8UdPo4258USpvmRa2qDo05NwwLhi+2VHbvslTdvw8c3FscFbMyMOhqKie
+BQeKB7irCfVR+1yZ3dpQb2rZFNDp/elNZ9zTzrNd4XepcuK7jI1zIsb2F5OMEalg
+3vaX/jg+dVcgoTx72+2Ze/qfnOyqnL7SWN5fGvHq4uYlq08Vqav6o1tqHm3qi/p0
+4bvb+lMvjKeVtRy4FpjeNXSn4MwH6OiCW+uvHpOznrQ2ZmbE5D6pbJ22OXlKSM4O
+1Ddp71y1Xm7p/b1toGTx3Tg0L3jnlfgXZ22uGg4/Gba89I3wZR/GnAqK/LI03nU+
+omv83q66oy0jIxnlvzg/YkW3VPto6+ww3hyhnvrrP3x+WHC0O3sP5dSbVSfeD+ND
+V8T8BQ==
+=oh/d
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/maxlaumeister
