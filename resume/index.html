@@ -54,14 +54,20 @@
             #loading {
                 height: 100%;
                 width: 100%;
-                background-color: rgba(255, 255, 255, 0.8);
+                background-color: white;
             }
             
-            #loading .spinner {
+            .spinnerWrapper {
                 position: relative;
                 top: 50%;
                 -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
+            }
+            
+            #loadingText {
+                text-align: center;
+                margin-top: 1.5em;
+                font-size: 1.5em;
             }
             
             #linkhome {
@@ -196,25 +202,28 @@
             </a>
         </div>
         <div id="loading">
-            <div class="spinner">
-              <div class="spinner-container container1">
-                <div class="circle1"></div>
-                <div class="circle2"></div>
-                <div class="circle3"></div>
-                <div class="circle4"></div>
-              </div>
-              <div class="spinner-container container2">
-                <div class="circle1"></div>
-                <div class="circle2"></div>
-                <div class="circle3"></div>
-                <div class="circle4"></div>
-              </div>
-              <div class="spinner-container container3">
-                <div class="circle1"></div>
-                <div class="circle2"></div>
-                <div class="circle3"></div>
-                <div class="circle4"></div>
-              </div>
+            <div class="spinnerWrapper">
+                <div class="spinner">
+                  <div class="spinner-container container1">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                  </div>
+                  <div class="spinner-container container2">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                  </div>
+                  <div class="spinner-container container3">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                  </div>
+                </div>
+                <h1 id="loadingText">Loading...</h1>
             </div>
         </div>
         <script>
