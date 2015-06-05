@@ -1,2 +1,16 @@
 User-agent: *
-Disallow: /downloads/resume-laumeister.pdf
+Disallow: /downloads/resume-laumeister.pdf # This is a web page now, at /resume/
+Disallow: /keybase.txt # Because why spam google results with this?
+
+# You're not a robot, so enjoy some art!
+#
+# ░░░░░░░░░░░░░░░░░░░░
+# ░░░░░░▄▀▀▄▀▀▄░░░░░░░
+# ░░░░░█▒▄░▄░░▒█▄▄▄░░░
+# ░░░▄▄█░▀░▀░░░█▄▓▓█░░
+# ░▄▀▒▒▒▀▄▀▄▄▄▀▒▒▀█▓▄░
+# ▄▀▀▒▀▒▒▒▒▒░░░▒▒▒█▓▓█
+# █▒▒▒▒▒▒▒▒▄░░░░▒▒██▀░
+# ▀▄▒▒▒▒▒▒▒█▀░░▒▄█▄▀░░
+# ░░▀▀▄▄▄▄█▄░░▒▒▀▄█▄▄░
+
