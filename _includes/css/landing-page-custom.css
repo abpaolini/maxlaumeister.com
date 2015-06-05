@@ -29,6 +29,11 @@ html {
 	text-decoration: underline;
 }
 
+.github-fork-ribbon-wrapper {
+    top: 50px;
+    z-index: 1;
+}
+
 .banner h3 > a {
 	color: #7DC4FF;
 }

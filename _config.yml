@@ -36,3 +36,10 @@ social:
     icon: align-left
     url: http://blog.maxlaumeister.com/
 
+# ----------------------------------- #
+#   Am I ready to be hired right now  #
+#   (i.e. not currently employed)     #
+# ----------------------------------- #
+
+readyforwork: no
+
