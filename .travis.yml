@@ -16,4 +16,6 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
   
 after_success:
+  - cp ./_site/robots-surge.txt ./_site/robots.txt
   - surge --project ./_site/ --domain ssl.maxlaumeister.com
+
