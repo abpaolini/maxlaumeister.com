@@ -18,6 +18,9 @@ description: > # "Write an awesome description for your new site here.
 markdown: kramdown
 permalink: pretty
 
+# For Travis CI
+exclude: [vendor]
+
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
