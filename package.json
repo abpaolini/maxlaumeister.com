@@ -1,0 +1,21 @@
+{
+  "name": "maxlaumeister.github.io",
+  "version": "0.0.0",
+  "description": "Portfolio of Maximillian Laumeister",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MaxLaumeister/maxlaumeister.github.io.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/MaxLaumeister/maxlaumeister.github.io/issues"
+  },
+  "devDependencies": {
+    "surge": "~0.13.0"
+  }
+}
