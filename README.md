@@ -1,4 +1,4 @@
-## Blog
+## Blog - Max Laumeister
 
 [![Build Status](https://travis-ci.org/MaxLaumeister/bitlisten.svg?branch=gh-pages)](https://travis-ci.org/MaxLaumeister/blog.maxlaumeister.com)
 
