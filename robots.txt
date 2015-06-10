@@ -1,7 +1,7 @@
 User-agent: *
 Disallow: /downloads/resume-laumeister.pdf # This is a web page now, at /resume/
 Disallow: /keybase.txt # Because why spam google results with this?
-Disallow: /about.txt
+Disallow: /a
 
 # You're not a robot, so enjoy some art!
 #
