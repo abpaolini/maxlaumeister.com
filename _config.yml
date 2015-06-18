@@ -29,15 +29,19 @@ social:
   - title: Resume
     icon: file-text-o
     url: resume/
+    targetblank: false
   - title: Linkedin
     icon: linkedin
     url: https://www.linkedin.com/in/maxlaumeister
+    targetblank: true
   - title: Github
     icon: github
     url: https://github.com/MaxLaumeister/
+    targetblank: true
   - title: Blog
     icon: align-left
     url: http://blog.maxlaumeister.com/
+    targetblank: true
 
 # ----------------------------------- #
 #   Am I ready to be hired right now  #
