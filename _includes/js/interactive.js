@@ -133,4 +133,15 @@ $(document).ready(function() {
 			requestAnimationFrame(updateCircles);
 		}
 	});
+	
+	// Konami Code easter egg
+	var revealed = false;
+	new Konami(function() {
+	    if (!revealed) {
+	        var kel = $(".intro-message-konami");
+	        kel.html("<br>(I also like the Konami Code.)");
+	        kel.fadeIn(1000);
+	        revealed = true;
+	    }
+	});
 });
