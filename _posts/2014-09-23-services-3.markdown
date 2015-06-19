@@ -14,10 +14,8 @@ description: |
 
   My Role:
   <ul>
-  <li>Designed app including all activities</li>
-  <li>Wrote asynchronous netcode, including HTML parsing routine</li>
-  <li>Wrote UI functions</li>
-  <li>Designed all art and interface elements</li>
+  <li>Designed and implemented user interface for all activities</li>
+  <li>Wrote asynchronous netcode, including HTML parsing code</li>
   </ul>
 
 ---
