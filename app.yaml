@@ -1,4 +1,7 @@
 runtime: python27
+
+application: max-laumeister
+version: 1
 api_version: 1
 threadsafe: true
 
