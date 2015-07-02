@@ -115,7 +115,7 @@ handlers:
   upload: static/(.*\.ttf)
 
 - url: /(.*\.txt)
-  mime_type: text/plain
+  mime_type: text/plain; charset=utf-8
   static_files: static/\1
   upload: static/(.*\.txt)
 
