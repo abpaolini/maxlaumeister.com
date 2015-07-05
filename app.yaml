@@ -116,6 +116,9 @@ handlers:
   mime_type: font/truetype
   static_files: static/\1
   upload: static/(.*\.ttf)
+  http_headers:
+    Access-Control-Allow-Origin: http://www.maxlaumeister.com
+  expiration: "30d"
 
 - url: /(.*\.txt)
   mime_type: text/plain; charset=utf-8
@@ -143,6 +146,7 @@ handlers:
   upload: static/(.*\.woff)
   http_headers:
     Access-Control-Allow-Origin: http://www.maxlaumeister.com
+  expiration: "30d"
   
 - url: /(.*\.woff2)
   mime_type: application/font-woff2
@@ -150,6 +154,7 @@ handlers:
   upload: static/(.*\.woff2)
   http_headers:
     Access-Control-Allow-Origin: http://www.maxlaumeister.com
+  expiration: "30d"
 
 - url: /(.*\.xml)
   mime_type: application/xml
