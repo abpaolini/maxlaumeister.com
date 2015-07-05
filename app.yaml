@@ -141,6 +141,15 @@ handlers:
   mime_type: application/x-font-woff
   static_files: static/\1
   upload: static/(.*\.woff)
+  http_headers:
+    Access-Control-Allow-Origin: http://www.maxlaumeister.com
+  
+- url: /(.*\.woff2)
+  mime_type: application/font-woff2
+  static_files: static/\1
+  upload: static/(.*\.woff2)
+  http_headers:
+    Access-Control-Allow-Origin: http://www.maxlaumeister.com
 
 - url: /(.*\.xml)
   mime_type: application/xml
@@ -179,15 +188,18 @@ handlers:
   static_files: static/\1/index.html
   upload: static/(.+)/index.html
   expiration: "15m"
+  secure: never
 
 - url: /(.+)
   static_files: static/\1/index.html
   upload: static/(.+)/index.html
   expiration: "15m"
+  secure: never
 
 # site root
 - url: /
   static_files: static/index.html
   upload: static/index.html
   expiration: "15m"
+  secure: never
 
