@@ -4,14 +4,20 @@ category: Services
 title: Puff
 elementId: puff
 
-useLeanback: true
-leanbackThumbnail: puff.png
-leanbackSourcesMP4: 
-  - puff.mp4
-  - puff-360p.mp4
-leanbackSourcesWebM: 
-  - puff.webm
-  - puff-360p.webm
+video_thumb: puff.png
+video_sources:
+ - url: puff.mp4
+   type: video/mp4
+   res: 720
+ - url: puff-360p.mp4
+   type: video/mp4
+   res: 360
+ - url: puff.webm
+   type: video/webm
+   res: 720
+ - url: puff-360p.webm
+   type: video/webm
+   res: 360
 
 description: |
   Overview:

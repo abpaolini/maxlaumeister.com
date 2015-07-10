@@ -4,14 +4,20 @@ category: Services
 title: Automatune
 elementId: automatune
 
-useLeanback: true
-leanbackThumbnail: automatune.png
-leanbackSourcesMP4: 
-  - automatune.mp4
-  - automatune-360p.mp4
-leanbackSourcesWebM: 
-  - automatune.webm
-  - automatune-360p.webm
+video_thumb: automatune.png
+video_sources:
+ - url: automatune.mp4
+   type: video/mp4
+   res: 720
+ - url: automatune-360p.mp4
+   type: video/mp4
+   res: 360
+ - url: automatune.webm
+   type: video/webm
+   res: 720
+ - url: automatune-360p.webm
+   type: video/webm
+   res: 360
 
 description: |
   Overview:

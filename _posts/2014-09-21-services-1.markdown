@@ -4,14 +4,20 @@ category: Services
 title: BitListen
 elementId: bitlisten
 
-useLeanback: true
-leanbackThumbnail: bitlisten.png
-leanbackSourcesMP4: 
-  - bitlisten.mp4
-  - bitlisten-360p.mp4
-leanbackSourcesWebM: 
-  - bitlisten.webm
-  - bitlisten-360p.webm
+video_thumb: bitlisten.png
+video_sources:
+ - url: bitlisten.mp4
+   type: video/mp4
+   res: 720
+ - url: bitlisten-360p.mp4
+   type: video/mp4
+   res: 360
+ - url: bitlisten.webm
+   type: video/webm
+   res: 720
+ - url: bitlisten-360p.webm
+   type: video/webm
+   res: 360
 
 description: |
   Overview:

@@ -1,31 +1,10 @@
-{% if post.useLeanback %}
-    <div class="leanback-player-video">
-        <video width="450" height="253" preload="metadata" controls poster="{{ post.leanbackThumbnail | asset_path }}">
-            {% for source in post.leanbackSourcesMP4 %}
-                <source src="{{ source | asset_path }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-            {% endfor %}
-            {% for source in post.leanbackSourcesWebM %}
-                <source src="{{ source | asset_path }}" type='video/webm; codecs="vp8, vorbis"' />
-            {% endfor %}
-            <object class="leanback-player-flash-fallback" width="640" height="253" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer.swf">
-                <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer.swf" />
-                <param name="allowFullScreen" value="true" />
-                <param name="wmode" value="opaque" />
-                <param name="bgcolor" value="#000000" />
-                <param name="flashVars" value="config={'playlist':['{{ post.leanbackThumbnail | asset_path }}', 
-                        {'url':'{{ post.leanbackSourcesMP4[0] }}','autoPlay':false,'autobuffering':true}]}" />
-            </object>
-
-            <div class="leanback-player-html-fallback" style="width: 450px; height: 253px;">
-                <img src="{{ post.leanbackThumbnail | asset_path }}" width="450" height="253" alt="Poster Image" 
-                    title="No HTML5-Video playback capabilities found. Please download the video(s) below." />
-                <div>
-                    <strong>Download Video:</strong>
-                    <a href="{{ post.leanbackSourcesMP4[0] }}">.mp4</a>
-                </div>
-            </div>
-        </video>
-    </div>
+{% if post.video_sources %}
+    <video class="video-js vjs-default-skin" controls preload="none" width="450" height="253" poster="{{ post.video_thumb | asset_path }}" data-setup='{ "plugins" : { "resolutionSelector" : { "default_res" : "720" } } }'>
+        {% for source in post.video_sources %}
+            <source src="{{ source.url | asset_path }}" type='{{ source.type }}' data-res='{{ source.res }}' />
+        {% endfor %}
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
 {% endif %}
 {% if post.youtubeId %}
 	<div class="lazyYT" data-youtube-id="{{ post.youtubeId }}" data-ratio="16:9" data-parameters="rel=0&amp;modestbranding=1&amp;showinfo=0">loading...</div>
