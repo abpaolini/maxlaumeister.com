@@ -3,7 +3,16 @@ layout: default
 category: Services
 title: UCSC Class Search
 elementId: ucsc-class-search
-youtubeId: dvpW7P2QRyk
+
+useLeanback: true
+leanbackThumbnail: classsearch.png
+leanbackSourcesMP4: 
+  - classsearch.mp4
+  - classsearch-360p.mp4
+leanbackSourcesWebM: 
+  - classsearch.webm
+  - classsearch-360p.webm
+
 description: |
   Overview:
   <ul>

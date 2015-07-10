@@ -3,7 +3,16 @@ layout: default
 category: Services
 title: Immunogen
 elementId: immunogen
-youtubeId: CahGpPaaBR0
+
+useLeanback: true
+leanbackThumbnail: immunogen.png
+leanbackSourcesMP4: 
+  - immunogen.mp4
+  - immunogen-360p.mp4
+leanbackSourcesWebM: 
+  - immunogen.webm
+  - immunogen-360p.webm
+
 description: |
   Overview:
   <ul>

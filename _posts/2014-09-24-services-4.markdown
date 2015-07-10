@@ -3,7 +3,16 @@ layout: default
 category: Services
 title: Puff
 elementId: puff
-youtubeId: xc7AG3udtZI
+
+useLeanback: true
+leanbackThumbnail: puff.png
+leanbackSourcesMP4: 
+  - puff.mp4
+  - puff-360p.mp4
+leanbackSourcesWebM: 
+  - puff.webm
+  - puff-360p.webm
+
 description: |
   Overview:
   <ul>

@@ -3,7 +3,16 @@ layout: default
 category: Services
 title: BitListen
 elementId: bitlisten
-youtubeId: AVnOPzF4BBE
+
+useLeanback: true
+leanbackThumbnail: bitlisten.png
+leanbackSourcesMP4: 
+  - bitlisten.mp4
+  - bitlisten-360p.mp4
+leanbackSourcesWebM: 
+  - bitlisten.webm
+  - bitlisten-360p.webm
+
 description: |
   Overview:
   <ul>

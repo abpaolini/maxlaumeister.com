@@ -3,7 +3,16 @@ layout: default
 category: Services
 title: Automatune
 elementId: automatune
-youtubeId: rU6m4N4Okv8
+
+useLeanback: true
+leanbackThumbnail: automatune.png
+leanbackSourcesMP4: 
+  - automatune.mp4
+  - automatune-360p.mp4
+leanbackSourcesWebM: 
+  - automatune.webm
+  - automatune-360p.webm
+
 description: |
   Overview:
   <ul>

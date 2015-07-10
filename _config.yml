@@ -54,6 +54,7 @@ assets:
   #
   # Base URL of assets paths.
   #
+  #baseurl: assets/
   baseurl: https://max-laumeister.appspot.com/assets/
   #
   # Pathnames where to find assets relative to the root of the site.
@@ -62,6 +63,7 @@ assets:
     - _assets/js
     - _assets/css
     - _assets/img
+    - _assets/video
   #
   # Sets JS compressor. No compression by default.
   # Possible variants: 'yui', 'uglifier', nil

@@ -14,11 +14,7 @@
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <div class="postimg img-responsive">
-						{% if post.youtubeId %}
-							<div class="lazyYT" data-youtube-id="{{ post.youtubeId }}" data-ratio="16:9" data-parameters="rel=0&amp;modestbranding=1&amp;showinfo=0">loading...</div>
-						{% elsif post.img %}
-							<img src="{{ post.img }}" />
-						{% endif %}
+                            {% include post_content.html %}
                     </div>
                 </div>
             </div>
@@ -41,11 +37,7 @@
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
                   <div class="postimg img-responsive">
-						{% if post.youtubeId %}
-							<div class="lazyYT" data-youtube-id="{{ post.youtubeId }}" data-ratio="16:9" data-parameters="rel=0&amp;modestbranding=1&amp;showinfo=0">loading...</div>
-						{% elsif post.img %}
-							<img src="{{ post.img }}" />
-						{% endif %}
+						{% include post_content.html %}
                     </div>
                 </div>
             </div>
