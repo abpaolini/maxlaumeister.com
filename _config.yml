@@ -2,7 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://www.maxlaumeister.com
+url: http://www.maxlaumeister.com # For index pages
+ext_url: https://max-laumeister.appspot.com # For js, css, etc
 title: Maximillian Laumeister
 email: max.laumeister@gmail.com
 description: 
