@@ -4,7 +4,7 @@ category: Services
 title: Immunogen
 elementId: immunogen
 
-video_thumb: immunogen.png
+video_thumb: immunogen.jpg
 video_sources:
  - url: immunogen.mp4
    type: video/mp4

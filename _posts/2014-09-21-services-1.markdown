@@ -4,7 +4,7 @@ category: Services
 title: BitListen
 elementId: bitlisten
 
-video_thumb: bitlisten.png
+video_thumb: bitlisten.jpg
 video_sources:
  - url: bitlisten.mp4
    type: video/mp4
