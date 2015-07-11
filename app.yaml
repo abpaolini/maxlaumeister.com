@@ -69,21 +69,25 @@ handlers:
   mime_type: video/m4v
   static_files: static/\1
   upload: static/(.*\.m4v)
+  expiration: "30d"
 
 - url: /(.*\.mp4)
   mime_type: video/mp4
   static_files: static/\1
   upload: static/(.*\.mp4)
+  expiration: "30d"
 
 - url: /(.*\.(ogg|oga))
   mime_type: audio/ogg
   static_files: static/\1
   upload: static/(.*\.(ogg|oga))
+  expiration: "30d"
 
 - url: /(.*\.ogv)
   mime_type: video/ogg
   static_files: static/\1
   upload: static/(.*\.ogv)
+  expiration: "30d"
 
 - url: /(.*\.otf)
   mime_type: font/opentype
@@ -111,6 +115,7 @@ handlers:
   mime_type: application/x-shockwave-flash
   static_files: static/\1
   upload: static/(.*\.swf)
+  expiration: "30d"
 
 - url: /(.*\.ttf)
   mime_type: font/truetype
@@ -134,11 +139,13 @@ handlers:
   mime_type: video/webm
   static_files: static/\1
   upload: static/(.*\.webm)
+  expiration: "30d"
 
 - url: /(.*\.webp)
   mime_type: image/webp
   static_files: static/\1
   upload: static/(.*\.webp)
+  expiration: "30d"
 
 - url: /(.*\.woff)
   mime_type: application/x-font-woff
