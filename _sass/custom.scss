@@ -49,11 +49,33 @@ header h1:hover {
 }
 
 pre {
-    margin-left: 2em;
+    max-width: 100%;
+    overflow: auto;
 }
 
 code {
-    background: none;
+    color: black;
+    font-size: 0.9em;
+    padding: 0.1em 0.5em;
+    border-radius: 0.4em;
+    background-color: #DBDBDB;
+}
+
+pre code {
+    color: white;
+    display: inline-block;
+    min-width: 100%;
+    border-radius: 0;
+    padding: 1em;
+    background-color: black;
+}
+
+pre code::selection {
+  background: #CCCCCC; /* WebKit/Blink Browsers */
+}
+
+pre code::-moz-selection {
+  background: #CCCCCC; /* Gecko Browsers */
 }
 
 .floatleft {

@@ -97,25 +97,29 @@ For OS X 10.8 Mountain Lion and earlier, [use WaterRoof to configure bandwidth r
 
 There are comparatively many tools for limiting bandwidth on Linux compared to Windows and Mac OS, but I've found that not all of them are as reliable as others. [Trickle](http://linux.die.net/man/1/trickle) is a popular way to limit a program’s bandwidth, but after a few tests under Linux Mint 17.1, I found it to consistently crash Bitcoin Core after a few hours of uptime. [Wondershaper](https://github.com/magnific0/wondershaper) is another “plug and go” bandwidth limiting solution, but only allows bandwidth limiting on an entire adapter, not for a specific application or port. [Tc](http://linux.die.net/man/8/tc) isn’t as user-friendly as the other two, but in my tests it has been the most reliable, so that’s what we will use for this tutorial.
 
-1. Make sure you have tc installed by typing `tc` at the command line. If you get “command not found”, install tc using your favorite package manager. If you're on a Debian-based distribution, the easiest way to install tc is by using the commands `sudo apt-get update`, then `sudo apt-get install tc`.
+1. Make sure you have tc installed by typing `tc` at the command line. If you get “command not found”, install tc using your favorite package manager. If you're on a Debian-based distribution, the easiest way to install tc is by using `apt-get`:
 
-2. Download the tc.sh script from the official Bitcoin Core repository by using the command:
+       sudo apt-get update
 
-    `wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/contrib/qos/tc.sh`
+       sudo apt-get install tc
+
+2. Download the tc.sh script from the official Bitcoin Core repository using wget:
+
+       wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/contrib/qos/tc.sh
 
 3. Open the script in a text editor. Find the line that says `IF="eth0"` and change `eth0` to reflect the network interface that your internet connection runs through. To get a list of your computer's network interfaces, use `ifconfig` on the command line. My computer is connected wirelessly through `wlan1`, so the IF line of my tc.sh looks like this:
 
-    `IF="wlan1"`
+       IF="wlan1"
 
 4. LINKCEIL should reflect the limit of the network interface, and most likely does not need to be changed.
 
-    `LINKCEIL="1gbit"`
+       LINKCEIL="1gbit"
 
 5. Change LIMIT to be the maximum bandwidth you want Bitcoin Core to use (I chose 1mbit). If you don’t have any other Bitcoin Core nodes in your local network, you can delete the line that says LOCALNET. This line is there to make a bandwidth exception for port 8333 communications within your local network (i.e. not out to the internet).
 
-    `LIMIT="1mbit"`
+       LIMIT="1mbit"
 
-    Leave the rest of the commands in tc.sh alone unless you know what you're doing. The top section of my tc.sh ended up looking like this:
+    Leave the rest of the commands in tc.sh alone unless you know what you're doing. The final top section of my tc.sh ended up looking like this:
 
         #network interface on which to limit traffic
         IF="wlan1"
@@ -128,13 +132,13 @@ There are comparatively many tools for limiting bandwidth on Linux compared to W
 
 6. Exit your editor and make the script executable with the following command:
 
-    `chmod +x ./tc.sh`
+       chmod +x ./tc.sh
 
 7. Run the script as superuser:
 
-    `sudo ./tc.sh`
+       sudo ./tc.sh
 
-Your Bitcoin Core bandwidth will be throttled until you reboot your computer. The steps for getting the bash script to run on boot will vary depending on your Linux distribution. On Ubuntu, [one of the ways to run a script on boot](http://askubuntu.com/a/1199/379181) is by adding the script to your `/etc/rc.local` file.
+Your Bitcoin Core bandwidth will be throttled until you reboot your computer. Optionally, you can set the script to run every time you boot your computer. Instructions for running scripts on boot will vary depending on your Linux distribution. On Ubuntu, [one of the ways to run a script on boot](http://askubuntu.com/a/1199/379181) is by adding the script to your `/etc/rc.local` file.
 
 ### Conclusion
 
