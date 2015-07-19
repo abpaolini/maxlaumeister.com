@@ -24,6 +24,7 @@ header h1:hover {
 .sharebuttons {
     display: inline-block;
     height: 20px;
+    margin: 0 0.5em;
 }
 
 .sharebuttons > div, .sharebuttons > iframe {
@@ -41,7 +42,33 @@ header h1:hover {
 .by-line > time, .by-line > span {
     vertical-align: top;
     line-height: 20px;
-    margin-right: 1em;
+}
+
+#footnote-bio {
+    display: table;
+    
+    > div {
+        display: table-row;
+        > div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    
+    .image-container {
+        width: 180px;
+        img {
+            display: inline;
+            margin: 0;
+        }
+    }
+    
+    p {
+        margin-bottom: 0.5em;
+        a {
+            font-weight: normal;
+        }
+    }
 }
 
 #posts, .post > p {
@@ -161,6 +188,14 @@ hr {
 
 h4 {
     font-size: 1em;
+}
+
+.sharingContainer {
+    margin: 1.333em 0;
+
+    > * {
+        vertical-align: middle;
+    }
 }
 
 footer {
