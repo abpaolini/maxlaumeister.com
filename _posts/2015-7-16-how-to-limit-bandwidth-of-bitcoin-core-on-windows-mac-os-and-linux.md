@@ -18,13 +18,13 @@ This guide will walk you through how to properly limit the outgoing bandwidth fo
 
 #### Section Navigation
 
-- [Windows](#windows)
-- [Mac OS X](#macosx)
-- [Linux](#linux)
+- <a data-scroll href="#windows">Windows</a>
+- <a data-scroll href="#macosx">Mac OS X</a>
+- <a data-scroll href="#linux">Linux</a>
 
 ---
 
-<a name="windows"></a>
+<a id="windows" name="windows"></a>
 
 ### Limiting Bitcoin Bandwidth on Windows
 
@@ -51,7 +51,7 @@ On Windows, there are a few choices available for limiting the bandwidth of an a
 
 6. You’re done! NetBalancer will now sit in the background and make sure Bitcoin Core doesn’t use more bandwidth than you want it to.
 
-<a name="macosx"></a>
+<a id="macosx" name="macosx"></a>
 
 ### Limiting Bandwidth on Mac OS X
 
@@ -91,7 +91,7 @@ For OS X 10.9 Mavericks, [use IceFloor to configure bandwidth rules](http://www.
 
 For OS X 10.8 Mountain Lion and earlier, [use WaterRoof to configure bandwidth rules](http://naleid.com/blog/2008/10/06/how-the-other-half-lives-bandwidth-throttling-on-the-mac-using-waterroofipfw). We want to limit outgoing traffic on TCP Port 8333. Alternatively, if you want a simple way to control the overall system bandwidth limit instead of just Bitcoin Core, follow the instructions above for OS X 10.10 Yosemite and later.
 
-<a name="linux"></a>
+<a id="linux" name="linux"></a>
 
 ### Limiting Bandwidth on Linux
 
