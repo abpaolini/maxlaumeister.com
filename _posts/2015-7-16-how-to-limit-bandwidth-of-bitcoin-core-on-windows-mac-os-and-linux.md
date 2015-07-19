@@ -82,13 +82,9 @@ From now on, you can enable/disable Network Link Conditioner from System Prefere
 
 Mac OS will place an icon in your notification tray so you remember that it’s on. Unlike the Windows/Linux solutions, this will limit the bandwidth for your entire system, so be sure to turn it off you’re not running Bitcoin Core.
 
-#### OS X 10.9 Mavericks
+#### OS X 10.9 Mavericks and earlier
 
-For OS X 10.9 Mavericks, [use IceFloor to configure bandwidth rules](http://www.techrepublic.com/article/configure-apples-built-in-network-firewall-with-icefloor/). We want to limit outgoing traffic on TCP Port 8333. Alternatively, if you want a simple way to control the overall system bandwidth limit instead of just Bitcoin Core, follow the instructions above for OS X 10.10 Yosemite and later.
-
-#### OS X 10.8 Mountain Lion and earlier
-
-For OS X 10.8 Mountain Lion and earlier, [use WaterRoof to configure bandwidth rules](http://naleid.com/blog/2008/10/06/how-the-other-half-lives-bandwidth-throttling-on-the-mac-using-waterroofipfw). We want to limit outgoing traffic on TCP Port 8333. Alternatively, if you want a simple way to control the overall system bandwidth limit instead of just Bitcoin Core, follow the instructions above for OS X 10.10 Yosemite and later.
+For OS X 10.9 Mavericks, [use IceFloor to configure bandwidth rules](http://www.techrepublic.com/article/configure-apples-built-in-network-firewall-with-icefloor/). For OS X 10.8 Mountain Lion and earlier, [use WaterRoof to configure bandwidth rules](http://naleid.com/blog/2008/10/06/how-the-other-half-lives-bandwidth-throttling-on-the-mac-using-waterroofipfw). We want to limit outgoing traffic on TCP Port 8333. Alternatively, if you want a simple way to control the overall system bandwidth limit instead of just Bitcoin Core, follow the instructions above for OS X 10.10 Yosemite and later.
 
 <a id="linux" name="linux"></a>
 
