@@ -38,16 +38,16 @@ On Windows, there are a few choices available for limiting the bandwidth of an a
 
 3. Run NetBalancer and you should see a GUI that looks similar to this:
 
-    ![NetBalancer GUI](/img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/netbalancer-1.png)
+    ![NetBalancer GUI](../img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/netbalancer-1.png)
 
-4. Find “bitcoin-qt.exe” in the list of running applications in the NetBalancer dialog, and double-click it to change its bandwidth rules.
+4. Find “bitcoin-qt.exe” in the list of running applications in the NetBalancer dialog and double-click it to change its bandwidth rules.
 
-5. Under “Upload Priority”, choose “Limited”, and set the maximum amount of bandwidth for Bitcoin Core to use. Keep in mind that 1KBps (Kilobyte per second, note the uppercase "B") is 8 times as much as 1Kbps (Kilobit per second, lowercase "b"). NetBalancer measures in Kilobytes (KB) by default, but your internet connection is likely measured in Megabits (Mb). So for example if you want to limit Bitcoin Core's bandwidth to 8Mb/s, you will need to enter 1000KB/s into NetBalancer.
+5. Under “Upload Priority” choose “Limited”, and set the maximum amount of bandwidth for Bitcoin Core to use. Keep in mind that 1KB/s (Kilobyte per second, note the uppercase "B") is 8 times as much as 1Kb/s (Kilobit per second, lowercase "b"). NetBalancer measures in Kilobytes (KB) by default, but your internet connection is likely measured in Megabits (Mb). So for example, if you want to limit Bitcoin Core's bandwidth to 8Mb/s, you will need to enter 1000KB/s into NetBalancer.
 
-    ![NetBalancer Bandwidth Rules](/img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/netbalancer-2.png)
+    ![NetBalancer Bandwidth Rules](../img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/netbalancer-2.png)
     The "bitcoin-qt.exe" entry should show the new rule under the "Priority" column:
 
-    ![NetBalancer Bitcoin-qt Bandwidth](/img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/netbalancer-3.png)
+    ![NetBalancer Bitcoin-qt Bandwidth](../img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/netbalancer-3.png)
 
 6. You’re done! NetBalancer will now sit in the background and make sure Bitcoin Core doesn’t use more bandwidth than you want it to.
 
@@ -55,7 +55,7 @@ On Windows, there are a few choices available for limiting the bandwidth of an a
 
 ### Limiting Bandwidth on Mac OS X
 
-In OS X versions before 10.10, there was a handy tool for shaping traffic bandwidth called [ipfw](https://www.freebsd.org/doc/handbook/firewalls-ipfw.html). In OS X 10.10 and later, however, Apple replaced the ipfw tool with [pfctl](https://www.freebsd.org/cgi/man.cgi?query=pfctl(8)&sektion=), and there are not yet any good, documented ways to limit bandwidth on an app-by-app basis (prove me wrong in the comments!) Apple provides their own method of limiting bandwidth for developers (Network Link Conditioner), but unfortunately it affects the network speed system-wide, rather than allowing the user to choose which apps to throttle.
+In OS X versions before 10.10, there was a handy tool for shaping traffic bandwidth called [ipfw](https://www.freebsd.org/doc/handbook/firewalls-ipfw.html). In OS X 10.10 and later, Apple replaced the ipfw tool with [pfctl](https://www.freebsd.org/cgi/man.cgi?query=pfctl(8)&sektion=), and there is limited documentation on how to use the new tool to limit bandwidth on an app-by-app basis (if you know how, please share in the comments or [on Stack Exchange!](http://apple.stackexchange.com/q/196252/136618)) Apple provides their own method of limiting bandwidth for developers (Network Link Conditioner), but unfortunately it affects the network speed system-wide, rather than allowing the user to choose which apps to throttle.
 
 The result is that on OS X 10.9 Mavericks and earlier, we will be able to control the bandwidth of Bitcoin Core specifically, but on OS X 10.10 Yosemite and later, we will only be able to limit the overall system bandwidth.
 
@@ -70,16 +70,15 @@ For OS X 10.10 Yosemite and later, there is no easy way to limit the bandwidth o
 3. Open the .dmg and double-click “Network Link Conditioner.prefpane” to install the prefpane.
 From now on, you can enable/disable Network Link Conditioner from System Preferences.
 
-
-    ![Network Link Conditioner - Main](/img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/nlc-2.png)
-
 4. From the Network Link Conditioner pane in System Preferences, click “Manage Profiles”, then click the “+” button to add a new profile. I named mine “Bitcoin Core”.
 
 5. Edit the profile and add your desired maximum upload speed:
 
-    ![Network Link Conditioner  - Profile](/img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/nlc-1.png)
+    ![Network Link Conditioner  - Profile](../img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/nlc-1.png)
 
-6. Save your edit, exit the profile manager, and flip the big switch to enable the limiter:
+6. Save your edit, exit the profile manager, choose your new profile, and flip the big switch to enable the limiter:
+
+    ![Network Link Conditioner - Main](../img/2015-7-16-how-to-limit-bandwidth-of-bitcoin-core-on-windows-mac-os-and-linux/nlc-2.png)
 
 Mac OS will place an icon in your notification tray so you remember that it’s on. Unlike the Windows/Linux solutions, this will limit the bandwidth for your entire system, so be sure to turn it off you’re not running Bitcoin Core.
 
@@ -138,8 +137,10 @@ There are comparatively many tools for limiting bandwidth on Linux compared to W
 
        sudo ./tc.sh
 
-Your Bitcoin Core bandwidth will be throttled until you reboot your computer. Optionally, you can set the script to run every time you boot your computer. Instructions for running scripts on boot will vary depending on your Linux distribution. On Ubuntu, [one of the ways to run a script on boot](http://askubuntu.com/a/1199/379181) is by adding the script to your `/etc/rc.local` file.
+   Your Bitcoin Core bandwidth will be throttled until you reboot your computer!
+
+Optionally, you can set the script to run every time you start your computer. Instructions for running scripts on boot will vary depending on your Linux distribution. On Ubuntu, [one of the ways to run a script on boot](http://askubuntu.com/a/1199/379181) is by adding the script to your `/etc/rc.local` file.
 
 ### Conclusion
 
-Now you can contribute your extra bandwidth to the Bitcoin network no matter what OS you're running, and without making the connection slow for anyone else. Hope you enjoyed this tutorial, and please leave any thoughts in the comments!
+Now you can contribute your extra bandwidth to the Bitcoin network no matter what OS you're running, and without slowing down the connection for your housemates. Hope you enjoyed this tutorial, and please leave any thoughts in the comments!
