@@ -24,10 +24,10 @@
       <meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
     {% endif %}
 
-	<title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<title>{%if page.short_title %}{{ page.short_title }}{% else %}{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endif %}</title>
 	
 	<!-- OpenGraph -->
-	<meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+	<meta property="og:title" content="{%if page.short_title %}{{ page.short_title }}{% else %}{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endif %}" />
 	{%if page.title %}
         <meta property="og:type" content="article" />
         {% if page.date %}

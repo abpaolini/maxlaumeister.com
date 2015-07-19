@@ -1,6 +1,7 @@
 ---
 title: How to Limit the Bandwidth of Bitcoin Core on Windows, Mac OS X, and Linux
-description: In this article, we will learn how to limit the outgoing bandwidth of Bitcoin Core (formerly Bitcoin-qt), so we can leave it listening in the background without completely saturating our internet connection.
+short_title: How to Limit the Bandwidth of Bitcoin Core (Win/Mac/Linux)
+description: In this article, we will learn how to limit the outgoing bandwidth of Bitcoin Core (formerly Bitcoin-qt) on Windows, Mac OS, and Linux, so we can leave it listening in the background without completely saturating our internet connection.
 tags: 
  - Bitcoin Core
  - Bitcoin-qt
