@@ -32,9 +32,17 @@ description: |
   <ul>
   <li><a href="http://www.npr.org/2013/08/13/211735430/lawmakers-banking-regulators-take-on-bitcoin">Featured on NPR</a> (National Public Radio)</li>
   <li>Highlighted on <a href="http://www.theverge.com/2013/3/31/4168542/listen-to-bitcoin-in-real-time">The Verge</a></li>
-  <li>127,000 unique visitors</li>
-  <li>40 forks and 100 stars <a href="https://github.com/MaxLaumeister/bitlisten">on GitHub</a></li>
+  <li id="insertAfterThis">127,000 unique visitors</li>
+  
   <li>Code forked into <a href="http://blog.hatnote.com/post/56856315107/listen-to-wikipedia">Listen to Wikipedia</a></li>
   </ul>
+  
+  <script>
+      document.addEventListener("DOMContentLoaded", function(event) { 
+            $.get( "https://api.github.com/repos/maxlaumeister/bitlisten", function( response ) {
+                $("#insertAfterThis").after('<li>' + response.forks + ' forks and ' + response.watchers + ' stars <a href="https://github.com/MaxLaumeister/bitlisten">on GitHub</a></li>');
+            });
+        });
+  </script>
 
 ---

@@ -16,9 +16,23 @@ description: |
     <script>
         document.addEventListener("DOMContentLoaded", function(event) { 
             // Stack Overflow
+            
+            var answers = -1;
+            var rep = -1;
+            
             $.get( "http://api.maxlaumeister.com/stackexchange/helpful_answers/", function( response ) {
-                $( "#so_answers" ).html('As of today, I\'ve written <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister?tab=answers&sort=votes"><span id="so_answers">' + response.data.upvoted_or_accepted + '</span> answers on Stack Overflow</a> that other programmers have found helpful.');
+                answers = response.data.upvoted_or_accepted;
+                if (rep !== -1) showStats();
             });
+            $.get( "https://api.stackexchange.com/2.2/users/2234742?order=desc&sort=reputation&site=stackoverflow", function( response ) {
+                rep = response.items[0].reputation;
+                if (answers !== -1) showStats();
+            });
+            
+            function showStats() {
+                $( "#so_answers" ).html('As of today, I\'ve written <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister?tab=answers&sort=votes"><span id="so_answers">' + answers + '</span> answers on Stack Overflow</a> that other programmers have found helpful. This has earned me ' + rep + ' reputation on the site.');
+            }
+            
             // Bitcoin
             $.getJSON("https://query.yahooapis.com/v1/public/yql",
               {
