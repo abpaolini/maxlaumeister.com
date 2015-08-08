@@ -20,8 +20,8 @@ description: |
             var answers = -1;
             var rep = -1;
             
-            $.get( "http://api.maxlaumeister.com/stackexchange/helpful_answers/", function( response ) {
-                answers = response.data.upvoted_or_accepted;
+            $.get( "https://api.stackexchange.com/2.2/users/2234742/answers?order=desc&sort=activity&site=stackoverflow&filter=!)V)MSZJUTLp", function( response ) {
+                answers = response.total;
                 if (rep !== -1) showStats();
             });
             $.get( "https://api.stackexchange.com/2.2/users/2234742?order=desc&sort=reputation&site=stackoverflow", function( response ) {
@@ -30,7 +30,7 @@ description: |
             });
             
             function showStats() {
-                $( "#so_answers" ).html('As of today, I\'ve written <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister?tab=answers&sort=votes"><span id="so_answers">' + answers + '</span> answers on Stack Overflow</a> that other programmers have found helpful. This has earned me ' + rep + ' reputation on the site.');
+                $( "#so_answers" ).html('As of right now, I\'ve written <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister?tab=answers&sort=votes"><span id="so_answers">' + answers + '</span> answers on Stack Overflow</a>. This has earned me ' + rep + ' reputation on the site.');
             }
             
             // Bitcoin
