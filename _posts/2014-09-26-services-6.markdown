@@ -10,7 +10,7 @@ description: |
         <li>In 2011 I ran a <a href="https://www.youtube.com/playlist?list=PL15E0AC4F7B0CD8BA" target="_blank">Minecraft YouTube channel</a> that got 9 million views, and I was invited to Minecon.</li>
         <li>I write <a href="https://www.youtube.com/playlist?list=PL1D1B1B84D3BE770D" target="_blank">music for virtual orchestra</a> in my spare time. I also <a href="https://www.youtube.com/playlist?list=PL93Ao-kXHQuUVcQDf2llrR_YAUGr8x9uZ" target="_blank">punch custom music boxes</a>.</li>
         <li id="so_answers">I post answers to programming questions <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister">on Stack Overflow</a> in my free time.</li>
-        <li>I think crypto is pretty cool. I've got a public key hosted <a href="https://keybase.io/maxlaumeister" target="_blank">here</a>, if you're that kind of person too. <span id="bitcoin_text"></span></li>
+        <li>I think crypto is pretty cool. I've got a public key <a href="https://keybase.io/maxlaumeister" target="_blank">hosted here</a>, if you're that kind of person too. <span id="bitcoin_text"></span></li>
     </ul>
     
     <script>
