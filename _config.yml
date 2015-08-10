@@ -123,10 +123,10 @@ assets:
   #
   version: 1
 
-# ----------------------------------- #
-#   Am I ready to be hired right now  #
-#   (i.e. not currently employed)     #
-# ----------------------------------- #
+# -------------------------------- #
+#   Enable Rocket Thrusters        #
+#   (i.e. not currently employed)  #
+# -------------------------------- #
 
-readyforwork: no
+readyforwork: yes
 
