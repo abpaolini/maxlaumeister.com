@@ -21,16 +21,11 @@ video_sources:
    res: 360
 
 description: |
-  Overview:
-  <ul>
-  <li>HTML5 web app hosted at <a href="http://www.bitlisten.com/">BitListen.com</a></li>
-  <li>Bitcoin transactions with sound</li>
-  <li>Real-time data via Websocket</li>
-  </ul>
   
-  Attention:
+  Publications:
   <ul>
   <li><a href="http://www.npr.org/2013/08/13/211735430/lawmakers-banking-regulators-take-on-bitcoin">Featured on NPR</a> (National Public Radio)</li>
+  <li>BBC Radio interview scheduled to be aired on the upcoming "Future Proof" segment.</li>
   <li>Highlighted on <a href="http://www.theverge.com/2013/3/31/4168542/listen-to-bitcoin-in-real-time">The Verge</a></li>
   <li id="insertAfterThis">127,000 unique visitors</li>
   
@@ -44,5 +39,12 @@ description: |
             });
         });
   </script>
+
+  Overview:
+  <ul>
+  <li>HTML5 web app hosted at <a href="http://www.bitlisten.com/">BitListen.com</a></li>
+  <li>Bitcoin transactions with sound</li>
+  <li>Real-time data via Websocket</li>
+  </ul>
 
 ---
