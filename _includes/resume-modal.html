@@ -2,98 +2,12 @@
 <div id="resume-modal">
     <div id="resume-container">
         <div id="resume-content">
-            <iframe id="resume-frame" width="100%" height="100%" frameborder="0"></iframe>
-            <a id="downloadButton" class="resumeButton clickable" href="https://docs.google.com/document/export?format=pdf&amp;id=1SDGqPndJPxJbV6MsD-eidQKULGzcB4YNjNo4iFk5XRE&amp;token=AC4w5VgHI50xDuTyKKJMFwkpuZnDwDBXqw%3A1433027228477" target="_blank" download>
+            <iframe id="resume-frame" src="pdfjs/web/viewer.html?file=../../resume-laumeister.pdf" width="100%" height="100%" frameborder="0"></iframe>
+            <a id="downloadButton" class="resumeButton clickable" href="resume-laumeister.pdf" target="_blank" download>
                 <div id="downloadIt"><img src="resume/download.png" alt="Download"> <span>Download PDF</span></div>
-                <div id="downloading">
-                      <div id="downloadSpinner" class="spinner">
-                          <div class="spinner-container container1">
-                            <div class="circle1"></div>
-                            <div class="circle2"></div>
-                            <div class="circle3"></div>
-                            <div class="circle4"></div>
-                          </div>
-                          <div class="spinner-container container2">
-                            <div class="circle1"></div>
-                            <div class="circle2"></div>
-                            <div class="circle3"></div>
-                            <div class="circle4"></div>
-                          </div>
-                          <div class="spinner-container container3">
-                            <div class="circle1"></div>
-                            <div class="circle2"></div>
-                            <div class="circle3"></div>
-                            <div class="circle4"></div>
-                          </div>
-                    </div>
-                    Download starting...
-                </div>
             </a>
-        </div>
-        <div id="loading">
-            <div class="spinnerWrapper">
-                <div id="loadingSpinner" class="spinner">
-                  <div class="spinner-container container1">
-                    <div class="circle1"></div>
-                    <div class="circle2"></div>
-                    <div class="circle3"></div>
-                    <div class="circle4"></div>
-                  </div>
-                  <div class="spinner-container container2">
-                    <div class="circle1"></div>
-                    <div class="circle2"></div>
-                    <div class="circle3"></div>
-                    <div class="circle4"></div>
-                  </div>
-                  <div class="spinner-container container3">
-                    <div class="circle1"></div>
-                    <div class="circle2"></div>
-                    <div class="circle3"></div>
-                    <div class="circle4"></div>
-                  </div>
-                </div>
-                <h1 id="loadingText">Loading Document...</h1>
-            </div>
         </div>
         <a id="resume-close" href="javascript:void(0)">&times;</a>
     </div>
 </div>
 </div>
-<script>
-            var resumeModal = document.getElementById("resume-modal");
-            var downloadButtonEl = document.getElementById("downloadButton");
-            var downloadItEl = document.getElementById("downloadIt");
-            var downloadingEl = document.getElementById("downloading");
-            var closeButton = document.getElementById("resume-close");
-            
-            var loadingEl = document.getElementById("loading");
-            var iframeEl = document.getElementById("resume-frame");
-            
-            downloadButtonEl.onclick = function() {
-                downloadItEl.style.display = "none";
-                downloadingEl.style.display = "inline";
-                downloadButtonEl.onclick = function(){return false;};
-                downloadButtonEl.classList.remove("clickable");
-                setTimeout(function() {
-                    downloadButtonEl.style.opacity = "0";
-                    setTimeout(function() {
-                        downloadButtonEl.style.display = "none";
-                    }, 1500);
-                }, 5000);
-            }
-            
-            closeButton.onclick = function() {
-                resumeModal.style.display = "none";
-                $("body").removeClass("noscroll");
-            }
-            
-            window.onload = function() {
-                iframeEl.setAttribute("src", "https://docs.google.com/document/preview?hgd=1&id=1SDGqPndJPxJbV6MsD-eidQKULGzcB4YNjNo4iFk5XRE&overridemobile=true");
-                iframeEl.onload = function() {
-                    loadingEl.style.display = "none";
-                    downloadButtonEl.style.display = "block";
-                };
-            };
-            
-            
-</script>
