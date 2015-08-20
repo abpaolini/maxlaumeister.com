@@ -168,6 +168,12 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.xml)
   expiration: "1h"
+  
+- url: /(.*\.pdf)
+  mime_type: application/pdf
+  static_files: static/\1
+  upload: static/(.*\.pdf)
+  expiration: "1h"
 
 - url: /(.*\.xpi)
   mime_type: application/x-xpinstall
