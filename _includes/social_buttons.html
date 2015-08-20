@@ -1,7 +1,7 @@
 <ul class="list-inline intro-social-buttons">
     {% for social in site.social %}
     <li>
-        <a href="{{ social.url }}" class="btn btn-default btn-lg"{% if social.targetblank %} target="_blank"{% endif %}{% if social.prerender %} rel="prefetch prerender"{% endif %}><i class="fa fa-{{ social.icon }} fa-fw"></i> <span class="network-name">{{ social.title }}</span></a>
+        <a {% if social.url %}href="{{ social.url }}"{% endif %} class="btn btn-default btn-lg{% if social.class %} {{ social.class }}{% endif %}"{% if social.targetblank %} target="_blank"{% endif %}{% if social.prerender %} rel="prefetch prerender"{% endif %}><i class="fa fa-{{ social.icon }} fa-fw"></i> <span class="network-name">{{ social.title }}</span></a>
     </li>
     {% endfor %}
 </ul>

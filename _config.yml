@@ -26,9 +26,7 @@ exclude: [vendor]
 social:
   - title: Resume
     icon: file-text-o
-    url: resume/
-    targetblank: false
-    prerender: true
+    class: resume-button
   - title: Linkedin
     icon: linkedin
     url: https://www.linkedin.com/in/maxlaumeister
@@ -56,7 +54,7 @@ assets:
   # Base URL of assets paths.
   #
   #baseurl: assets/
-  baseurl: https://max-laumeister.appspot.com/assets/
+  baseurl: assets/
   #
   # Pathnames where to find assets relative to the root of the site.
   #
