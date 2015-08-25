@@ -4,13 +4,11 @@
 \e[40;2m  * \e[22;1;92mMaximillian Laumeister\e[97m                      \e[2m*  \e[49m
 \e[40;2m  * \e[22;1;96mProgrammer / Web Developer\e[97m                  \e[2m*  \e[49m
 \e[40;2m  * \e[22;1mmax.laumeister@gmail.com                    \e[2m*  \e[49m
-\e[40;2m  * \e[22;1mhttp://maxlaumeister.com/                   \e[2m*  \e[49m
 \e[40;2m  *                                             \e[2m*  \e[49m
 \e[40;2m  * \e[22;1;92mFind me on:\e[97m                                 \e[2m*  \e[49m
-\e[40;2m  * \e[22;1mGitHub:   github.com/MaxLaumeister/         \e[2m*  \e[49m
+\e[40;2m  * \e[22;1mWeb:      maxlaumeister.com\e[97m                 \e[2m*  \e[49m
+\e[40;2m  * \e[22;1mGitHub:   github.com/maxlaumeister/         \e[2m*  \e[49m
 \e[40;2m  * \e[22;1mLinkedIn: linkedin.com/in/maxlaumeister/    \e[2m*  \e[49m
-\e[40;2m  *                                             \e[2m*  \e[49m
-\e[40;2m  * \e[22;1mLet's get in touch!                         \e[2m*  \e[49m
 \e[40;2m  ***********************************************  \e[49m
 \e[40m                                                   \e[00m
 \n
