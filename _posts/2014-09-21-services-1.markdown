@@ -34,9 +34,23 @@ description: |
   
   <script>
       document.addEventListener("DOMContentLoaded", function(event) { 
-            $.get( "https://api.github.com/repos/maxlaumeister/bitlisten", function( response ) {
-                $("#insertAfterThis").after('<li>' + response.forks + ' forks and ' + response.watchers + ' stars <a href="https://github.com/MaxLaumeister/bitlisten">on GitHub</a></li>');
-            });
+            function showContent(content) {
+                $("#insertAfterThis").after('<li>' + content.forks + ' forks and ' + content.watchers + ' stars <a href="https://github.com/MaxLaumeister/bitlisten">on GitHub</a></li>');
+            }
+            
+            var cachedContent = Cookies.getJSON("ajax-cache-bitlisten-github");
+            if (cachedContent) {
+                showContent(cachedContent);
+                //console.log(cachedContent, "cached content shown");
+            } else {
+                $.get( "https://api.github.com/repos/maxlaumeister/bitlisten", function( response ) {
+                    var content = {forks: response.forks, watchers: response.watchers};
+                    showContent(content);
+                    Cookies.set("ajax-cache-bitlisten-github", content, { expires: (new Date()).addHours(1) });
+                    //console.log(content, "fresh content shown");
+                });
+                
+            }
         });
   </script>
 

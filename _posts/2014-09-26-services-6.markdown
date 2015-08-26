@@ -17,20 +17,40 @@ description: |
         document.addEventListener("DOMContentLoaded", function(event) { 
             // Stack Overflow
             
-            var answers = -1;
-            var rep = -1;
+            function saveStackContent(content) {
+                Cookies.set("ajax-cache-stackoverflow", content, { expires: (new Date()).addHours(1) });
+                //console.log(content, "fresh content shown");
+            }
             
-            $.get( "https://api.stackexchange.com/2.2/users/2234742/answers?order=desc&sort=activity&site=stackoverflow&filter=!)V)MSZJUTLp", function( response ) {
-                answers = response.total;
-                if (rep !== -1) showStats();
-            });
-            $.get( "https://api.stackexchange.com/2.2/users/2234742?order=desc&sort=reputation&site=stackoverflow", function( response ) {
-                rep = response.items[0].reputation;
-                if (answers !== -1) showStats();
-            });
+            function showStackContent(content) {
+                $( "#so_answers" ).html('As of right now, I\'ve written <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister?tab=answers&sort=votes"><span id="so_answers">' + content.answers + '</span> answers on Stack Overflow</a>. This has earned me ' + content.rep + ' reputation on the site.');
+            }
             
-            function showStats() {
-                $( "#so_answers" ).html('As of right now, I\'ve written <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister?tab=answers&sort=votes"><span id="so_answers">' + answers + '</span> answers on Stack Overflow</a>. This has earned me ' + rep + ' reputation on the site.');
+            var cachedStackContent = Cookies.getJSON("ajax-cache-stackoverflow");
+            
+            if (cachedStackContent) {
+                showStackContent(cachedStackContent);
+                //console.log(cachedStackContent, "cached content shown");
+            } else {
+               var answers = -1;
+               var rep = -1;
+               
+               $.get( "https://api.stackexchange.com/2.2/users/2234742/answers?order=desc&sort=activity&site=stackoverflow&filter=!)V)MSZJUTLp", function( response ) {
+                   answers = response.total;
+                   if (rep !== -1) {
+                       var content = {answers: answers, rep: rep};
+                       showStackContent(content);
+                       saveStackContent(content);
+                   }
+               });
+               $.get( "https://api.stackexchange.com/2.2/users/2234742?order=desc&sort=reputation&site=stackoverflow", function( response ) {
+                   rep = response.items[0].reputation;
+                   if (answers !== -1) {
+                       var content = {answers: answers, rep: rep};
+                       showStackContent(content);
+                       saveStackContent(content);
+                   }
+               });
             }
             
             // Bitcoin
