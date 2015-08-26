@@ -129,6 +129,11 @@ handlers:
   mime_type: text/plain; charset=utf-8
   static_files: static/\1
   upload: static/(.*\.txt)
+  
+- url: /(.*\.properties)
+  mime_type: text/plain; charset=utf-8
+  static_files: static/\1
+  upload: static/(.*\.properties)
 
 - url: /(.*\.unity3d)
   mime_type: application/vnd.unity

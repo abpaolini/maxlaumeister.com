@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /downloads/resume-laumeister.pdf # This is a web page now, at /resume/
+Disallow: /downloads/resume-laumeister.pdf # This is now located at /resume-maxlaumeister.pdf
 Disallow: /keybase.txt # Because why spam google results with this?
 Disallow: /about-ansi.txt
 
