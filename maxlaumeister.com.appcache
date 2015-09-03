@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+CACHE:
+
+NETWORK:
+*
+
+FALLBACK:
+/ /offline.html
+
+SETTINGS:
+prefer-online
