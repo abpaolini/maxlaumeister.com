@@ -13,6 +13,13 @@
 
 'use strict';
 
+// Returns true if the request is for the root page of the site
+// e.g. http://www.maxlaumeister.com/
+function isRootRequest(url) {
+    var urlarr = url.split("/");
+    return urlarr[3] == false; // Check if falsey
+}
+
 const OFFLINE_CACHE = 'maxlaumeister-com-offline-cache';
 const OFFLINE_URL = 'offline.html';
 
@@ -28,10 +35,9 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  // We only want to call event.respondWith() if this is a GET request for an HTML document.
-  console.log("Request: ", event.request);
+  // We only want to call event.respondWith() if this is a GET request for the main page.
   if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').includes('text/html')) {
+      isRootRequest(event.request.url)) {
     console.log('Handling fetch event for', event.request.url);
     event.respondWith(
       fetch(event.request).catch(function(e) {

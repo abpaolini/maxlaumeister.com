@@ -53,8 +53,8 @@ assets:
   #
   # Base URL of assets paths.
   #
-  baseurl: assets/
-  #baseurl: https://max-laumeister.appspot.com/assets/
+  #baseurl: assets/
+  baseurl: https://max-laumeister.appspot.com/assets/
   #
   # Pathnames where to find assets relative to the root of the site.
   #
