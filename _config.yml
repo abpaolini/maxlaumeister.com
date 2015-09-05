@@ -3,7 +3,7 @@
 # ----------------------- #
 
 url: http://www.maxlaumeister.com # For index pages
-ext_url: https://max-laumeister.appspot.com # For js, css, etc
+ext_url: https://www.maxlaumeister.com # For js, css, etc
 title: Maximillian Laumeister
 email: max.laumeister@gmail.com
 description: 
@@ -53,8 +53,8 @@ assets:
   #
   # Base URL of assets paths.
   #
-  #baseurl: assets/
-  baseurl: https://max-laumeister.appspot.com/assets/
+  baseurl: assets/
+  #baseurl: https://max-laumeister.appspot.com/assets/
   #
   # Pathnames where to find assets relative to the root of the site.
   #

@@ -29,7 +29,7 @@ handlers:
   mime_type: text/css
   static_files: static/\1
   upload: static/(.*\.css)
-  expiration: "30d"
+  expiration: "24h"
 
 - url: /(.*\.eot)
   mime_type: application/vnd.ms-fontobject
@@ -57,7 +57,7 @@ handlers:
   mime_type: text/javascript
   static_files: static/\1
   upload: static/(.*\.js)
-  expiration: "30d"
+  expiration: "24h"
 
 - url: /(.*\.json)
   mime_type: application/json
