@@ -2,8 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://www.maxlaumeister.com # For index pages
-ext_url: https://www.maxlaumeister.com # For js, css, etc
+url: https://www.maxlaumeister.com # For index pages
+ext_url:  # For js, css, etc
 title: Maximillian Laumeister
 email: max.laumeister@gmail.com
 description: 
