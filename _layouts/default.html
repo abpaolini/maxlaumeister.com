@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="maxlaumeister.com.appcache">
 	{% include head.html %}
 	<body>
         <div id="pageContent">
@@ -10,6 +10,7 @@
         </div>
         {% include extra_scroll.html %}
         {% include resume-modal.html %}
+        <iframe id="offlineOverlay" src="offline.html"></iframe>
         {% include js.html %}
 	</body>
 </html>

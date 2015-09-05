@@ -1,12 +1,16 @@
 CACHE MANIFEST
 
 CACHE:
+/offline.html
 
 NETWORK:
 *
 
 FALLBACK:
-/ /offline.html
+/online.css /offline.css
+/online.js /offline.js
 
 SETTINGS:
 prefer-online
+
+# Testing v1
