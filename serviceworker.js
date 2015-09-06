@@ -1,4 +1,4 @@
-// Version 9/6/15.1
+// Version 9/6/15.2
 
 /*
  Copyright 2015 Google Inc. All Rights Reserved.
@@ -18,8 +18,10 @@
 // Returns true if the request is for the root page of the site
 // e.g. http://www.maxlaumeister.com/
 function isRootRequest(url) {
+    url = url.split("#")[0]; // Strip anchor, if any
+    url = url.split("?")[0]; // Strip arguments, if any
     var urlarr = url.split("/");
-    return urlarr[3] == false; // Check if falsey
+    return urlarr[3] == false; // Check if falsey (if there is nothing else after the trailing domain slash)
 }
 
 const OFFLINE_CACHE = 'maxlaumeister-com-offline-cache';
