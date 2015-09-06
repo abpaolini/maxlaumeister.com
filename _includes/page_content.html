@@ -12,7 +12,7 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">{{ post.title }}</h2>
-                    <h3 class="section-subheading">{{ post.subtitle }}</h3>
+                    {% if post.subtitle %}<h3 class="section-subheading">{{ post.subtitle }}</h3>{% endif %}
                     {{ post.description }}
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
