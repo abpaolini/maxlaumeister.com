@@ -39,12 +39,12 @@
     {% stylesheet ribbon %}
     {% stylesheet landing-page %}
     
-    <!-- Load Video.js -->
+    <!-- Load Video.js CSS -->
     <link href='{{ site.ext_url }}/video-js/video-js.min.css' rel='stylesheet' type='text/css'>
     
-    <!-- Load Video.js Resolution Plugin -->
+    <!-- Load Video.js Resolution Plugin CSS -->
     <link href='{{ site.ext_url }}/video-js/video-quality-selector.css' rel='stylesheet' type='text/css'>
-    
+
     {% stylesheet landing-page-custom %}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,6 +53,16 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Load Video.js -->
+    <script src="{{ site.ext_url }}/video-js/video.js"></script>
+    <script>
+        videojs.options.flash.swf = "{{ site.ext_url }}/video-js/video-js.swf";
+    </script>
+
+    <!-- Load Video.js Resolution Plugin -->
+    <script src="{{ site.ext_url }}/video-js/video-quality-selector.js"></script>
+
     
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
