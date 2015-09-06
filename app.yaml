@@ -223,6 +223,6 @@ handlers:
 - url: /
   static_files: static/index.html
   upload: static/index.html
-  expiration: "15m"
+  expiration: "0s"
   secure: optional
 
