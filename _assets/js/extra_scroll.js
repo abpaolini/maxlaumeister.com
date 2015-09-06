@@ -49,14 +49,23 @@ function revealPresentation() {
 var scrollingTimeout;
 
 function scrollChange() {
-    // Return if we're using the compact layout without the fancy box at the bottom
-    if (window.matchMedia("(max-width: 1000px)").matches || window.matchMedia("(max-height: 500px)").matches) return;
-    
+
     var currScroll = window.pageYOffset;
     scrollDelta = currScroll - lastScroll;
     lastScroll = currScroll;
-    
     var scrollBottom = windowHeight + currScroll;
+
+    if (currScroll + 10 < pageHeight && navIsHidden) {
+        navEl.classList.remove("tucked");
+        iframeWrapperEl.classList.remove("presenting");
+        iframeInnerEl.classList.remove("presenting");
+        presentTextEl.classList.remove("presenting");
+        downArrowEl.classList.remove("presenting");
+        navIsHidden = false;
+    }
+
+    // Return if we're using the compact layout without the fancy box at the bottom
+    if (window.matchMedia("(max-width: 1000px)").matches || window.matchMedia("(max-height: 500px)").matches) return;
     
     if (scrollBottom >= pageHeight + extraScrollHeight / 3 && !revealing && scrollDelta > 0) {
         clearTimeout(scrollingTimeout);
@@ -65,6 +74,7 @@ function scrollChange() {
     }
     
     if (scrollBottom >= pageHeight + extraScrollHeight / 3 && revealing && scrollDelta < 0) {
+        clearTimeout(scrollingTimeout);
         $('html, body').stop();
         revealing = false;
     }
@@ -84,13 +94,6 @@ function scrollChange() {
         downArrowEl.classList.add("presenting");
         requestAnimationFrame(checkiframeReadyState);
         navIsHidden = true;
-    } else if (currScroll + 10 < pageHeight && navIsHidden) {
-        navEl.classList.remove("tucked");
-        iframeWrapperEl.classList.remove("presenting");
-        iframeInnerEl.classList.remove("presenting");
-        presentTextEl.classList.remove("presenting");
-        downArrowEl.classList.remove("presenting");
-        navIsHidden = false;
     }
     
     if (currScroll + 10 >= pageHeight && !iframeRequested) {
