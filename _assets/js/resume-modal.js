@@ -16,6 +16,7 @@ $(resumeModal).click(function(event) {
 
 iframeEl.onload = function() {
     // Convert links to open in top
+    var innerDoc = iframeEl.contentDocument || iframeEl.contentWindow.document;
     $('head', innerDoc).append('<base target="_top">');
 };
 
