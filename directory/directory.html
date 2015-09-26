@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Directory</title>
+    <style>
+        @font-face {
+            font-family: linowrite;
+            src: url(linowrite.ttf);
+        }
+        html, body {
+            margin: 0;
+            background-color: black;
+            background-image: url(stressed_linen.png);
+        }
+        #card-main {
+            position: absolute;
+            top: 2vw;
+            left: 2vw;
+            bottom: 2vw;
+            right: 2vw;
+            font-family: linowrite, serif;
+            /*border: dashed white 1px;*/
+        }
+        #card-inner {
+            background-color: white;
+            background-image: url("paper-background.jpg");
+            position: absolute;
+            top: 0.5vw;
+            left: 0.5vw;
+            bottom: 0.5vw;
+            right: 0.5vw;
+            border-radius: 5px;
+        }
+        #card-underlay {
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        #card-title, #card-subtitle {
+            font-weight: normal;
+            color: #333;
+        }
+        #card-title {
+            font-size: 50px;
+            text-align: center;
+        }
+        #card-subtitle {
+            
+        }
+        #card-links {
+            margin: 1vw 3vw;
+        }
+        #card-links a {
+            color: #777;
+        }
+        #card-links > div {
+            font-size: 1vh;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="card-main">
+        <div id="card-inner">
+            <div id="card-underlay">
+                <h1 id="card-title">Maximillian Laumeister</h1>
+                <div id="card-links">
+                    <h2 id="card-subtitle">Find me on:</h2>
+                    <div>LinkedIn: <a href="https://www.linkedin.com/in/maxlaumeister">https://www.linkedin.com/in/maxlaumeister</a></div>
+                    <div>GitHub: <a href="https://github.com/MaxLaumeister">https://github.com/MaxLaumeister</a></div>
+                    <div>Twitter: <a href="https://twitter.com/maxlaumeister">https://twitter.com/maxlaumeister</a></div>
+                    <div>Stack Overflow: <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister">https://stackoverflow.com/users/2234742/maximillian-laumeister</a></div>
+                    <div>Stack Overflow Careers: <a href="https://careers.stackoverflow.com/maxlaumeister">https://careers.stackoverflow.com/maxlaumeister</a></div>
+                    <div>YouTube: <a href="https://www.youtube.com/musicalwolfe">https://www.youtube.com/musicalwolfe</a></div>
+                    <div>Reddit: <a href="https://www.reddit.com/u/musicalwolfe">https://www.reddit.com/u/musicalwolfe</a></div>
+                    <div>Keybase: <a href="https://keybase.io/maxlaumeister">https://keybase.io/maxlaumeister</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
