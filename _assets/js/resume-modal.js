@@ -3,9 +3,11 @@ var closeButton = document.getElementById("resume-close");
 
 var iframeEl = document.getElementById("resume-frame");
 
+var $flipper = $("#flipper");
+
 function closeModal() {
-    resumeModal.style.display = "none";
-    $("body").removeClass("noscroll");
+    $flipper.removeClass("flipped");
+    $(closeButton).addClass("invisible");
 }
 
 closeButton.onclick = closeModal;
@@ -21,7 +23,10 @@ iframeEl.onload = function() {
 };
 
 $(".resume-button").click(function(){
-    $("#resume-modal").show();
-    $("body").addClass("noscroll");
+    $flipper.addClass("flipped");
+    setTimeout(function () {
+        $flipper.off();
+        $(closeButton).removeClass("invisible");
+    }, 1000);
     return false;
 });

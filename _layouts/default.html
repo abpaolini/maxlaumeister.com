@@ -2,14 +2,20 @@
 <html>
 	{% include head.html %}
 	<body>
-        <div id="pageContent">
-            {% include header.html %}
-            {% include page_content.html %}
-            {% include contact.html %}
-            {% include footer.html %}
+	    <div id="flipper">
+	        <div class="front">
+                <div id="pageContent">
+                    {% include header.html %}
+                    {% include page_content.html %}
+                    {% include contact.html %}
+                    {% include footer.html %}
+                </div>
+                {% include extra_scroll.html %}
+            </div>
+            <div class="back">
+                {% include resume-modal.html %}
+            </div>
         </div>
-        {% include extra_scroll.html %}
-        {% include resume-modal.html %}
         {% include js.html %}
 	</body>
 </html>
