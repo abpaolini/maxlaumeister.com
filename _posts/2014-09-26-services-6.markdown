@@ -23,8 +23,8 @@ description: |
             }
             
             function showStackContent(content) {
-                var displayRep = Math.floor(content.rep / 1000) + "k";
-                $( "#so_answers" ).html('As of right now, I\'ve written <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister?tab=answers&sort=votes"><span id="so_answers">' + content.answers + '</span> answers on Stack Overflow</a>. This has earned me ' + displayRep + ' reputation on the site.');
+                var displayRep = Math.floor(content.rep / 100) / 10 + "k";
+                $( "#so_answers" ).html('As of right now, I\'ve written <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister?tab=answers&sort=votes"><span id="so_answers">' + content.answers + '</span> answers on Stack Overflow</a>. This has earned me <a href="https://stackoverflow.com/users/2234742/maximillian-laumeister?tab=profile">' + displayRep + ' reputation</a> on the site.');
             }
             
             var cachedStackContent = JSON.parse(localStorage.getItem("ajax-cache-stackoverflow"));
