@@ -2,6 +2,7 @@
 layout: default
 category: Services
 title: Puff
+tags: gamemaker gml
 elementId: puff
 
 video_thumb: puff.png

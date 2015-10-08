@@ -2,6 +2,7 @@
 layout: default
 category: Services
 title: UCSC Class Search
+tags: java android html
 elementId: ucsc-class-search
 
 video_thumb: classsearch.png

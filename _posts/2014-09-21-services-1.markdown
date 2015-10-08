@@ -2,6 +2,7 @@
 layout: default
 category: Services
 title: BitListen
+tags: html5 css javascript jquery
 subtitle: Formerly <i>Listen To Bitcoin</i>
 elementId: bitlisten
 

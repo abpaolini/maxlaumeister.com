@@ -2,6 +2,7 @@
 layout: default
 category: Services
 title: Automatune
+tags: html5 css javascript
 elementId: automatune
 
 video_thumb: automatune.png
