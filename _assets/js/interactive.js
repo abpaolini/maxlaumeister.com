@@ -1,3 +1,19 @@
+var color = {
+	curr: 0,
+	arr: [
+		"#EDC951",
+		"#4ECDC4",
+		"#556270",
+		"#FF6B6B",
+		"#6A4A3C",
+		$(".intro-header").css("background-color")
+	]
+};
+
+var themecolor = $("<meta name='theme-color'>");
+themecolor.attr('content', color.arr[color.arr.length - 1]);
+$("head").append(themecolor);
+
 $(document).ready(function() {
 	
 	var inter = $("#interactive-container");
@@ -6,17 +22,6 @@ $(document).ready(function() {
 	var context = canvas.getContext('2d');
 	var offset = circlescont.offset();
 	var circlecount = 0;
-	var color = {
-		curr: 0,
-		arr: [
-			"#EDC951",
-			"#4ECDC4",
-			"#556270",
-			"#FF6B6B",
-			"#6A4A3C",
-			$(".intro-header").css("background-color")
-		]
-	};
 	
 	function resizeCanvas() {
 		canvas.width = circlescont.width();
@@ -104,6 +109,7 @@ $(document).ready(function() {
 				var bgcol = color.arr[color.curr];
 				color.curr != color.arr.length - 1 ? color.curr++ : color.curr = 0; // Increment color
 				$(".banner").css("background", bgcol); // Update header color
+				themecolor.attr('content', color.arr[color.curr]); // Update meta theme color
 				return bgcol;
 			})(),
 			center: {
