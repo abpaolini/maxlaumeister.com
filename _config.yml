@@ -9,6 +9,9 @@ author:
   
 analytics-id: UA-24440376-11
 
+# Gems
+gems: [jekyll-paginate]
+
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
