@@ -38,15 +38,15 @@ description: |
                 $("#insertAfterThis").after('<li>' + content.forks + ' forks and ' + content.watchers + ' stars <a href="https://github.com/MaxLaumeister/bitlisten">on GitHub</a></li>');
             }
             
-            var cachedContent = Cookies.getJSON("ajax-cache-bitlisten-github");
-            if (cachedContent) {
+            var cachedContent = JSON.parse(localStorage.getItem("ajax-cache-bitlisten-github"));
+            if (cachedContent && Date.now() - cachedContent.timestamp < 3600000) { // Cache for 1 hour
                 showContent(cachedContent);
                 //console.log(cachedContent, "cached content shown");
             } else {
                 $.get( "https://api.github.com/repos/maxlaumeister/bitlisten", function( response ) {
-                    var content = {forks: response.forks, watchers: response.watchers};
+                    var content = {forks: response.forks, watchers: response.watchers, timestamp: Date.now()};
                     showContent(content);
-                    Cookies.set("ajax-cache-bitlisten-github", content, { expires: (new Date()).addHours(1) });
+                    localStorage.setItem("ajax-cache-bitlisten-github", JSON.stringify(content));
                     //console.log(content, "fresh content shown");
                 });
                 
