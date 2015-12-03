@@ -90,6 +90,7 @@ code {
     padding: 0.1em 0.5em;
     border-radius: 0.4em;
     background-color: #DBDBDB;
+    white-space: nowrap;
 }
 
 pre code {
@@ -99,6 +100,7 @@ pre code {
     border-radius: 0;
     padding: 1em;
     background-color: black;
+    white-space: inherit;
 }
 
 pre code::selection {
