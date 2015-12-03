@@ -148,6 +148,18 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.txt)
   secure: always
+
+- url: /(.*\.yaml)
+  mime_type: text/plain; charset=utf-8
+  static_files: static/\1
+  upload: static/(.*\.yaml)
+  secure: always
+
+- url: /(.*\.py)
+  mime_type: text/plain; charset=utf-8
+  static_files: static/\1
+  upload: static/(.*\.py)
+  secure: always
   
 - url: /(.*\.properties)
   mime_type: text/plain; charset=utf-8
