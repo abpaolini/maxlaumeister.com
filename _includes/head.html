@@ -18,6 +18,9 @@
     {% if page.description %}
         <meta name="description" content="{{ page.description }}">
         <meta property="og:description" content="{{ page.description }}">
+    {% elsif site.description %}
+        <meta name="description" content="{{ site.description }}">
+        <meta property="og:description" content="{{ site.description }}">
     {% endif %}
     
     {% if page.tags %}
@@ -42,7 +45,9 @@
 	{% else %}
 	    <meta property="og:type" content="website" />
 	{% endif %}
+	
     <meta property="og:url" content="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}/" />
+    <link rel="canonical" href="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}/" />
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
