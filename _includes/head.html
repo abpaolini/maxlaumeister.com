@@ -33,9 +33,23 @@
 	<meta property="og:image:type" content="image/png">
 	
 	<title>Portfolio/Resume of Maximillian Laumeister</title>
+	
+	<style>
+        /* Load web fonts */
+        @font-face {
+            font-family: 'Varela Round';
+            src: url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.eot');
+            src: url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.eot?#iefix') format('embedded-opentype'),
+                 url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.woff2') format('woff2'),
+                 url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.woff') format('woff'),
+                 url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.ttf') format('truetype'),
+                 url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.svg#varela_roundregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+	</style>
     
     {% stylesheet font-awesome.min %}
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet'>
     {% stylesheet bootstrap-3.3.5.min %}
     {% stylesheet lazyYT %}
     {% stylesheet ribbon %}
