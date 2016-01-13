@@ -53,7 +53,7 @@ description: |
               function(response){
                 var pusher = new Pusher('de504dc5763aeef9ff52');
                 var channel = pusher.subscribe('live_trades');
-                $( "#bitcoin_text" ).html('Did you know that 1 <a href="https://bitcoin.org/en/">Bitcoin</a> is currently worth $<span id="bitcoin_price">' + parseFloat(response.query.results.json.last).toFixed(2) + '</span>?');
+                $( "#bitcoin_text" ).html('Did you know that 1 <a href="https://en.wikipedia.org/wiki/Bitcoin">Bitcoin</a> is currently worth $<span id="bitcoin_price">' + parseFloat(response.query.results.json.last).toFixed(2) + '</span>?');
                 channel.bind('trade', function(ticker) {
                     $( "#bitcoin_price" ).html(parseFloat(ticker.price).toFixed(2));
                 });
