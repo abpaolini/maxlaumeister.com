@@ -16,3 +16,12 @@
 </script>
 
 <script src="https://js.pusher.com/3.0/pusher.min.js" integrity="sha384-icMP6H1KwU+0CgdYouvShx1yTJKOtoYDJvVuLvpuSZSICeHwIcRNaNmpe+qyPQZi" crossorigin="anonymous"></script>
+
+    <!-- Load Video.js -->
+    <script src="{{ site.ext_url }}/video-js/video.js"></script>
+    <script>
+        videojs.options.flash.swf = "{{ site.ext_url }}/video-js/video-js.swf";
+    </script>
+
+    <!-- Load Video.js Resolution Plugin -->
+    <script src="{{ site.ext_url }}/video-js/video-quality-selector.js"></script>
