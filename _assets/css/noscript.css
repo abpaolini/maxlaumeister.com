@@ -1,0 +1,13 @@
+/* Prevent interactive link from showing when user has JS disabled */
+.intro-header h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    display: block;
+}
+
+#extraScroll {
+    display: none;
+}
