@@ -49,19 +49,21 @@
         }
 	</style>
     
-    {% stylesheet font-awesome.min %}
-    {% stylesheet bootstrap-3.3.5.min %}
-    {% stylesheet lazyYT %}
-    {% stylesheet ribbon %}
-    {% stylesheet landing-page %}
-    
     <!-- Load Video.js CSS -->
     <link href='{{ site.ext_url }}/video-js/video-js.min.css' rel='stylesheet' type='text/css'>
     
     <!-- Load Video.js Resolution Plugin CSS -->
     <link href='{{ site.ext_url }}/video-js/video-quality-selector.css' rel='stylesheet' type='text/css'>
 
-    {% stylesheet landing-page-custom %}
+    <!-- All custom CSS and libraries -->
+    <style>
+        {% asset font-awesome.min.css %}
+        {% asset bootstrap-3.3.5.min.css %}
+        {% asset lazyYT.css %}
+        {% asset ribbon.css %}
+        {% asset landing-page.css %}
+        {% asset landing-page-custom.css %}
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

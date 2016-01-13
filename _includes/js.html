@@ -3,13 +3,17 @@
     // jQuery fallback, in case CDN is unavailable
     if (!window.jQuery) { document.write('<script src="{{ site.ext_url }}/fallback/jquery-1.11.3.min.js"><\/script>'); }
 </script>
-{% javascript polyfills %}
-{% javascript konami %}
-{% javascript interactive %}
-{% javascript extra_scroll %}
-{% javascript bootstrap-3.3.5.min %}
-{% javascript resume-modal %}
-{% javascript js.cookie %}
-{% javascript date-js-shim %}
-{% javascript serviceworker-init %}
+
+<script>
+{% asset polyfills.js %}
+{% asset konami.js %}
+{% asset interactive.js %}
+{% asset extra_scroll.js %}
+{% asset bootstrap-3.3.5.min.js %}
+{% asset resume-modal.js %}
+{% asset js.cookie.js %}
+{% asset date-js-shim.js %}
+{% asset serviceworker-init.js %}
+</script>
+
 <script src="https://js.pusher.com/3.0/pusher.min.js" integrity="sha384-icMP6H1KwU+0CgdYouvShx1yTJKOtoYDJvVuLvpuSZSICeHwIcRNaNmpe+qyPQZi" crossorigin="anonymous"></script>
