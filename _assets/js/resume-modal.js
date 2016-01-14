@@ -21,7 +21,7 @@ iframeEl.onload = function() {
 };
 
 $(".resume-button").click(function(){
-    if (!iframeEl.src) iframeEl.src = "pdfjs/web/viewer.html?file=../../resume-maxlaumeister.pdf";
+    if (!iframeEl.src) iframeEl.src = "pdfjs/web/viewer.html?file=../../resume-maxlaumeister.pdf#0";
     $(resumeModal).show();
     $("body").addClass("noscroll");
     return false;
