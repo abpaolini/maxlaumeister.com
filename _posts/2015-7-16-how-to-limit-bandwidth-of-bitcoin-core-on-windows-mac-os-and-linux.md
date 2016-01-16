@@ -99,7 +99,7 @@ There are comparatively many tools for limiting bandwidth on Linux compared to W
 
        sudo apt-get update
 
-       sudo apt-get install tc
+       sudo apt-get install iproute2
 
 2. Download the tc.sh script from the official Bitcoin Core repository using wget:
 
