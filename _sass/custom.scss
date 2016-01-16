@@ -24,11 +24,15 @@ header h1:hover {
 .sharebuttons {
     display: inline-block;
     height: 20px;
-    margin: 0 0.5em;
+    margin: 0 5px;
 }
 
 .sharebuttons > div, .sharebuttons > iframe {
     margin-right: 0.5em;
+}
+
+.sharethis {
+    vertical-align: top;
 }
 
 .fb-share-button {
@@ -46,6 +50,10 @@ header h1:hover {
 .by-line > time, .by-line > span {
     vertical-align: top;
     line-height: 20px;
+}
+
+.by-line > time {
+    margin-right: 20px;
 }
 
 #footnote-bio {
@@ -182,6 +190,15 @@ $menu-width: 25rem;
   -ms-transform: translateX($menu-width);
   transform: translateX($menu-width);
   width: $menu-width;
+}
+
+#header .navlinks a {
+    color: #285BB8;
+    font-weight: normal;
+}
+
+#header .navlinks a:hover {
+    text-decoration: underline;
 }
 
 hr {

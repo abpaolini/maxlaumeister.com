@@ -5,13 +5,37 @@
 //Import
 @import "base", "mixin", "typography", "layout", "syntax.scss", "custom.scss";
 
-// Custom CSS
+.share {
+	padding-left: 0;
+	list-style: none; }
+	
+.share-item {
+	display: inline-block;
+    }	
 
-#header .navlinks a {
-    color: #285BB8;
-    font-weight: normal;
+.share-link {
+	/* crude button styles */
+	text-decoration: none;
+	color: #444;
+	font-weight: bold;
 }
 
-#header .navlinks a:hover {
-    text-decoration: underline;
+[class*="ico-"] {
+	display: inline-block;
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.ico-facebook {
+	background-image: url('https://www.facebook.com/favicon.ico');
+}
+	
+.ico-twitter {
+	background-image: url('https://twitter.com/favicons/favicon.ico');
+}
+
+.ico-google {
+	background-image: url('https://ssl.gstatic.com/s2/oz/images/faviconr2.ico');
 }

@@ -9,3 +9,30 @@
         //callback: function ( toggle, anchor ) {} // Function to run after scrolling
     });
 </script>
+
+<!-- Initialize sharing buttons -->
+<script>
+    var title = document.title;
+    var encoded_title = encodeURIComponent(title);
+    
+    var url = window.location.href;
+    var encoded_url = encodeURIComponent(url);
+    
+    var fb = document.getElementsByClassName("ico-facebook");
+    
+    for (var i = 0; i < fb.length; i++) {
+        fb[i].href = "https://www.facebook.com/sharer.php?u=" + encoded_url;
+    }
+    
+    var tw = document.getElementsByClassName("ico-twitter");
+    
+    for (var i = 0; i < tw.length; i++) {
+        tw[i].href = "https://twitter.com/share?text=" + encoded_title + "&url=" + encoded_url + "&via=maxlaumeister";
+    }
+    
+    var gp = document.getElementsByClassName("ico-google");
+    
+    for (var i = 0; i < gp.length; i++) {
+        gp[i].href = "https://plus.google.com/share?url=" + encoded_url;
+    }
+</script>
