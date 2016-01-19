@@ -205,6 +205,49 @@ a.btn > .fa, a.btn > .network-name {
             transform: translate(0, -50px);
 }
 
+.social-icons {
+    display: inline-block;
+    margin: 11px;
+    margin-bottom: 0;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    margin: 0 3px;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 450px) {
+    .social-icons {
+        margin: 15px 0;
+        margin-bottom: 0;
+    }
+
+    .social-icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-size: 16px;
+        margin: 0 2px;
+        background-repeat: no-repeat;
+    }
+}
+
+.social-icon.twitter {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAk1BMVEUAAABUrO9UrO4uo/Udk9xUq+5UrO5Tq+5HpOk6m+xUrO5Lq/BTq+1Uq+5Tq+5NqupPq/BTq+1Sq+5Tq+1SrO9Tq+9TrO5Sq+1Rqu5Oqe1Sq+9Uq+1Tqu5UrO9Tq+5Tq+5Rq+1Sqe1Qqe5Qq+1Oqe9Pqe5UrO5Tq+1Tqu5Rq+5LpvFIrO9Tq+5Sq+9Sq+1SpO5VrO60+Ri3AAAAMHRSTlMA/fEFAujgeQ4J9xLax3E0J8+7tJSPfllQQTzt1cGgmoZtS0YuI+PKqmAbF6hzZx/0Vgy5AAABG0lEQVQ4y8WSV5KDMBBELUASiJxzxmm9Qfc/3QrDwpSB33V/Tr/qVo3m9CbJTupox7YWmxd8Me8CUW195OkP9NUQ8aeCoSkiWUxs13SUFaDCn8V8WxWTjnC3XyrPOV+EgygTo4RwZNCPGbD4Koaj8Q1pwTmSvFh+Ap8AkCx9HOne2IqYYY0pPgCIPKXe8TxARRV6ADAm/zFUjO+qnIDE9/N9IJgA2+UHaufN1+wAcP52Q/Z9Y9nu4Eo7PrIWQEmrHG0Aoq9AbeINgL7AD/Y7Fd4ZntD3hsAxCBAlWSkhmC9R+fXQOgP+Y6i+2HZrIpAfAV/N+oTWV9CAyhjmy9mNwH5EqDhRKEXrbmyxr62+2qAntZowaGjyOP2/fgFOT01D4XhtUgAAAABJRU5ErkJggg==);
+}
+
+.social-icon.github {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAflBMVEUAAAANDQ0UEhIUExMAAAATExMBAQEPDw8ODg4TExMUEhIUExMODg4UExMSERETExMPDw8QEBAUExMTExMTExMTEhIPDw8UExMUExMUExMTExMTEhIUDw8UEhIQDw8UEREUEREUERETExMTExMSEhIUDg4NDQ0UExMPDw8XFRVpOF1GAAAAKXRSTlMADvL8B9wXYhLhrqo09sJeMR/W0plyQezpuI14Z2U60dCknp1+WSjGRp5pW8MAAAFFSURBVDjLjZLXgoMgEEUvCpJoNNFoem+7/P8PLs4QFfFhzwNlOsOgZ6bv68iYaH3XM4Sssth0xNkKPqJmdW9SC89dmQA1CLKJzATRBo4F60OLhat+bi9VGnm6tLLrnF/zMJYlpN7ZJxaFfepOSyyN5UEJTEtbkfiA+Ii2bhK3SVJ3GsF+KZDEhlOMWHI7EpzowOUwfemWEzLaNQI0KTJUFEkgQFDuCjllwASUIwf3HRPw/7BBhAm4tW5LEJA419uwDWEjbnjSfpUYIa+keOJtiANGHFj+hsj5lCVeARlLcwHU1n1TtIN6XnDwyyn9Tmht72Vu4kb+8N8RqfmSl7C87OlSztvVjWhn8OKQNv4eQh9/+w4whXQC29QGPcIwqqu7VNb6qI/SM1DlYDr2JBJDg70/Q+edb7A9B/PRqK1LIbeqEfgvf/fnQK5bIpZbAAAAAElFTkSuQmCC);
+}
+
+.social-icon.linkedin {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEUAAAAAd7kAf7IAfrEAf7EAf7EAfrIAfrIAfrMAfrIAfK8AfrIAdK4AfrMAfrEAfrEAfLEAfrEAf7EAfrIAfrEAfrIAfrEAfrEAfrIAeq4Ad64Af7EAfrEAfbIAfrMAfrMAfrAAe64Af60Af7IAf7LeSR9PAAAAJHRSTlMADptLvJeLZ1dsKO8HgHRQNObZx7i0r6BELx75ooSDW1s8HBT3uegqAAAAo0lEQVQ4y9XQyw6CMBCF4QMWlFKg3C/ete//jGZGjQl2XGhC4rc6iz+TpljGJeuzCTKdOudSDVHvSAiR4kBBtOfgAFGg6ECAD2wx4hcmJho48yhgiqjr4uH1BkdWQMIjspVjtZ4Hax5N6h7K6S2YaYVgWz2PaG/QXmGy+8x9QclfVvPe+YIQJOfd+III5MRbycHmqyD558CEZAQGHkcQyzvHEm5jWyzG4L/LIAAAAABJRU5ErkJggg==);
+}
+
 .content-section-b {
     background-color: white;
 }
@@ -225,6 +268,12 @@ a.btn > .fa, a.btn > .network-name {
     .intro-message {
         padding-top: 10vh;
         padding-bottom: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar-brand {
+        font-size: 13px;
     }
 }
 
@@ -397,11 +446,14 @@ a.btn > .fa, a.btn > .network-name {
 }
 
 #skillsSection {
-    box-sizing: border-box;
-    background-color: white;
     overflow: auto;
     font-size: 18px;
-    border-bottom: 1px solid #e7e7e7;
+}
+
+#skillsHeader {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0;
 }
 
 #skillsSection ul {
@@ -413,7 +465,24 @@ a.btn > .fa, a.btn > .network-name {
     column-count: 3;
     list-style-position: inside;
     margin: 20px auto;
+    margin-bottom: 0;
     width: 1000px;
+}
+
+#bioSection {
+    padding: 20px 0;
+}
+
+#bioSection .inner {
+    padding: 20px 40px;
+}
+
+#bioImage {
+    float: left;
+    width: 162px;
+    height: 250px;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 1100px) {
@@ -428,6 +497,14 @@ a.btn > .fa, a.btn > .network-name {
     }
 }
 
+@media (max-width: 500px) {
+    #bioImage {
+            display: block;
+            float: none;
+            margin: 20px auto;
+    }
+}
+
 @media (max-width: 700px) {
     #skillsSection ul {
         -ms-column-count: 1;
@@ -438,11 +515,6 @@ a.btn > .fa, a.btn > .network-name {
         column-count: 1;
         width: auto;
     }
-}
-
-#skillsHeader {
-    text-align: center;
-    font-size: 25px;
 }
 
 @keyframes bob {
