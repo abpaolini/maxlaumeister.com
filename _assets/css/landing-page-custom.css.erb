@@ -212,12 +212,29 @@ a.btn > .fa, a.btn > .network-name {
 }
 
 .social-icon {
+    position: relative;
     display: inline-block;
     width: 24px;
     height: 24px;
     background-size: 24px;
     margin: 0 3px;
     background-repeat: no-repeat;
+}
+
+.social-icon::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+.social-icon:hover::before {
+    background-color: #E6E6E6;
 }
 
 @media (max-width: 450px) {
