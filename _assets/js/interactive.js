@@ -58,9 +58,9 @@ $(document).ready(function() {
 	var tryshow2timeout = null;
 	var circlecount2 = null;
 	var cooldown = 0;
-	
-	$(".interactive-go").click(function(e) {
-		e.preventDefault();
+    
+    function interactiveClick(e) {
+        e.preventDefault();
 		function tryshow2rearm() {
 			clearTimeout(tryshow2timeout);
 			tryshow2timeout = setTimeout(function() {
@@ -70,6 +70,18 @@ $(document).ready(function() {
 					setTimeout(function() {
 						$(".intro-text-noclick").hide();
 					}, 1000);
+                    
+                    $('<h1 class="intro-title-2">Wow.</h1>' +
+                        '<h3 class="intro-message-2 message-hidden">' +
+                            'You must like <a class="interactive-go" href="javascript:void(0)">interaction</a> too.<br>' +
+                            'Why not take a look at <a href="#portfolio">my portfolio</a>?' +
+                            '<span class="intro-message-3 message-hidden"><br>Or better yet, <a href="#contact">interact with me</a>?</span>' +
+                            '<span class="intro-message-4 message-hidden"><br>(Pretty, isn\'t it.)</span>' +
+                        '</h3>').insertAfter(".intro-message-1");
+                        
+                    $(".intro-message-2 .interactive-go").click(interactiveClick);
+                    smoothScroll(".intro-message-2");
+                    
 					$(".intro-title-2").fadeIn(500);
 					$(".intro-message-2").fadeIn(500);
 					circlecount2 = 0;
@@ -132,7 +144,9 @@ $(document).ready(function() {
 			lastTime = Date.now();
 			requestAnimationFrame(updateCircles);
 		}
-	});
+    }
+	
+	$(".interactive-go").click(interactiveClick);
 	
 	// Konami Code easter egg
 	var revealed = false;

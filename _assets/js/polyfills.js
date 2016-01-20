@@ -93,8 +93,10 @@ $(document).ready(function(){
 /*
  *		jQuery Smooth Scroll
  */
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
+function smoothScroll(selector) {
+  var final_selector = 'a[href*=#]:not([href=#])';
+  if (selector) final_selector = selector + " " + final_selector;
+  $(final_selector).click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -106,4 +108,8 @@ $(function() {
       }
     }
   });
+};
+
+$(document).ready(function() {
+    smoothScroll();
 });
