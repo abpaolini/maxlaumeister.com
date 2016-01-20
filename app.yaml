@@ -252,5 +252,7 @@ handlers:
   static_files: static/index.html
   upload: static/index.html
   expiration: "1h"
+  http_headers:
+    x-favorite-pony: Fluttershy
   secure: always
 
