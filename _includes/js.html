@@ -13,15 +13,20 @@
 {% asset resume-modal.js %}
 {% asset date-js-shim.js %}
 {% asset serviceworker-init.js %}
+
+/* Adds a big play button to the video poster frames */
+
+$(".vid-container .play-button").show();
+var pv = $(".vid-container video");
+pv.prop("controls", false);
+$(".vid-container").one("click", function() {
+    $(this).removeClass("inactive");
+    var vid = $(this).find("video");
+    vid.prop("controls", true);
+    $(this).find(".play-button").hide();
+    vid.get(0).play();
+});
+
 </script>
 
 <script src="https://js.pusher.com/3.0/pusher.min.js" integrity="sha384-icMP6H1KwU+0CgdYouvShx1yTJKOtoYDJvVuLvpuSZSICeHwIcRNaNmpe+qyPQZi" crossorigin="anonymous"></script>
-
-    <!-- Load Video.js -->
-    <script src="{{ site.ext_url }}/video-js/video.js"></script>
-    <script>
-        videojs.options.flash.swf = "{{ site.ext_url }}/video-js/video-js.swf";
-    </script>
-
-    <!-- Load Video.js Resolution Plugin -->
-    <script src="{{ site.ext_url }}/video-js/video-quality-selector.js"></script>

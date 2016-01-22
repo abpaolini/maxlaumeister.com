@@ -1,10 +1,12 @@
 {% if post.video_sources %}
-    <video class="video-js vjs-default-skin" controls preload="none" width="450" height="253" poster="{{ post.video_thumb | asset_path }}" data-setup='{ "plugins" : { "resolutionSelector" : { "default_res" : "720" } } }'>
-        {% for source in post.video_sources %}
-            <source src="{{ source.url | asset_path }}" type='{{ source.type }}' data-res='{{ source.res }}' />
-        {% endfor %}
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-    </video>
+    <div class="vid-container inactive">
+        <video controls preload="none" width="450" height="253" poster="{{ post.video_thumb | asset_path }}">
+            {% for source in post.video_sources %}
+                <source src="{{ source.url | asset_path }}" type='{{ source.type }}' data-res='{{ source.res }}' />
+            {% endfor %}
+        </video>
+        <div class="play-button">&#9654;</div>
+    </div>
 {% endif %}
 {% if post.youtubeId %}
 	<div class="lazyYT" data-youtube-id="{{ post.youtubeId }}" data-ratio="16:9" data-parameters="rel=0&amp;modestbranding=1&amp;showinfo=0">Please enable JavaScript to view this YouTube video.</div>

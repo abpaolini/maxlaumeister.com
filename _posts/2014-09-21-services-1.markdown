@@ -10,16 +10,8 @@ video_thumb: bitlisten.jpg
 video_sources:
  - url: bitlisten.mp4
    type: video/mp4
-   res: 720
- - url: bitlisten-360p.mp4
-   type: video/mp4
-   res: 360
  - url: bitlisten.webm
    type: video/webm
-   res: 720
- - url: bitlisten-360p.webm
-   type: video/webm
-   res: 360
 
 description: |
   

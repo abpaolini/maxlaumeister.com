@@ -9,16 +9,8 @@ video_thumb: immunogen.jpg
 video_sources:
  - url: immunogen.mp4
    type: video/mp4
-   res: 720
- - url: immunogen-360p.mp4
-   type: video/mp4
-   res: 360
  - url: immunogen.webm
    type: video/webm
-   res: 720
- - url: immunogen-360p.webm
-   type: video/webm
-   res: 360
 
 description: |
   Overview:

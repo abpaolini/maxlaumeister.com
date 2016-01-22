@@ -587,29 +587,6 @@ a.btn > .fa, a.btn > .network-name {
     filter: alpha(opacity=0);
 }
 
-/* Video.js Player Customizations */
-
-.video-js {
-    max-width: 100%;
-}
-
-.vjs-default-skin .vjs-big-play-button {
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin:auto;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    background-color: black;
-}
-
-.vjs-default-skin .vjs-big-play-button:before {
-    line-height: 2.8em;
-    left: 0.1em;
-}
-
 @media (max-width: 1000px), (max-height: 500px) {
     #extraScroll {
         display: none;
@@ -702,4 +679,41 @@ a.btn > .fa, a.btn > .network-name {
     top: -0.15em;
     height: 100%;
     vertical-align: middle;
+}
+
+.vid-container {
+    position: relative;
+    max-width: 100%;
+}
+
+.vid-container video {
+    background-color: black;
+    width: 100%;
+}
+
+.vid-container .play-button {
+    display: none;
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    border: solid gray 3px;
+}
+
+.vid-container:hover .play-button {
+    background-color: #5F5F5F;
+    border: solid white 3px;
+}
+
+.vid-container.inactive {
+    cursor: pointer;
 }

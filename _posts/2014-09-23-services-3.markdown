@@ -9,16 +9,8 @@ video_thumb: classsearch.png
 video_sources:
  - url: classsearch.mp4
    type: video/mp4
-   res: 720
- - url: classsearch-360p.mp4
-   type: video/mp4
-   res: 360
  - url: classsearch.webm
    type: video/webm
-   res: 720
- - url: classsearch-360p.webm
-   type: video/webm
-   res: 360
 
 description: |
   Overview:
