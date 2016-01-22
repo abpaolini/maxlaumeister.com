@@ -694,24 +694,19 @@ a.btn > .fa, a.btn > .network-name {
 .vid-container .play-button {
     display: none;
     position: absolute;
-    color: white;
     left: 50%;
     top: 50%;
-    text-align: center;
-    line-height: 80px;
-    font-size: 30px;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    background-color: black;
-    border-radius: 50%;
-    border: solid gray 3px;
+    background: transparent url('data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxu cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdo dD0iNTEyIiB2ZXJzaW9uPSIxLjEiPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuOTI0 NDIxMTgsMCwwLDAuOTI0NDIxMTgsMTkuMzQ4MTc5LDE5LjM0ODE3OSkiPjx0aXRs ZT5MYXllciAxPC90aXRsZT48Y2lyY2xlIGN5PSIyNTYiIGN4PSIyNTYiIHI9IjI1 NiIgc3R5bGU9ImZpbGw6I2ZmZjtzdHJva2Utd2lkdGg6MzU7c3Ryb2tlOiNiMmIy YjIiLz48cGF0aCBzdHJva2U9Im51bGwiIGQ9Ik0yNTYgMEMxMTQuNiAwIDAgMTE0 LjYgMCAyNTYgMCAzOTcuNCAxMTQuNiA1MTIgMjU2IDUxMiAzOTcuNCA1MTIgNTEy IDM5Ny40IDUxMiAyNTYgNTEyIDExNC42IDM5Ny40IDAgMjU2IDBaTTIwNC44IDM3 MS4yIDIwNC44IDE0MC44IDM1OC40IDI1NiAyMDQuOCAzNzEuMloiIGZpbGw9IiMw MDAiLz48L2c+PC9zdmc+') no-repeat center center;
+    background-size: contain;
 }
 
 .vid-container:hover .play-button {
-    background-color: #5F5F5F;
-    border: solid white 3px;
+    -webkit-filter: contrast(70%) brightness(200%);
+    filter: contrast(70%) brightness(200%);
 }
 
 .vid-container.inactive {
