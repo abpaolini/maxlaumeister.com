@@ -32,7 +32,7 @@ social:
     class: resume-button
     url: resume-maxlaumeister.pdf
   - title: Blog
-    icon: align-left
+    icon: edit
     url: https://blog.maxlaumeister.com/
     targetblank: true
     
