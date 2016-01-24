@@ -1,0 +1,42 @@
+/*!
+* lazyyt
+* v0.3.4 - 2014-06-30
+* Copyright (c) 2014 Tyler Pearson <ty.pearson@gmail.com> (http://tylerp.me); Licensed MIT %>
+* Modified for use in this project.
+*/
+
+.lazyYT-title {
+    z-index: 100!important;
+    color: #fff!important;
+    font-family: sans-serif!important;
+    font-size: 12px!important;
+    top: 10px!important;
+    left: 12px!important;
+    position: absolute!important;
+    margin: 0!important;
+    padding: 0.5em!important;
+    line-height: 1!important;
+    font-style: normal!important;
+    font-weight: normal!important;
+    background-color: rgba(0,0,0,0.8)!important;
+    border-radius: 0.5em!important;
+}
+
+.lazyYT-button {
+    margin: 0!important;
+    padding: 0!important;
+    width: 100%!important;
+    height: 100%!important;
+    z-index: 100!important;
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAApCAYAAABp50paAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYTAgYp9TziDwAABUhJREFUaN7dmk9oFFccxz/zdnY3+8fdmGg2mkkrFYrYk+2pKpIepYjQiyfxVHrxoIdWKEohRw8RIqRCCTmIghJ6k5ZWgtBSD7Y99VSRdus0ZGJMNtnd7GZ2Z6aH/Y0Z13VVurNr/MFjZ968ffO+v3/ze7/302hDlmFoQAxQQBTIAikgAcSBISAJ6EBGnmelLybjkjJWkzn0ptdsAC7gAFVgHbAD92vAI6Ag40pyXwHKQFH+4wL1nGna7TBpLUDmgD2AIW2PgMwAg8A2IA30CaDgHJ40ZAFeoL/5uU+qxVq0wH2kabwbALsGrALLQA14DPwDzAN/Afmcaa60BCzS/Bj4DHhXJBRvwSSnqXm0J41XoxfNp4QJflMtxmwIU34Fvs6Z5t1WgE8CF0R6Ppi6/HYCSKfpeYyJiOn4zFgEvsiZ5g9PFm0ZxvvAN8AusRHvNQH1f5mhxBz/AD7NmWZeWYYRBT4JgG22oa1I/vpdUe/3gI98DvQBb72k/WxF4Lb8HrIMI+mLfJA3nxKAruQz09/GOXWK072mLJAIAq6HtDAV8J6RHjqxFJDQgZ2CvhIGWDU8XE2cOFFwLEvfuHUr5RWLyZC1qRXVBWNaB3aLFNwQJFyPjY2tJM+cSeG69diRI/Ol8fEhd2Eh3UUnqQngfqBfCfLQVEkNDAD0o9RA/OjRt7MzM6vxY8f+RdcdUfFu2LcjTmuXksgqPE67ribzu0BE37dvNDM5GU2fP/9IDQ8XBLDqViCiZDfjhaxSwRe7wK7EqVP92enpldjBg4vS3w2H1tcNwK247QBJff/+kczUVDR5+vRDLR4vyYYlTMoo0e1uR1g+6KiWzQ6mzp7NZq5csSKjo0shh7UJJVz1umA/LS0cqKNUNjY2ZmRnZkrx48fz0q9CWEdcBdSol9GQC0Qje/fuzkxMJNLj44+0bduKHV6TByRVF+zm1TRBqZHEyZPbM1NTy2p4uNhBZ+b5Kq2/ZrukGpCOHT6cjB44UO3w3LoKbJ9ep33sfOXqVceem8uKundq7qouG2Rf5FqPwXru8rK1PjFhV2dnR7yNjUiHAZd1UaFekpJWqN27Vyh+/vl2J5/fIabW6U2G7QPulWQjgO0Vi6uVa9dK65OTQ16lkmIzT91pDXqi0loP1DcCrDv371ulixcT9u3boyFJNUhlnUbiTnVZhT1cd7E6O1svX7qUcRcWBgLRV5i0pgMrIUtYCzjFKFB38nmrMj1tV27cGMG2dZ4+pQh1m6jTOKfplgoXanfvlooXLiScBw9ygcRDN94PsKrTOLAKTX2dfN4DFrxyOV69fn2lfPnyTq9YTAtQt0tmpNM4h3qsA0viuMJwGBH7zp3+4rlzBXdpqWbPzRldcEytQkodsHwbtsSOB+l85tL1KpW+6s2bIwGn5NJ98n3VmhIvvcKz57ad3AnVhJm9jNnXgLKSiwJb+yzppaIswFXitJbfYKC+IB8CG4pGAv53PyPAm3Wg5tE4LLSBX3KmWVM50/SA74DfJBkQDQz2thgDmtccF9/0PfDTU2kdyzA+BL4EPmhyOE7Aw76oxEELCcTL7LYigQCHQLj8I/BVzjT/fmaBlmHspVHncQh4Rzjkt2gbQE6AOW6HQkV/8ZEAKNWGKbbEEw6Ngpc/gZ+Bb3OmudhWIpZhDALbaaRwh4AdwIB8q/eI6vvNL2NK0chxJwNm0QnP6lfslOR6nUapUlU+daY43cfS/GfzzRU8r6SCUuUTYbPmys+HJdgsYeqTNshmSZPPuOdJphbQjLKATMq1KVLz67eqAroW0KIa4IoveiH9ByVW1iFN/VrIAAAAAElFTkSuQmCC)!important;
+}
+
+.lazyYT-button:hover {
+    -webkit-filter: brightness(200%);
+    filter: brightness(200%);
+}

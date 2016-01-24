@@ -1,5 +1,5 @@
 <div id="extraScroll">
-    {% image down_arrow.svg id="downArrow" alt="Down Arrow" %}
+    <div id="downArrow">{% include down_arrow.svg %}</div>
     <div id="presentText">
         <div id="presentTextInner">
             <h1>Your Project is Next.</h1>
@@ -23,8 +23,8 @@
             <div id="browserURL">
                 <div>
                     <div id="browserForwardBack">
-                        {% image back_button.svg id="browserBack" alt="Back Button Image" %}<!-- collapse whitespace
-                        -->{% image back_button.svg id="browserForward" alt="Forward Button Image" %}
+                        <div id="browserBack">{% include back_button.svg %}</div><!-- collapse whitespace
+                        --><div id="browserForward">{% include back_button.svg %}</div>
                     </div>
                     <div id="browserURLinputcell">
                         <input id="browserURLinput" type="text" readonly="readonly">
