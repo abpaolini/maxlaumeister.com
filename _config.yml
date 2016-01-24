@@ -25,14 +25,16 @@ exclude: [vendor]
 
 social:
   - title: Portfolio
-    icon: file-picture-o
+    svg: file-image-o.svg
+    offset: -1px;
     url: '#portfolio'
   - title: Resume
-    icon: file-text-o
+    svg: file-text-o.svg
+    offset: -1px;
     class: resume-button
     url: resume-maxlaumeister.pdf
   - title: Blog
-    icon: edit
+    svg: edit.svg
     url: https://blog.maxlaumeister.com/
     targetblank: true
     
