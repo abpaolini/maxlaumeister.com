@@ -1,12 +1,30 @@
 <head>
-
 	<!--
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 *                                                               *
-	 *   Attention Reader - View source here for easier reading:     *
-	 *   https://github.com/MaxLaumeister/blog.maxlaumeister.com     *
-	 *                                                               *
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+	******************************************************************
+	*                                                                *
+	*  Dear reader, this site was built using the static site        *
+	*  generator Jekyll, so the markup you see below has gone        *
+	*  through a few steps of compilation. Please find the original  *
+	*  Jekyll project at the following URL:                          *
+	*                                                                *
+	*  https://github.com/MaxLaumeister/blog.maxlaumeister.com       *
+	*                                                                *
+	*  -Max                                                          *
+	*                                                                *
+	******************************************************************
+
+	*******************************************  
+	* Maximillian Laumeister                  *  
+	* Programmer / Web Developer              *  
+	* max.laumeister@gmail.com                *  
+	*                                         *  
+	* Find me on:                             *  
+	* Web:      maxlaumeister.com             *  
+	* GitHub:   github.com/maxlaumeister/     *  
+	* LinkedIn: linkedin.com/in/maxlaumeister *  
+	*******************************************
+	
 	-->
 	
 	<!-- Meta -->
@@ -45,6 +63,34 @@
 	{% else %}
 	    <meta property="og:type" content="website" />
 	{% endif %}
+    
+    <!-- Schema -->
+    {%if page.title %}
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "TechArticle",
+          "mainEntityOfPage":{
+            "@type":"WebPage",
+            "@id":"{{ page.url | prepend: site.url }}/"
+          },
+          "headline": "{%if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}",
+          "datePublished": "{{ page.date | date_to_xmlschema }}",
+          "author": {
+            "@type": "Person",
+            "name": "Maximillian Laumeister",
+            "url": "{{ site.author.url }}/"
+          },
+           "publisher": {
+            "@type": "Person",
+            "name": "Maximillian Laumeister",
+            "url": "{{ site.author.url }}/"
+          },
+          "description": "{{ page.description }}"
+        }
+        </script>
+    {% endif %}
+    
 	
     <meta property="og:url" content="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}/" />
     <link rel="canonical" href="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}/" />
