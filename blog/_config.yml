@@ -1,11 +1,11 @@
 # Site settings
 title: Blog - Maximillian Laumeister
 description: "Hi! My name is Maximillian, and I'm a web developer living in Santa Cruz, CA. This is my web tech / programming blog. A portfolio of my software projects is available at www.maxlaumeister.com."
-url: "https://blog.maxlaumeister.com"
+url: "https://www.maxlaumeister.com/blog/"
 author:
   name: "Maximillian Laumeister"
   email: "max.laumeister@gmail.com"
-  url: "https://www.maxlaumeister.com"
+  url: "https://www.maxlaumeister.com/"
   
 analytics-id: UA-24440376-11
 
@@ -13,7 +13,7 @@ analytics-id: UA-24440376-11
 gems: [jekyll-paginate]
 
 # Build settings
-baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: /blog/ # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 source: .
 destination: ./_site
