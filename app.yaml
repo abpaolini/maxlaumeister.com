@@ -208,6 +208,18 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.xpi)
   secure: always
+  
+- url: /(.*\.yaml)
+  mime_type: text/plain; charset=utf-8
+  static_files: static/\1
+  upload: static/(.*\.yaml)
+  secure: always
+
+- url: /(.*\.py)
+  mime_type: text/plain; charset=utf-8
+  static_files: static/\1
+  upload: static/(.*\.py)
+  secure: always
 
 # image files
 - url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
@@ -238,20 +250,20 @@ handlers:
 - url: /(.+)/
   static_files: static/\1/index.html
   upload: static/(.+)/index.html
-  expiration: "1h"
+  expiration: "15m"
   secure: always
 
 - url: /(.+)
   static_files: static/\1/index.html
   upload: static/(.+)/index.html
-  expiration: "1h"
+  expiration: "15m"
   secure: always
 
 # site root
 - url: /
   static_files: static/index.html
   upload: static/index.html
-  expiration: "1h"
+  expiration: "15m"
   http_headers:
     x-favorite-pony: Fluttershy
   secure: always
