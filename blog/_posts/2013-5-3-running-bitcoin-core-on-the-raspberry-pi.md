@@ -8,7 +8,7 @@ tags:
 - Full Node
 ---
 
-![Bitcoin Raspberry Pi Logo](/img/2013-5-3-running-bitcoin-core-on-the-raspberry-pi/bitpi.png){: .floatleft}
+![Bitcoin Raspberry Pi Logo]({{ '/img/2013-5-3-running-bitcoin-core-on-the-raspberry-pi/bitpi.png' | prepend: site.baseurl | replace: '//', '/' }}){: .floatleft}
 
 **Update 11 May 2015:** The [Raspberry Pi 2](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/) has been released, and due to the increased RAM, it seems to be more stable than the original Raspberry Pi when running a Bitcoin node. These instructions will work for building on either hardware version.
 

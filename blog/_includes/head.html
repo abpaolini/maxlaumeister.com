@@ -54,7 +54,7 @@
         {% if page.date %}
           <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
         {% endif %}
-        <meta content="{{ site.author.url }}/" property="article:author">
+        <meta content="{{ site.author.url }}" property="article:author">
         {% if page.tags %}
           {% for tag in page.tags %}
             <meta content="{{ tag }}" property="article:tag">
@@ -72,19 +72,19 @@
           "@type": "TechArticle",
           "mainEntityOfPage":{
             "@type":"WebPage",
-            "@id":"{{ page.url | prepend: site.url }}/"
+            "@id":"{{ page.url | prepend: site.url }}"
           },
           "headline": "{%if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}",
           "datePublished": "{{ page.date | date_to_xmlschema }}",
           "author": {
             "@type": "Person",
             "name": "Maximillian Laumeister",
-            "url": "{{ site.author.url }}/"
+            "url": "{{ site.author.url }}"
           },
            "publisher": {
             "@type": "Person",
             "name": "Maximillian Laumeister",
-            "url": "{{ site.author.url }}/"
+            "url": "{{ site.author.url }}"
           },
           "description": "{{ page.description }}"
         }
@@ -92,8 +92,8 @@
     {% endif %}
     
 	
-    <meta property="og:url" content="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}/" />
-    <link rel="canonical" href="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}/" />
+    <meta property="og:url" content="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}" />
+    <link rel="canonical" href="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}" />
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">

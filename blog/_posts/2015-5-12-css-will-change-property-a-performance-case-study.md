@@ -47,7 +47,7 @@ The application uses [window.requestAnimationFrame](https://developer.mozilla.or
 
 Here are the Chrome profiler results without will-change:
 
-![BitListen Without will-change](/img/2015-5-12-css-will-change-property-a-performance-case-study/without-will-change.png)
+![BitListen Without will-change]({{ '/img/2015-5-12-css-will-change-property-a-performance-case-study/without-will-change.png' | prepend: site.baseurl | replace: '//', '/' }})
 
 Looks like roughly 50fps, with occasional dips under 30fps. Not bad by any means, but not fantastic either. When the frame rate drops, the user sees the bubbles on the screen &ldquo;jump&rdquo; in position as the browser catches up. By the way, the green bars represent the browser rendering the page, and it spends a LOT of time doing it.
 
@@ -64,7 +64,7 @@ The same CSS snippet with will-change:
 
 And the Chrome profiler results:
 
-![BitListen With will-change](/img/2015-5-12-css-will-change-property-a-performance-case-study/with-will-change.png)
+![BitListen With will-change]({{ '/img/2015-5-12-css-will-change-property-a-performance-case-study/with-will-change.png' | prepend: site.baseurl | replace: '//', '/' }})
 
 Bingo! With one line of CSS, BitListen launches into hyperspeed! Not once during the profile did the framerate drop below 120fps. The bubble div movement is jank-free and buttery smooth!
 
