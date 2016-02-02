@@ -35,8 +35,7 @@ social:
     url: resume-maxlaumeister.pdf
   - title: Blog
     svg: edit.svg
-    url: https://blog.maxlaumeister.com/
-    targetblank: true
+    url: /blog/
     
 # ------------------------- #
 #   Jekyll-Assets Plugin    #
