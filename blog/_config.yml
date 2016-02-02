@@ -1,0 +1,40 @@
+# Site settings
+title: Blog - Maximillian Laumeister
+description: "Hi! My name is Maximillian, and I'm a web developer living in Santa Cruz, CA. This is my web tech / programming blog. A portfolio of my software projects is available at www.maxlaumeister.com."
+url: "https://blog.maxlaumeister.com"
+author:
+  name: "Maximillian Laumeister"
+  email: "max.laumeister@gmail.com"
+  url: "https://www.maxlaumeister.com"
+  
+analytics-id: UA-24440376-11
+
+# Gems
+gems: [jekyll-paginate]
+
+# Build settings
+baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Custom variables
+version: "1.1.0"
+accent_color: #285BB8
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false

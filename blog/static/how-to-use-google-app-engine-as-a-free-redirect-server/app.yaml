@@ -1,0 +1,12 @@
+runtime: python27
+
+application: your-app-name-here
+version: 1
+api_version: 1
+threadsafe: no
+
+default_expiration: "6h"
+
+handlers:
+- url: /.*
+  script: main.app

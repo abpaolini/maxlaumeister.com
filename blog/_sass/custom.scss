@@ -1,0 +1,245 @@
+/*- Custom style -*/
+
+// -- Put custom style under this point -- //
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header h1:hover {
+    color: #285BB8;
+}
+
+#wrap {
+    padding-bottom: 6rem;
+}
+
+#wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+.sharebuttons {
+    display: inline-block;
+    height: 20px;
+    margin: 0 5px;
+}
+
+.sharebuttons > div, .sharebuttons > iframe {
+    margin-right: 0.5em;
+}
+
+.sharethis {
+    vertical-align: top;
+}
+
+.fb-share-button {
+    display: inline-block;
+}
+
+.fb-share-button, .fb-share-button > span {
+    vertical-align: top !important;
+}
+
+.pagetitle {
+    margin-bottom: 0.5rem;
+}
+
+.by-line > time, .by-line > span {
+    vertical-align: top;
+    line-height: 20px;
+}
+
+.by-line > time {
+    margin-right: 20px;
+}
+
+#footnote-bio {
+    display: table;
+    
+    > div {
+        display: table-row;
+        > div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    
+    .image-container {
+        width: 180px;
+        img {
+            display: inline;
+            margin: 0;
+        }
+    }
+    
+    p {
+        margin-bottom: 0.5em;
+        a {
+            font-weight: normal;
+        }
+    }
+}
+
+#posts, .post > p {
+    margin-bottom: 0;
+}
+
+pre {
+    max-width: 100%;
+    overflow: auto;
+}
+
+code {
+    color: black;
+    font-size: 0.9em;
+    padding: 0.1em 0.5em;
+    border-radius: 0.4em;
+    background-color: #DBDBDB;
+    white-space: nowrap;
+}
+
+pre code {
+    color: white;
+    display: inline-block;
+    min-width: 100%;
+    border-radius: 0;
+    padding: 1em;
+    background-color: black;
+    white-space: inherit;
+}
+
+pre code::selection {
+  background: #CCCCCC; /* WebKit/Blink Browsers */
+}
+
+pre code::-moz-selection {
+  background: #CCCCCC; /* Gecko Browsers */
+}
+
+.floatleft {
+    float: left;
+    margin: 0 24px 15px 24px;
+}
+
+#menu-icon {
+    display: inline-block;
+    width: 27px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#menu-text {
+    vertical-align: middle;
+    margin-left: 1em;
+    color: #7b7b7b;
+    font-weight: normal;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+#menu-text.text-menu-open {
+    color: #FDFDFD;
+}
+
+#nav-bio {
+    p {
+        margin-left: 1em;
+        margin-right: 1em;
+        text-align: left;
+    }
+    a {
+        display: inline;
+        text-decoration: underline;
+        padding: 0;
+        font-weight: bold;
+    }
+}
+
+#nav-menu {
+    left: 25px;
+    top: 35px;
+    right: auto;
+}
+
+$menu-width: 25rem;
+
+#nav {
+    position: absolute;
+    width: $menu-width;
+    max-width: 100%;
+    left: -$menu-width;
+    
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#nav-bio a {
+    font-size: 1em;
+}
+
+#nav.menu-open {
+  -webkit-transform: translateX($menu-width);
+  -moz-transform: translateX($menu-width);
+  -ms-transform: translateX($menu-width);
+  transform: translateX($menu-width);
+  width: $menu-width;
+}
+
+#header .navlinks a {
+    color: #285BB8;
+    font-weight: normal;
+}
+
+#header .navlinks a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-color: #d4d4d4;
+    border-style: solid;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+.sharingContainer {
+    margin: 1.333em 0;
+
+    > * {
+        vertical-align: middle;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+footer a:hover, footer a:focus {
+    color: white;
+}
+
+@media (max-width: 820px) {
+    #header {
+        padding-top: 75px;
+    }
+}
