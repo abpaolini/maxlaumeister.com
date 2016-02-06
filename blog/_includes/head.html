@@ -72,7 +72,7 @@
           "@type": "TechArticle",
           "mainEntityOfPage":{
             "@type":"WebPage",
-            "@id":"{{ page.url | prepend: site.url }}"
+            "@id":"{{ site.url }}{{ page.url | remove_first: "/"}}/"
           },
           "headline": "{%if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}",
           "datePublished": "{{ page.date | date_to_xmlschema }}",
@@ -92,8 +92,8 @@
     {% endif %}
     
 	
-    <meta property="og:url" content="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}" />
-    <link rel="canonical" href="{%if page.title %}{{ page.url | prepend: site.url }}{% else %}{{ site.url }}{% endif %}" />
+    <meta property="og:url" content="{%if page.title %}{{ site.url }}{{ page.url | remove_first: "/"}}/{% else %}{{ site.url }}{% endif %}" />
+    <link rel="canonical" href="{%if page.title %}{{ site.url }}{{ page.url | remove_first: "/"}}/{% else %}{{ site.url }}{% endif %}" />
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
