@@ -52,6 +52,8 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.html)
   expiration: "1h"
+  http_headers:
+    x-frame-options: SAMEORIGIN
   secure: always
 
 - url: /(.*\.ico)
@@ -251,12 +253,16 @@ handlers:
   static_files: static/\1/index.html
   upload: static/(.+)/index.html
   expiration: "15m"
+  http_headers:
+    x-frame-options: SAMEORIGIN
   secure: always
 
 - url: /(.+)
   static_files: static/\1/index.html
   upload: static/(.+)/index.html
   expiration: "15m"
+  http_headers:
+    x-frame-options: SAMEORIGIN
   secure: always
 
 # site root
@@ -265,6 +271,7 @@ handlers:
   upload: static/index.html
   expiration: "15m"
   http_headers:
+    x-frame-options: SAMEORIGIN
     x-favorite-pony: Fluttershy
   secure: always
 
