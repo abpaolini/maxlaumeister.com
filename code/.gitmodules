@@ -1,0 +1,3 @@
+[submodule "clientside-html-password"]
+	path = clientside-html-password
+	url = https://github.com/MaxLaumeister/clientside-html-password
