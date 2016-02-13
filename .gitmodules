@@ -1,3 +1,6 @@
 [submodule "main/_assets/video"]
 	path = main/_assets/video
 	url = https://github.com/MaxLaumeister/maxlaumeister.com-video
+[submodule "code/clientside-html-password"]
+	path = code/clientside-html-password
+	url = https://github.com/MaxLaumeister/clientside-html-password
