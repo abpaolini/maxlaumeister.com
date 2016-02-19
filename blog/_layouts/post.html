@@ -41,6 +41,10 @@ layout: default
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'blog-maxlaumeister';
     
+    var disqus_config = function () {
+        this.page.url = "{{ site.url }}{{ page.url | remove_first: "/"}}/";
+    };
+    
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
