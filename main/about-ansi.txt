@@ -3,7 +3,7 @@
 \e[40;2m  *******************************************  \e[49m
 \e[40;2m  * \e[22;1;92mMaximillian Laumeister\e[97m                  \e[2m*  \e[49m
 \e[40;2m  * \e[22;1;96mProgrammer / Web Developer\e[97m              \e[2m*  \e[49m
-\e[40;2m  * \e[22;1mmax.laumeister@gmail.com                \e[2m*  \e[49m
+\e[40;2m  * \e[22;1mEmail: max@maxlaumeister.com            \e[2m*  \e[49m
 \e[40;2m  *                                         \e[2m*  \e[49m
 \e[40;2m  * \e[22;1;92mFind me on:\e[97m                             \e[2m*  \e[49m
 \e[40;2m  * \e[22;1mWeb:      maxlaumeister.com\e[97m             \e[2m*  \e[49m
