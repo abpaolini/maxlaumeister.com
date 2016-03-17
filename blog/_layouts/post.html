@@ -52,3 +52,25 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "{{ site.url }}",
+      "name": "Blog"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "{{ site.url }}{{ page.url | remove_first: "/"}}/",
+      "name": "{%if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}"
+    }
+  }]
+}
+</script>
