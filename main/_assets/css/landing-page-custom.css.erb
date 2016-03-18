@@ -11,13 +11,21 @@ h6 {
 
 html {
     background-color: black;
-    background-image: url(/<%= asset_path "stressed_linen.png" %>);
+    background-image: url(<%= site.baseurl %><%= asset_path "stressed_linen.png" %>);
 }
 
 @media(max-width:500px) {
     h3, .h3 {
     	font-size: 18px;
     }
+}
+
+.anchorLink {
+    position: relative;
+    top:-50px;
+    display: block;
+    height: 0;
+    width:0;
 }
 
 .intro-header, .banner {
@@ -123,11 +131,6 @@ html {
 
 #opening-circle {
 	background-color: #6D91D4;
-}
-
-#skills {
-    position: relative;
-    top: -50px;
 }
 
 .postimg {
@@ -584,15 +587,30 @@ a.btn > .fa, a.btn > .network-name {
   }
 }
 
-#downArrow {
+#downArrow, #upArrow {
     display: block;
-    margin: 3em auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+#downArrow {
+    margin: 3em 0;
     opacity: 0.5;
     filter: alpha(opacity=50);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
+}
+
+#downArrow svg {
     -webkit-animation: bob 1s infinite alternate;
     animation: bob 1s infinite alternate;
+}
+
+#downArrow svg, #upArrow svg {
+    display: block;
 }
 
 #downArrow, #downArrow svg {
@@ -600,9 +618,34 @@ a.btn > .fa, a.btn > .network-name {
     width: 6em;
 }
 
+#upArrow, #upArrow svg {
+    height: 3em;
+    width: 3em;
+}
+
 #downArrow.presenting {
     opacity: 0;
     filter: alpha(opacity=0);
+}
+
+#upArrow {
+    margin: 1em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -webkit-transition: all 1s linear;
+            transition: all 1s linear;
+}
+
+#upArrow svg {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#upArrow.presenting {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 
 @media (max-width: 1000px), (max-height: 500px) {

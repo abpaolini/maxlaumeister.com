@@ -5,6 +5,7 @@ var iframeWrapperEl = document.getElementById("iframeWrapper");
 var iframeInnerEl = document.getElementById("iframeInner");
 var browserURLinput = document.getElementById("browserURLinput");
 var downArrowEl = document.getElementById("downArrow");
+var upArrowEl = document.getElementById("upArrow");
 var extraScrollEl = document.getElementById("extraScroll");
 var scrollDelta = 0;
 var lastScroll = 0;
@@ -23,16 +24,19 @@ var pageHeight;
 var windowHeight;
 
 var resizeFrame;
+
+function resizeImmediate() {
+    pageHeight = pageContentEl.offsetHeight;
+    windowHeight = window.innerHeight;
+    extraScrollHeight = extraScrollEl.offsetHeight;
+}
+
 function resize() {
     clearTimeout(resizeFrame);
-    resizeFrame = setTimeout(function(){
-        pageHeight = pageContentEl.offsetHeight;
-        windowHeight = window.innerHeight;
-        extraScrollHeight = extraScrollEl.offsetHeight;
-    }, 100);
+    resizeFrame = setTimeout(resizeImmediate, 100);
 }
- window.addEventListener("resize", resize, false);
- resize();
+window.addEventListener("resize", resize, false);
+resizeImmediate();
 
 var revealing = false;
 
@@ -61,6 +65,7 @@ function scrollChange() {
         iframeInnerEl.classList.remove("presenting");
         presentTextEl.classList.remove("presenting");
         downArrowEl.classList.remove("presenting");
+        upArrowEl.classList.remove("presenting");
         navIsHidden = false;
     }
 
@@ -92,6 +97,7 @@ function scrollChange() {
         }
         presentTextEl.classList.add("presenting");
         downArrowEl.classList.add("presenting");
+        upArrowEl.classList.add("presenting");
         requestAnimationFrame(checkiframeReadyState);
         navIsHidden = true;
     }
@@ -110,7 +116,5 @@ function scrollChange() {
     }
 }
 
-
-
-window.onscroll = scrollChange;
-scrollChange();
+window.addEventListener("scroll", scrollChange);
+//window.addEventListener("DOMContentLoaded", scrollChange);
