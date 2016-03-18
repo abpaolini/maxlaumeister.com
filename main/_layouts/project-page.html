@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <!--
+	
+	    ******************************************************************
+	    *                                                                *
+	    *  Dear reader, this site was built using the static site        *
+	    *  generator Jekyll, so the markup you see below has gone        *
+	    *  through a few steps of compilation. Please find the original  *
+	    *  Jekyll project at the following URL:                          *
+	    *                                                                *
+	    *  https://github.com/MaxLaumeister/maxlaumeister.com            *
+	    *                                                                *
+	    *  -Max                                                          *
+	    *                                                                *
+	    ******************************************************************
+
+	    *******************************************  
+	    * Maximillian Laumeister                  *  
+	    * Programmer / Web Developer              *  
+	    * Email: max@maxlaumeister.com            *  
+	    *                                         *  
+	    * Find me on:                             *  
+	    * Web:      maxlaumeister.com             *  
+	    * GitHub:   github.com/maxlaumeister/     *  
+	    * LinkedIn: linkedin.com/in/maxlaumeister *  
+	    *******************************************
+	
+	    -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="{{ page.description }}">
+	    <meta name="author" content="Maximillian Laumeister">
+	    <link rel="author" href="https://plus.google.com/100865127821381452608/posts" />
+	    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	    <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}" />
+	
+	    <title>{{ page.title }} - Projects by Maximillian Laumeister</title>
+	
+        <script>
+            {% asset loadCSS.js %}
+        </script>
+        
+	    <style>
+            /* Load web fonts */
+            @font-face {
+                font-family: 'Varela Round';
+                src: url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.eot');
+                src: url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.eot?#iefix') format('embedded-opentype'),
+                     url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.woff2') format('woff2'),
+                     url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.woff') format('woff'),
+                     url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.ttf') format('truetype'),
+                     url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.svg#varela_roundregular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+	    </style>
+
+        <!-- All custom CSS and libraries -->
+        {% stylesheet bootstrap-3.3.5.min %}
+        {% stylesheet portfolio-item %}
+        
+        <style>
+        body,h1,h2,h3,h4,h5,h6{
+            font-family:'Varela Round', sans-serif;
+            font-weight:initial
+        }
+        .navbar-default .navbar-brand, .navbar-default .navbar-brand a, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, navbar-nav > li > a {
+            color: #777;
+        }
+        .navbar-default .navbar-brand a:focus, .navbar-default .navbar-brand a:hover {
+            color: #5e5e5e;
+        }
+        </style>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+        
+        <script>
+	      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('set', 'forceSSL', true);
+	      ga('create', 'UA-24440376-11', 'auto');
+	      ga('send', 'pageview');
+
+	    </script>
+
+	</head>
+	<body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand"><a href="{{ site.baseurl }}/">Maximillian Laumeister</a> &#x203A; <a href="{{ site.baseurl }}/projects/">Projects</a> &#x203A; <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></span>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{ site.baseurl }}/">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/#about">About</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <!-- /.container -->
+</nav>
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Portfolio Item Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">{{ page.title }}
+                        <small>{{ page.subtitle }}</small>
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <!-- Portfolio Item Row -->
+            <div class="row">
+
+                <div class="col-md-12">
+                    {% if page.video_sources %}
+                        <div class="vid-container inactive img-responsive">
+                            <video controls preload="none" poster="{{ page.video_thumb | asset_path }}" style="width: 100%;">
+                                {% for source in page.video_sources %}
+                                    <source src="{{ source.url | asset_path }}" type='{{ source.type }}' data-res='{{ source.res }}' />
+                                {% endfor %}
+                            </video>
+                            <div class="play-button"></div>
+                        </div>
+                    {% endif %}
+                    {% if page.img %}
+	                    <img class="img-responsive" src="{{ page.img }}" />
+                    {% endif %}
+                </div>
+
+                <div class="col-md-12">
+                    {{ content }}
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+            <!-- Related Projects Row -->
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h3 class="page-header">Screenshots</h3>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#">
+                        <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                    </a>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#">
+                        <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                    </a>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#">
+                        <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                    </a>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#">
+                        <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="copyright text-muted small">Copyright &copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> {{ site.title }}, All Rights Reserved.</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+
+        </div>
+        <!-- /.container -->
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" integrity="sha384-6ePHh72Rl3hKio4HiJ841psfsRJveeS+aLoaEf3BWfS+gTF0XdAqku2ka8VddikM" crossorigin="anonymous"></script>
+        <script>
+            // jQuery fallback, in case CDN is unavailable
+            if (!window.jQuery) { document.write('<script src="{{ site.ext_url }}/fallback/jquery-1.11.3.min.js"><\/script>'); }
+        </script>
+
+        <!-- Bootstrap Core JavaScript -->
+        {% javascript bootstrap-3.3.5.min %}
+	</body>
+</html>
