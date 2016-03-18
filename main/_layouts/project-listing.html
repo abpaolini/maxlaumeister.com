@@ -36,7 +36,7 @@
 	    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	    <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}" />
 	
-	    <title>{{ page.title }} - Projects by Maximillian Laumeister</title>
+	    <title>Projects by Maximillian Laumeister</title>
 	
         <script>
             {% asset loadCSS.js %}
@@ -73,22 +73,10 @@
         .navbar-default .navbar-brand a:focus, .navbar-default .navbar-brand a:hover {
             color: #5e5e5e;
         }
-        .project-subtitle {
-            float: left;
-            margin-top: 10px;
+        .portfolio-item .img-responsive {
+            height: 146px;
+            width: 100%;
         }
-        .project-url {
-            float: right;
-            margin-top: 10px;
-        }
-        .page-header:after {
-            visibility: hidden;
-            display: block;
-            font-size: 0;
-            content: " ";
-            clear: both;
-            height: 0;
-         }
         </style>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -111,8 +99,8 @@
 
 	</head>
 	<body>
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -122,7 +110,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <span class="navbar-brand"><a href="{{ site.baseurl }}/">Maximillian Laumeister</a> &#x203A; <a href="{{ site.baseurl }}/projects/">Projects</a> &#x203A; <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></span>
+            <span class="navbar-brand"><a href="{{ site.baseurl }}/">Maximillian Laumeister</a> &#x203A; <a href="{{ site.baseurl }}/projects/">Projects</a></span>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -144,80 +132,82 @@
     <!-- /.container -->
 </nav>
 
-        <!-- Page Content -->
-        <div class="container">
+<!-- Page Content -->
+    <div class="container">
 
-            <!-- Portfolio Item Heading -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">{{ page.title }}<br />
-                        <small class="project-subtitle">{{ page.subtitle }}</small>
-                        <small class="project-url"><a href="{{ page.project_url }}">{{ page.project_url }}</a></small>
-                    </h1>
-                </div>
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Projects
+                </h1>
             </div>
-            <!-- /.row -->
-
-            <!-- Portfolio Item Row -->
-            <div class="row">
-
-                <div class="col-md-12">
-                    {% if page.video_sources %}
-                        <div class="vid-container inactive img-responsive">
-                            <video controls preload="metadata" poster="{{ page.video_thumb | asset_path }}" style="width: 100%;">
-                                {% for source in page.video_sources %}
-                                    <source src="{{ source.url | asset_path }}" type='{{ source.type }}' data-res='{{ source.res }}' />
-                                {% endfor %}
-                            </video>
-                            <div class="play-button"></div>
-                        </div>
-                    {% endif %}
-                    {% if page.img %}
-	                    <img class="img-responsive" src="{{ page.img }}" />
-                    {% endif %}
-                </div>
-
-                <div class="col-md-12">
-                    {{ content }}
-                </div>
-
-            </div>
-            <!-- /.row -->
-
-            <!-- Related Projects Row -->
-            <div class="row">
-
-                <div class="col-lg-12">
-                    <h3 class="page-header">Screenshots</h3>
-                </div>
-                
-                {% assign count = 1 %}
-                {% for screenshot in page.screenshots %}
-                    <div class="col-sm-3 col-xs-6">
-                        <a href="{{ screenshot | asset_path }}" data-lightbox="screenshots">
-                            <img class="img-responsive portfolio-item" src="{{ screenshot | asset_path }}" alt="Screenshot {{ count }}">
-                            {% assign count = count | plus: 1 %}
-                        </a>
-                    </div>
-                {% endfor %}
-
-            </div>
-            <!-- /.row -->
-
-            <hr>
-
-            <!-- Footer -->
-            <footer>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="copyright text-muted small">Copyright &copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> {{ site.title }}, All Rights Reserved.</p>
-                    </div>
-                </div>
-                <!-- /.row -->
-            </footer>
-
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            {% for tpage in site.pages %}
+                {% if tpage.category == 'project' %}
+                    <div class="col-md-4 portfolio-item">
+                        <a href="{{ tpage.url }}">
+                            <img class="img-responsive" src="{{ tpage.screenshots[0] | asset_path }}" alt="{{ tpage.title }}">
+                        </a>
+                        <h3>
+                            <a href="{{ tpage.url }}">{{ tpage.title }}</a>
+                        </h3>
+                        <p>{{ tpage.preview_text }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright text-muted small">Copyright &copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> {{ site.title }}, All Rights Reserved.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" integrity="sha384-6ePHh72Rl3hKio4HiJ841psfsRJveeS+aLoaEf3BWfS+gTF0XdAqku2ka8VddikM" crossorigin="anonymous"></script>
@@ -228,13 +218,5 @@
 
         <!-- Bootstrap Core JavaScript -->
         {% javascript bootstrap-3.3.5.min %}
-        
-        <script src="{{ site.baseurl }}/libs/lightbox/js/lightbox.js"></script>
-        <script>
-            lightbox.option({
-              'resizeDuration': 500,
-              'fadeDuration': 250
-            });
-        </script>
 	</body>
 </html>

@@ -1,8 +1,12 @@
 ---
 layout: project-page
+category: project
+
 title: BitListen
-subtitle: Formerly <i>Listen To Bitcoin</i>
-description: Realtime Bitcoin transaction visualizer project by Maximillian Laumeister.
+subtitle: Bitcoin transaction visualizer
+project_url: http://www.bitlisten.com/
+preview_text: Software that visualizes Bitcoin transactions in realtime
+description: Realtime Bitcoin transaction visualizer project by Maximillian Laumeister
 
 video_thumb: bitlisten.jpg
 video_sources:
@@ -10,6 +14,11 @@ video_sources:
    type: video/mp4
  - url: bitlisten.webm
    type: video/webm
+   
+screenshots:
+ - bitlisten1.png
+ - bitlisten2.png
+   
 ---
 
 ### What is BitListen?
@@ -20,3 +29,4 @@ Bitcoin is an online currency that can be sent and received by anyone in the wor
 
 BitListen is written in Javascript and jQuery, and pulls realtime transaction information via WebSocket from an external API (right now it is using [Toshi.io](https://toshi.io/)). The nature of the Bitcoin network and the WebSocket protocol means that it takes less than 10 seconds between someone clicking the "send money" button in their Bitcoin client and the time that the transaction appears on BitListen.com. In addition to the transaction bubbles, BitListen also keeps up with the Bitcoin exchange rate from [Bitstamp](https://www.bitstamp.net/) and displays it in the upper left.
 
+BitListen is [open source](https://github.com/MaxLaumeister/bitlisten) and MIT licensed.
