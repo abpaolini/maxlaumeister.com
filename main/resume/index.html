@@ -1,0 +1,473 @@
+---
+layout: page
+
+title: Resume
+description: Resume of Maximillian Laumeister
+---
+
+<style>
+    .resume {
+        background-color: #F8F8F8;
+        padding: 30px;
+        display: inline-block;
+        min-width: 100%;
+        color: black;
+    }
+
+    .resume-inner {
+        width: 750px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 2px 2px 5px #999999;
+        padding: 40px;
+    }
+
+    .resume * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .resume h1 {
+        font-size: 31px;
+        font-weight: bold;
+    }
+
+    .resume h2 {
+        font-size: 17px;
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    .resume h3 {
+        color: white !important;
+        background-color: black !important;
+        padding: 3px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .resume h4 {
+        margin: 0;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .skills-table {
+        margin: 10px;
+    }
+
+    .skills-table td:first-child {
+        font-weight: bold;
+        width: 170px;
+    }
+
+    .skills-table td {
+        vertical-align: top;
+        padding: 7px 0;
+    }
+
+    .project-wrap {
+        margin: 10px 0;
+    }
+
+    .project-title-wrap {
+        background-color: #CCC !important;
+        padding: 5px;
+    }
+
+    .project-title-wrap:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+    .project-title-wrap * {
+        line-height: 20px;
+    }
+
+    .project-title-wrap h4 {
+        float: left;
+    }
+
+    .project-title-wrap .project-url {
+        float: right;
+    }
+
+    .project-desc-wrap {
+        background-color: #EEE !important;
+    }
+
+    .project-table {
+        display: table;
+    }
+
+    .project-table > * {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px;
+    }
+
+    .project-table > *:first-child {
+        width: 280px;
+        text-align: center;
+    }
+
+    .project-table img {
+        width: 200px;
+        margin: 10px 30px;
+    }
+
+    hr {
+        border-color: #BBB;
+    }
+    
+    .glyphicon {
+        top: 3px;
+    }
+    
+    .resume-actions {
+        margin: 20px 0;
+    }
+
+    @media print {
+        * {
+            -webkit-print-color-adjust: exact;
+        }
+        footer, .footer-hr {
+            display: none;
+        }
+        .page-header {
+            display: none;
+        }
+        body {
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .project-wrap, .no-break-wrap {
+            page-break-inside: avoid;
+        }
+        .resume, .resume-inner {
+            padding: 0;
+        }
+        .resume-actions {
+            display: none;
+        }
+    }
+
+</style>
+<div class="resume-actions">
+    <a href="{{ site.baseurl }}/resume-maxlaumeister.pdf" type="button" class="btn btn-primary btn-lg" id="print-button"><span class="glyphicon glyphicon-print"></span> <span>View/Print PDF</span></a>
+    <a href="{{ site.baseurl }}/resume-maxlaumeister.pdf" type="button" class="btn btn-primary btn-lg" id="download-button" download><span class="glyphicon glyphicon-download"></span> <span>Download PDF</span></a>
+</div>
+<div class="resume">
+    <div class="resume-inner">
+        <div style="text-align: center;">
+            <h1>Maximillian Laumeister</h1>
+            max@maxlaumeister.com<br>
+            https://www.maxlaumeister.com
+            <hr>
+            <h2>Software Development</h2>
+            <h2>Web Development</h2>
+            <h2>Game Design</h2>
+        </div>
+        <br>
+        <p>Experience with object-oriented programming techniques, coupled with substantial web development and design backgrounds. Capable of strong and efficient written communication.</p>
+        <hr>
+        <div class="no-break-wrap">
+            <h3>Education</h3>
+            <b>University of California: Santa Cruz (2010-2014)</b>
+            <ul>
+                <li>BS in Computer Science: Computer Game Design, highest honors</li>
+                <li>Minor in Bioinformatics</li>
+                <li>Member of Tau Beta Pi Engineering Honor Society</li>
+            </ul>
+        </div>
+        <div class="no-break-wrap">
+            <h3>Programming Skills</h3>
+            <table class="skills-table">
+                <tr>
+                    <td>Technologies:</td>
+                    <td>HTML5/CSS/Javascript, jQuery/AJAX, C/C++, C#, Unity, Java, Python, GameMaker/GML.</td>
+                </tr>
+                <tr>
+                    <td>Tools:</td>
+                    <td>Git/GitHub, SVN, Apache, Grunt, JSDoc, Eclipse, Visual Studio, Dropbox.</td>
+                </tr>
+                <tr>
+                    <td>Platforms:</td>
+                    <td>Windows, Mac OS, Linux/Unix, Android, iOS.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="no-break-wrap">
+            <h3>Design Skills</h3>
+            <table class="skills-table">
+                <tr>
+                    <td>Graphic Design:</td>
+                    <td>Adobe Photoshop and Illustrator, Gimp, and Inkscape.</td>
+                </tr>
+                <tr>
+                    <td>Video Production:</td>
+                    <td>Adobe Premiere and After Effects</td>
+                </tr>
+                <tr>
+                    <td>Audio Production:</td>
+                    <td>FL Studio, Logic Pro, and Audacity.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="no-break-wrap">
+            <h3>Jobs and Projects</h3>
+            <div class="project-wrap">
+                <div class="project-title-wrap">
+                    <h4>BitListen - HTML/CSS/JS</h4>
+                    <div class="project-url">http://www.bitlisten.com/</div>
+                </div>
+                <div class="project-desc-wrap">
+                    <div class="project-table">
+                        <div>
+                            <img src="{% asset_path 'resume-bitlisten.jpg' %}" alt="BitListen"><br>
+                            BitListen (2013 - present)
+                        </div>
+                        <div>
+                            Overview:
+                            <ul>
+                                <li>Bitcoin transactions with sound</li>
+                                <li>Real-time data via Websocket</li>
+                            </ul>
+                            Attention:
+                            <ul>
+                                <li>Featured on NPR (National Public Radio)</li>
+                                <li>Highlighted on The Verge</li>
+                                <li>127,000 unique visitors</li>
+                                <li>29 forks and 80 stars on GitHub</li>
+                                <li>Code forked into “Listen to Wikipedia”</li>
+                            </ul>
+                            My Role:
+                            <ul>
+                                <li>All code and design by me, plus some features added through pull requests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-wrap">
+            <div class="project-title-wrap">
+                <h4>Immunogen - Unity/C#</h4>
+                <div class="project-url">http://immunogen.org/</div>
+            </div>
+            <div class="project-desc-wrap">
+                <div class="project-table">
+                    <div>
+                        <img src="{% asset_path 'resume-immunogen.jpg' %}" alt="Immunogen"><br>
+                        Immunogen (2014)
+                    </div>
+                    <div>
+                        Overview:
+                        <ul>
+                            <li>2D physics game in Unity</li>
+                            <li>Team of 4 students</li>
+                        </ul>
+                        Attention:
+                        <ul>
+                            <li>Winner: Technical Innovation (UCSC 2014)</li>
+                            <li>Finalist: Visual Design and Grand Prize</li>
+                        </ul>
+                        My Role:
+                        <ul>
+                            <li>Created game concept and mechanics</li>
+                            <li>Implemented game mechanics in C#</li>
+                            <li>Created all art and composed all music</li>
+                            <li>Created game trailer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-wrap">
+            <div class="project-title-wrap">
+                <h4>UCSC Class Search - Android</h4>
+                <div class="project-url">http://maxl.us/cs</div>
+            </div>
+            <div class="project-desc-wrap">
+                <div class="project-table">
+                    <div>
+                        <img src="{% asset_path 'resume-classsearch.png' %}" alt="UCSC Class Search"><br>
+                        UCSC Class Search (2014)
+                    </div>
+                    <div>
+                        Overview:
+                        <ul>
+                            <li>Native Android app</li>
+                            <li>Lets UCSC students search for classes</li>
+                        </ul>
+                        My Role:
+                        <ul>
+                            <li>Designed app including all activities</li>
+                            <li>Wrote asynchronous netcode, including HTML parsing routine</li>
+                            <li>Wrote UI functions</li>
+                            <li>Designed all art and interface elements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-wrap">
+            <div class="project-title-wrap">
+                <h4>Treofab - HTML/CSS/JS</h4>
+                <div class="project-url">http://maxl.us/treo</div>
+            </div>
+            <div class="project-desc-wrap">
+                <div class="project-table">
+                    <div>
+                        <img src="{% asset_path 'resume-treofab.png' %}" alt="Treofab"><br>
+                        Treofab Product Editor (2014)
+                    </div>
+                    <div>
+                        Overview:
+                        <ul>
+                            <li>Apply 3D clip art to a plastic product</li>
+                            <li>Purchase the product</li>
+                            <li>Get it 3D printed and shipped to you</li>
+                        </ul>
+                        My Role:
+                        <ul>
+                            <li>Contract programmer for Treofab, Inc.</li>
+                            <li>Wrote WebGL code using the Three.js library</li>
+                            <li>Implemented mouse controls using raytracing</li>
+                            <li>Implemented undo/redo stack, delete, change variant, and other interface elements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-wrap">
+            <div class="project-title-wrap">
+                <h4>OpenGlobe - HTML/CSS/JS</h4>
+                <div class="project-url">http://openglobelearning.net/</div>
+            </div>
+            <div class="project-desc-wrap">
+                <div class="project-table">
+                    <div>
+                        <img src="{% asset_path 'resume-openglobe.jpg' %}" alt="OpenGlobe"><br>
+                        OpenGlobe Learning (2014)
+                    </div>
+                    <div>
+                        Overview:
+                        <ul>
+                            <li>Interactive learning platform for K-12 students</li>
+                            <li>Students watch videos and complete activities</li>
+                            <li>Product is in an early conceptual stage</li>
+                        </ul>
+                        My Role:
+                        <ul>
+                            <li>Contract programmer for OpenGlobe Learning</li>
+                            <li>Implemented interactive activities in HTML5/CSS/JS</li>
+                            <li>Created intro animation in After Effects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-wrap">
+            <div class="project-title-wrap">
+                <h4>Hex109 - C++</h4>
+                <div class="project-url">http://maxl.us/hex</div>
+            </div>
+            <div class="project-desc-wrap">
+                <div class="project-table">
+                    <div>
+                        <img src="{% asset_path 'resume-hex109.png' %}" alt="Hex109"><br>
+                        Hex109 (2013)
+                    </div>
+                    <div>
+                        Overview:
+                        <ul>
+                            <li>Written in C++ for command line</li>
+                            <li>Plays the strategy board game “Game of Hex”</li>
+                            <li>Includes Monte Carlo AI</li>
+                        </ul>
+                        My Role:
+                        <ul>
+                            <li>Designed and wrote entire program</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-wrap">
+            <div class="project-title-wrap">
+                <h4>Puff - GameMaker</h4>
+                <div class="project-url">http://maxl.us/puff</div>
+            </div>
+            <div class="project-desc-wrap">
+                <div class="project-table">
+                    <div>
+                        <img src="{% asset_path 'resume-puff.png' %}" alt="Puff"><br>
+                        Puff (2012)
+                    </div>
+                    <div>
+                        Overview:
+                        <ul>
+                            <li>PC/Mac Game</li>
+                            <li>Minimalist vector graphics</li>
+                            <li>Mouse controls</li>
+                        </ul>
+                        Attention:
+                        <ul>
+                            <li>Finalist: Audio Award (UCSC 2012)</li>
+                        </ul>
+                        My Role:
+                        <ul>
+                            <li>Created game concept</li>
+                            <li>Implemented game mechanics in GML</li>
+                            <li>Created all art and composed all music</li>
+                            <li>Created game trailer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-wrap">
+            <div class="project-title-wrap">
+                <h4>Automatune - HTML/CSS/JS</h4>
+                <div class="project-url">http://automatune.com</div>
+            </div>
+            <div class="project-desc-wrap">
+                <div class="project-table">
+                    <div>
+                        <img src="{% asset_path 'resume-automatune.png' %}" alt="Automatune"><br>
+                        Automatune (2014)
+                    </div>
+                    <div>
+                        Overview:
+                        <ul>
+                            <li>HTML5 procedural music editor</li>
+                            <li>Simplified, accessible interface</li>
+                            <li>Create music with no coding knowledge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="no-break-wrap">
+            <h3>Did you know?</h3>
+            <ul>
+                <li>I write answers to programming questions on Stack Overflow. I’ve written over 300 answers so far, and gained over 10,000 reputation.</li>
+                <li>In 2011 I ran a Minecraft YouTube channel that got 9 million views, and I was invited to Minecon.</li>
+                <li>I write music for virtual orchestra in my spare time. I also punch custom music boxes.</li>
+            </ul>
+        </div>
+        <div class="no-break-wrap">
+            <h3>Availability</h3>
+            <p>To get in touch, shoot me an email at max@maxlaumeister.com. I’d love to hear about what you’re working on, and possibly help out.</p>
+        </div>
+    </div>
+</div>
