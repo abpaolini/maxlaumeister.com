@@ -5,8 +5,8 @@ category: project
 title: Automatune
 subtitle: Procedural music editor
 project_url: http://www.automatune.com/
-preview_text: Procedural music editor that doesn't require any knowledge of coding
-description: Procedural music editor by Maximillian Laumeister
+preview_text: Procedural music editor that doesn't require any coding knowledge
+description: Procedural music editor by Maximillian Laumeister. No coding knowledge required.
 
 video_thumb: automatune.png
 video_sources:

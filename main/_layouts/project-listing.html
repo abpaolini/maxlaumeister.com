@@ -1,3 +1,6 @@
+---
+title: Projects
+---
 <!DOCTYPE html>
 <html>
 	<head>
@@ -34,7 +37,7 @@
 	    <meta name="author" content="Maximillian Laumeister">
 	    <link rel="author" href="https://plus.google.com/100865127821381452608/posts" />
 	    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	    <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}" />
+	    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 	
 	    <title>Projects by Maximillian Laumeister</title>
 	
@@ -46,12 +49,12 @@
             /* Load web fonts */
             @font-face {
                 font-family: 'Varela Round';
-                src: url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.eot');
-                src: url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.eot?#iefix') format('embedded-opentype'),
-                     url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.woff2') format('woff2'),
-                     url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.woff') format('woff'),
-                     url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.ttf') format('truetype'),
-                     url('{{ site.ext_url }}/fonts/varelaround-regular-webfont.svg#varela_roundregular') format('svg');
+                src: url('{{ site.baseurl }}/fonts/varelaround-regular-webfont.eot');
+                src: url('{{ site.baseurl }}/fonts/varelaround-regular-webfont.eot?#iefix') format('embedded-opentype'),
+                     url('{{ site.baseurl }}/fonts/varelaround-regular-webfont.woff2') format('woff2'),
+                     url('{{ site.baseurl }}/fonts/varelaround-regular-webfont.woff') format('woff'),
+                     url('{{ site.baseurl }}/fonts/varelaround-regular-webfont.ttf') format('truetype'),
+                     url('{{ site.baseurl }}/fonts/varelaround-regular-webfont.svg#varela_roundregular') format('svg');
                 font-weight: normal;
                 font-style: normal;
             }
@@ -100,37 +103,7 @@
 	</head>
 	<body>
 	
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <span class="navbar-brand"><a href="{{ site.baseurl }}/">Maximillian Laumeister</a> &#x203A; <a href="{{ site.baseurl }}/projects/">Projects</a></span>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="{{ site.baseurl }}/">Home</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.baseurl }}/#about">About</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.baseurl }}/#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.baseurl }}/#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-    </div>
-    <!-- /.container -->
-</nav>
+{% include navbar.html %}
 
 <!-- Page Content -->
     <div class="container">
@@ -213,7 +186,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" integrity="sha384-6ePHh72Rl3hKio4HiJ841psfsRJveeS+aLoaEf3BWfS+gTF0XdAqku2ka8VddikM" crossorigin="anonymous"></script>
         <script>
             // jQuery fallback, in case CDN is unavailable
-            if (!window.jQuery) { document.write('<script src="{{ site.ext_url }}/fallback/jquery-1.11.3.min.js"><\/script>'); }
+            if (!window.jQuery) { document.write('<script src="{{ site.baseurl }}/fallback/jquery-1.11.3.min.js"><\/script>'); }
         </script>
 
         <!-- Bootstrap Core JavaScript -->
