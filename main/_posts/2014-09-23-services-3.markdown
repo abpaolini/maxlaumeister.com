@@ -25,5 +25,7 @@ description: |
   <li>Designed and implemented user interface for all activities</li>
   <li>Wrote asynchronous netcode, including HTML parsing code</li>
   </ul>
+  
+  <a href="projects/ucsc-class-search/">Learn More</a>
 
 ---

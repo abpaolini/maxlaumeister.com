@@ -20,5 +20,7 @@ description: |
   <li>Create music with no coding knowledge</li>
   <li>Project at <a href="http://www.automatune.com/">Automatune.com</a></li>
   </ul>
+  
+  <a href="projects/automatune/">Learn More</a>
 
 ---

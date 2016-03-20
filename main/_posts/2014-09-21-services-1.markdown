@@ -53,4 +53,6 @@ description: |
   <li>Real-time data via Websocket</li>
   </ul>
 
+  <a href="projects/bitlisten/">Learn More</a>
+
 ---

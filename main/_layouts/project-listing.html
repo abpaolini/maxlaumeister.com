@@ -78,7 +78,11 @@ title: Projects
         }
         .portfolio-item .img-responsive {
             height: 146px;
-            width: 100%;
+            margin: 0 auto;
+        }
+        .img-container {
+            display: block;
+            background-color: black;
         }
         </style>
 
@@ -122,7 +126,7 @@ title: Projects
             {% for tpage in site.pages %}
                 {% if tpage.category == 'project' %}
                     <div class="col-md-4 portfolio-item">
-                        <a href="{{ tpage.url }}">
+                        <a class="img-container" href="{{ tpage.url }}">
                             <img class="img-responsive" src="{{ tpage.screenshots[0] | asset_path }}" alt="{{ tpage.title }}">
                         </a>
                         <h3>
@@ -132,38 +136,6 @@ title: Projects
                     </div>
                 {% endif %}
             {% endfor %}
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
         </div>
         <!-- /.row -->
 

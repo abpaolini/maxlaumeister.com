@@ -34,4 +34,6 @@ description: |
   <li>Created game trailer</li>
   </ul>
 
+  <a href="projects/immunogen/">Learn More</a>
+
 ---
