@@ -8,7 +8,6 @@ project_url: http://www.automatune.com/
 preview_text: Procedural music editor that doesn't require any coding knowledge
 description: Procedural music editor by Maximillian Laumeister. No coding knowledge required.
 
-video_thumb: automatune.png
 video_sources:
  - url: automatune.mp4
    type: video/mp4
@@ -30,6 +29,6 @@ When you add arrows and notes to the Automatune grid, the dots will follow the a
 
 ### Tech Stack
 
-Automatune is written in vanilla Javascript, and makes limited use of jQuery for its menu system. The project is written in a way that makes it easily extensible, and it is documented using jsDoc.
+Automatune is written in HTML, CSS, and vanilla Javascript, and it makes limited use of jQuery for its menu system. The project is written in a way that makes it easily extensible, and it is thoroughly documented using jsDoc.
 
 Automatune is [open source](https://github.com/MaxLaumeister/automatune) and licensed under GPL.

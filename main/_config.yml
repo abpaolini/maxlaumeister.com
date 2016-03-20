@@ -31,10 +31,10 @@ social:
     svg: file-text-o.svg
     offset: -1px;
     class: resume-button
-    url: resume-maxlaumeister.pdf
-  - title: Blog
+    url: /resume/
+  - title: Contact
     svg: edit.svg
-    url: /blog/
+    url: /contact/
     
 # ------------------------- #
 #   Jekyll-Assets Plugin    #

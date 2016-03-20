@@ -32,5 +32,7 @@ description: |
   <li>Created all art and composed all music</li>
   <li>Created game trailer</li>
   </ul>
+  
+  <a href="projects/puff/">Learn More</a>
 
 ---

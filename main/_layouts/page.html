@@ -29,7 +29,11 @@
 	
 	    -->
 	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    {% if page.title == "Resume" %}
+	        <meta name="viewport" content="width=1024, initial-scale=1">
+        {% else %}
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% endif %}
 	    <meta name="description" content="{{ page.description }}">
 	    <meta name="author" content="Maximillian Laumeister">
 	    <link rel="author" href="https://plus.google.com/100865127821381452608/posts" />
