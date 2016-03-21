@@ -116,6 +116,12 @@ assets:
   # Default: 1
   #
   version: 1
+  
+mini_magick:
+    thumbnail:
+        source: assets
+        destination: assets/small
+        resize: "100x100"
 
 # -------------------------------- #
 #   Enable Rocket Thrusters        #
