@@ -82,6 +82,8 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.m4v)
   expiration: "30d"
+  http_headers:
+      Accept-Ranges: Bytes
   secure: always
 
 - url: /(.*\.mp4)
@@ -89,6 +91,8 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.mp4)
   expiration: "30d"
+  http_headers:
+      Accept-Ranges: Bytes
   secure: always
 
 - url: /(.*\.(ogg|oga))
@@ -96,6 +100,8 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.(ogg|oga))
   expiration: "30d"
+  http_headers:
+      Accept-Ranges: Bytes
   secure: always
 
 - url: /(.*\.ogv)
@@ -103,6 +109,8 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.ogv)
   expiration: "30d"
+  http_headers:
+      Accept-Ranges: Bytes
   secure: always
 
 - url: /(.*\.otf)
@@ -168,6 +176,8 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.webm)
   expiration: "30d"
+  http_headers:
+      Accept-Ranges: Bytes
   secure: always
 
 - url: /(.*\.webp)
@@ -175,6 +185,8 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.webp)
   expiration: "30d"
+  http_headers:
+      Accept-Ranges: Bytes
   secure: always
 
 - url: /(.*\.woff)

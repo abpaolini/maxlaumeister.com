@@ -170,7 +170,7 @@
                         <div class="vid-container inactive img-responsive">
                             <video controls preload="metadata" poster="{{ page.screenshots[0] | asset_path }}" style="width: 100%;">
                                 {% for source in page.video_sources %}
-                                    <source src="{{ source.url | asset_path }}" type='{{ source.type }}' data-res='{{ source.res }}' />
+                                    <source src="{{ site.video_url }}{{ source.url | asset_path }}" type='{{ source.type }}' data-res='{{ source.res }}' />
                                 {% endfor %}
                             </video>
                             <div class="play-button"></div>

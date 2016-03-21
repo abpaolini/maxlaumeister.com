@@ -2,7 +2,7 @@
     <div class="vid-container inactive">
         <video controls preload="none" width="450" height="253" poster="{{ post.video_thumb | asset_path }}">
             {% for source in post.video_sources %}
-                <source src="{{ source.url | asset_path }}" type='{{ source.type }}' data-res='{{ source.res }}' />
+                <source src="{{ site.video_url }}{{ source.url | asset_path }}" type='{{ source.type }}' data-res='{{ source.res }}' />
             {% endfor %}
         </video>
         <div class="play-button"></div>
