@@ -199,7 +199,7 @@
                 {% for screenshot in page.screenshots %}
                     <div class="col-sm-3 col-xs-6">
                         <a href="{{ screenshot | asset_path }}" data-lightbox="screenshots">
-                            <img class="img-responsive portfolio-item" src="{{ screenshot | asset_path }}" alt="Screenshot {{ count }}">
+                            <img class="img-responsive portfolio-item" src="{{ screenshot | replace: '.', ' ' | truncatewords: 1 | remove: '...' | append: '-thumb.png' | asset_path }}" alt="Screenshot {{ count }}">
                             {% assign count = count | plus: 1 %}
                         </a>
                     </div>

@@ -33,7 +33,7 @@ title: Projects
 	    -->
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta name="description" content="{{ page.description }}">
+	    <meta name="description" content="Projects by Maximillian Laumeister">
 	    <meta name="author" content="Maximillian Laumeister">
 	    <link rel="author" href="https://plus.google.com/100865127821381452608/posts" />
 	    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -127,7 +127,7 @@ title: Projects
                 {% if tpage.category == 'project' %}
                     <div class="col-md-4 portfolio-item">
                         <a class="img-container" href="{{ tpage.url }}">
-                            <img class="img-responsive" src="{{ tpage.screenshots[0] | asset_path }}" alt="{{ tpage.title }}">
+                            <img class="img-responsive" src="{{ tpage.screenshots[0] | replace: '.', ' ' | truncatewords: 1 | remove: '...' | append: '-thumb.png' | asset_path }}" alt="{{ tpage.title }}">
                         </a>
                         <h3>
                             <a href="{{ tpage.url }}">{{ tpage.title }}</a>
