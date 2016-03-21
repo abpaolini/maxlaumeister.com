@@ -30,9 +30,9 @@
 	    -->
 	    <meta charset="utf-8">
 	    {% if page.title == "Resume" %}
-	        <meta name="viewport" content="width=1024, initial-scale=1">
+	        <meta name="viewport" content="width=1024">
         {% else %}
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         {% endif %}
 	    <meta name="description" content="{{ page.description }}">
 	    <meta name="author" content="Maximillian Laumeister">
@@ -116,15 +116,7 @@
 
         <hr class="footer-hr">
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright text-muted small">Copyright &copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> {{ site.title }}, All Rights Reserved.</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+        {% include vanilla-footer.html %}
 
     </div>
     <!-- /.container -->
