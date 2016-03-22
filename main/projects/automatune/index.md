@@ -6,7 +6,7 @@ title: Automatune
 subtitle: Procedural music editor
 project_url: http://www.automatune.com/
 preview_text: Procedural music editor that doesn't require any coding knowledge
-description: Procedural music editor by Maximillian Laumeister. No coding knowledge required.
+description: Automatune is an easy-to-use procedural music editor that doesn't require any coding or special knowledge. The name Automatune comes from the word "automaton", which means "a machine designed to automatically follow a predetermined sequence of operations or respond to encoded instructions". Automatune is an automaton that makes tunes!
 
 video_sources:
  - url: automatune.mp4

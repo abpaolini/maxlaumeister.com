@@ -33,13 +33,13 @@ title: Projects
 	    -->
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta name="description" content="Projects by Maximillian Laumeister">
+	    <meta name="description" content="{{ page.description }}">
 	    <meta name="author" content="Maximillian Laumeister">
 	    <link rel="author" href="https://plus.google.com/100865127821381452608/posts" />
 	    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 	
-	    <title>Projects by Maximillian Laumeister</title>
+	    <title>{{ page.title }} - Maximillian Laumeister</title>
 	
         <script>
             {% asset loadCSS.js %}
@@ -120,6 +120,10 @@ title: Projects
             </div>
         </div>
         <!-- /.row -->
+        
+        {{ content }}
+        
+        <hr>
 
         <!-- Projects Row -->
         <div class="row">

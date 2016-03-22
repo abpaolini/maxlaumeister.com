@@ -6,7 +6,7 @@ title: BitListen
 subtitle: Bitcoin transaction visualizer
 project_url: http://www.bitlisten.com/
 preview_text: Software that visualizes Bitcoin transactions in realtime
-description: Realtime Bitcoin transaction visualizer project by Maximillian Laumeister
+description: BitListen is a web application that visualizes public Bitcoin transactions in realtime. It is written in HTML, CSS, and Javascript, and it has been featured on NPR and The Verge.
 
 video_sources:
  - url: bitlisten.mp4

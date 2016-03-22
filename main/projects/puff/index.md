@@ -6,7 +6,7 @@ title: Puff
 subtitle: Sidescrolling physics game
 project_url: https://games.soe.ucsc.edu/project/puff
 preview_text: Sidescrolling physics game where the protagonist is a dandelion seed
-description: Sidescrolling physics game by Maximillian Laumeister and Andrew Paolini
+description: Puff is a casual side-scrolling game that focuses on efficient navigation, rather than dexterity. By harnessing the power of wind in your mouse cursor, guide a dandelion seed (“Puff”) past obstacles so it can land safely and bloom into a dandelion.
 
 video_sources:
  - url: puff.mp4
