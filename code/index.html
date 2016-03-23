@@ -2,19 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>Code by Maximillian Laumeister</title>
     <style>
         html, body {
-            width: 100%;
             background-color: #DDDDDD;
         }
     
         #container {
             background-color: white;
             border: solid gray 1px;
-            width: 600px;
+            max-width: 600px;
             padding: 20px;
-            margin: 50px auto;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 730px) {
+            #container {
+                margin: 50px auto;
+            }
         }
         
     </style>
