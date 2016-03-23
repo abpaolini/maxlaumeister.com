@@ -8,18 +8,15 @@ description: Resume of Maximillian Laumeister
 <style>
     .resume {
         background-color: #F8F8F8;
-        padding: 30px;
         min-width: 100%;
         color: black;
-        width: 840px;
     }
 
     .resume-inner {
-        width: 750px;
         margin: 0 auto;
         background-color: white;
         box-shadow: 2px 2px 5px #999999;
-        padding: 40px;
+        padding: 20px;
     }
 
     .resume * {
@@ -52,15 +49,21 @@ description: Resume of Maximillian Laumeister
     }
 
     .skills-table {
+        display: block;
         margin: 10px;
     }
 
     .skills-table td:first-child {
         font-weight: bold;
-        width: 170px;
+        font-size: 1.2em;
+    }
+    
+    .skills-table tr {
+        display: block;
     }
 
     .skills-table td {
+        display: block;
         vertical-align: top;
         padding: 7px 0;
     }
@@ -87,36 +90,21 @@ description: Resume of Maximillian Laumeister
         line-height: 20px;
     }
 
-    .project-title-wrap h4 {
-        float: left;
-    }
-
-    .project-title-wrap .project-url {
-        float: right;
-    }
-
     .project-desc-wrap {
         background-color: #EEE !important;
     }
 
-    .project-table {
-        display: table;
-    }
-
-    .project-table > * {
-        display: table-cell;
-        vertical-align: middle;
-        padding: 10px;
+    .project-table > *:nth-child(2) {
+        padding: 10px 30px;
     }
 
     .project-table > *:first-child {
-        width: 280px;
         text-align: center;
     }
 
     .project-table img {
         width: 200px;
-        margin: 10px 30px;
+        margin: 10px;
     }
 
     hr {
@@ -127,8 +115,74 @@ description: Resume of Maximillian Laumeister
         top: 3px;
     }
     
-    .resume-actions {
-        margin: 20px 0;
+    .resume-actions > * {
+        margin-bottom: 20px;
+    }
+    
+    @media (min-width: 450px) {
+        .resume-inner {
+            padding: 40px;
+        }
+        
+        .project-table > *:first-child {
+            width: 280px;
+        }
+    }
+    
+    @media (min-width: 766px) {
+        .project-table {
+            display: table;
+        }
+
+        .project-table > * {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px;
+        }
+        
+        .project-title-wrap h4 {
+            float: left;
+        }
+
+        .project-title-wrap .project-url {
+            float: right;
+        }
+    }
+    
+    @media (min-width: 988px) {
+        .resume-inner {
+            width: 750px;
+        }
+        
+        
+        
+        .resume {
+            padding: 30px;
+        }
+        
+        .skills-table {
+            display: table;
+            margin: 10px;
+        }
+        
+        .skills-table tr {
+            display: table-row;
+        }
+
+        .skills-table td {
+            display: table-cell;
+            vertical-align: top;
+            padding: 7px 0;
+        }
+        
+        .skills-table td:first-child {
+            font-size: 1em;
+            width: 170px;
+        }
+        
+        .skills-table td:first-child:after {
+            content: ":";
+        }
     }
 
     @media print {
@@ -195,15 +249,15 @@ description: Resume of Maximillian Laumeister
             <h3>Programming Skills</h3>
             <table class="skills-table">
                 <tr>
-                    <td>Technologies:</td>
+                    <td>Technologies</td>
                     <td>HTML5/CSS/Javascript, jQuery/AJAX, C/C++, C#, Unity, Java, Python, GameMaker/GML.</td>
                 </tr>
                 <tr>
-                    <td>Tools:</td>
+                    <td>Tools</td>
                     <td>Git/GitHub, SVN, Apache, Grunt, JSDoc, Eclipse, Visual Studio, Dropbox.</td>
                 </tr>
                 <tr>
-                    <td>Platforms:</td>
+                    <td>Platforms</td>
                     <td>Windows, Mac OS, Linux/Unix, Android, iOS.</td>
                 </tr>
             </table>
@@ -212,15 +266,15 @@ description: Resume of Maximillian Laumeister
             <h3>Design Skills</h3>
             <table class="skills-table">
                 <tr>
-                    <td>Graphic Design:</td>
+                    <td>Graphic Design</td>
                     <td>Adobe Photoshop and Illustrator, Gimp, and Inkscape.</td>
                 </tr>
                 <tr>
-                    <td>Video Production:</td>
+                    <td>Video Production</td>
                     <td>Adobe Premiere and After Effects</td>
                 </tr>
                 <tr>
-                    <td>Audio Production:</td>
+                    <td>Audio Production</td>
                     <td>FL Studio, Logic Pro, and Audacity.</td>
                 </tr>
             </table>
