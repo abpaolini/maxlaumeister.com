@@ -2,7 +2,7 @@
 layout: page
 
 title: Resume
-description: Resume of Maximillian Laumeister
+description: Below is a printable summary of my education, skills, and accomplishments. For a short bio, please visit my main page. For more details on the projects I've worked on, check out my project pages. To get in contact, send me a message!
 ---
 
 <style>
@@ -69,6 +69,7 @@ description: Resume of Maximillian Laumeister
     }
 
     .project-wrap {
+        position: relative;
         margin: 10px 0;
     }
 
@@ -107,7 +108,7 @@ description: Resume of Maximillian Laumeister
         margin: 10px;
     }
 
-    hr {
+    .resume hr {
         border-color: #BBB;
     }
     
@@ -119,7 +120,7 @@ description: Resume of Maximillian Laumeister
         margin-bottom: 20px;
     }
     
-    @media (min-width: 450px) {
+    @media print, (min-width: 450px) {
         .resume-inner {
             padding: 40px;
         }
@@ -129,7 +130,7 @@ description: Resume of Maximillian Laumeister
         }
     }
     
-    @media (min-width: 766px) {
+    @media print, (min-width: 766px) {
         .project-table {
             display: table;
         }
@@ -149,12 +150,10 @@ description: Resume of Maximillian Laumeister
         }
     }
     
-    @media (min-width: 988px) {
+    @media print, (min-width: 988px) {
         .resume-inner {
             width: 750px;
         }
-        
-        
         
         .resume {
             padding: 30px;
@@ -189,10 +188,7 @@ description: Resume of Maximillian Laumeister
         * {
             -webkit-print-color-adjust: exact;
         }
-        footer, .footer-hr {
-            display: none;
-        }
-        .page-header {
+        footer, .footer-hr, .page-header, .resume-actions, .resume-intro {
             display: none;
         }
         body {
@@ -209,15 +205,16 @@ description: Resume of Maximillian Laumeister
         .resume, .resume-inner {
             padding: 0;
         }
-        .resume-actions {
-            display: none;
-        }
         a[href]:after {
             content: none !important;
         }
     }
 
 </style>
+<div class="resume-intro">
+    <p>Below is a printable summary of my education, skills, and accomplishments. For a short bio, please visit my <a href="{{ site.baseurl }}/">main page</a>. For more details on the projects I've worked on, check out my <a href="{{ site.baseurl }}/projects/">project pages</a>. To get in contact, <a href="{{ site.baseurl }}/contact/">send me a message!</a></p>
+    <hr>
+</div>
 <div class="resume-actions">
     <a href="{{ site.baseurl }}/resume-maxlaumeister.pdf" type="button" class="btn btn-primary btn-lg" id="print-button"><span class="glyphicon glyphicon-print"></span> <span>View/Print PDF</span></a>
     <a href="{{ site.baseurl }}/resume-maxlaumeister.pdf" type="button" class="btn btn-primary btn-lg" id="download-button" download><span class="glyphicon glyphicon-download"></span> <span>Download PDF</span></a>
