@@ -4,6 +4,9 @@
 	      <h1 style="font-size: 2em;">Dev Notes by Maximillian Laumeister</h1>
 	    </a>
 	    <br />
-	    <div class="navlinks"><a href="https://www.maxlaumeister.com/">About Me</a> &mdash; <a href="{{ site.baseurl }}">Blog</a></div>
+	    <nav>
+	        {% include navlinks.html %}
+	    </nav>
 	</div>
 </header>
+<div class="breadcrumbs"><a href="/">Maximillian Laumeister</a> › <a href="/blog/">Blog</a>{% if page.title %} › <a href="{{ post.permalink }}">{{ page.title }}</a>{% endif %}</div>
