@@ -7,6 +7,32 @@ description: Contact Maximillian Laumeister
 
 <p>I live in Santa Cruz, CA, and I develop software in the San Francisco Bay Area and remotely.</p>
 
-<p>To get in touch, or to inquire about hiring me, please shoot me an email at <a href="mailto:max@maxlaumeister.com">max@maxlaumeister.com</a>.</p>
+<p>To get in touch, or to inquire about hiring me, please shoot me an email at <a href="mailto:max@maxlaumeister.com">max@maxlaumeister.com</a> or type your message below.</p>
 
 <p>I'm also reachable on <a href="https://twitter.com/maxlaumeister">Twitter</a> and <a href="https://www.linkedin.com/in/maxlaumeister">LinkedIn</a>!</p>
+
+<hr>
+
+<form id="contact_form" role="form" action="https://api.maxlaumeister.com/contact-form/submit/" method="post">
+  <div class="form-group">
+    <label for="name">Your Name:</label>
+    <input type="text" class="form-control" id="name" name="name" required="required">
+  </div>
+  <div class="form-group">
+    <label for="email">Your Email:</label>
+    <input type="email" class="form-control" id="email" name="email" required="required">
+  </div>
+  <div class="form-group">
+    <label for="subject">Subject:</label>
+    <input type="text" class="form-control" id="subject" name="subject">
+  </div>
+  <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea class="form-control" id="message" name="message" required="required"></textarea>
+  </div>
+  <div class="form-group" style="height: 0; overflow: hidden;">
+    <label for="antispam">Please leave this field blank (if it's not blank your message will be marked as spam!):</label>
+    <input type="text" class="form-control" id="antispam" name="antispam">
+  </div>
+  <button type="submit" id="submit" class="btn btn-default">Send</button>
+</form>
