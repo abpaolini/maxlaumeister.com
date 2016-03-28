@@ -26,11 +26,11 @@ exclude: [vendor]
 social:
   - title: Portfolio
     svg: file-image-o.svg
-    offset: -1px;
+    offset: -1px
     url: '#portfolio'
   - title: Resume
     svg: file-text-o.svg
-    offset: -1px;
+    offset: -1px
     class: resume-button
     url: /resume/
   - title: Contact
