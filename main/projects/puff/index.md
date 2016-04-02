@@ -1,6 +1,6 @@
 ---
 layout: project-page
-category: project
+categories: [project, featured-project]
 
 title: Puff
 subtitle: Sidescrolling physics game

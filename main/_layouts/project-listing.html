@@ -58,6 +58,9 @@ title: Projects
             display: block;
             background-color: black;
         }
+        .container h2 {
+            margin-bottom: 20px;
+        }
         </style>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -98,14 +101,40 @@ title: Projects
         {{ content }}
         
         <hr>
+        
+        <h2>Featured Projects</h2>
 
         <!-- Projects Row -->
         <div class="row">
             {% for tpage in site.pages %}
-                {% if tpage.category == 'project' %}
+                {% if tpage.categories contains 'featured-project' %}
                     <div class="col-md-4 portfolio-item">
                         <a class="img-container" href="{{ tpage.url }}">
-                            <img class="img-responsive" src="{{ tpage.screenshots[0] | replace: '.', ' ' | truncatewords: 1 | remove: '...' | append: '-thumb.png' | asset_path }}" alt="{{ tpage.title }}">
+                            {% capture image %}{% if tpage.screenshots and tpage.screenshots != empty %}{{ tpage.screenshots[0] }}{% else %}{{ tpage.img }}{% endif %}{% endcapture %}
+                            <img class="img-responsive" src="{{ image | replace: '.', ' ' | truncatewords: 1 | remove: '...' | append: '-thumb.png' | asset_path }}" alt="{{ tpage.title }}">
+                        </a>
+                        <h3>
+                            <a href="{{ tpage.url }}">{{ tpage.title }}</a>
+                        </h3>
+                        <p>{{ tpage.preview_text }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <!-- /.row -->
+        
+        <hr>
+        
+        <h2>More Projects</h2>
+        
+        <!-- Projects Row -->
+        <div class="row">
+            {% for tpage in site.pages %}
+                {% if tpage.categories contains 'more-project' %}
+                    <div class="col-md-4 portfolio-item">
+                        <a class="img-container" href="{{ tpage.url }}">
+                            {% capture image %}{% if tpage.screenshots  and tpage.screenshots != empty %}{{ tpage.screenshots[0] }}{% else %}{{ tpage.img }}{% endif %}{% endcapture %}
+                            <img class="img-responsive" src="{{ image | replace: '.', ' ' | truncatewords: 1 | remove: '...' | append: '-thumb.png' | asset_path }}" alt="{{ tpage.title }}">
                         </a>
                         <h3>
                             <a href="{{ tpage.url }}">{{ tpage.title }}</a>

@@ -56,6 +56,10 @@ footer .nav-links li {
     word-wrap: break-word;
 }
 
+blockquote {
+    font-size: 1em;
+}
+
 @media (min-width: 415px) {
     .mid-home {
         display: inline;

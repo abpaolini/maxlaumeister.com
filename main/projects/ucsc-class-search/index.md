@@ -1,6 +1,6 @@
 ---
 layout: project-page
-category: project
+categories: [project, featured-project]
 
 title: UCSC Class Search
 subtitle: Course browser for Android
