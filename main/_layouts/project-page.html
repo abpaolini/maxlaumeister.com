@@ -151,7 +151,7 @@
                         </div>
                     {% endif %}
                     {% if page.img %}
-	                    <img class="img-responsive" src="{{ page.img | asset_path }}" />
+	                    <a href="{{ page.project_url }}"><img class="img-responsive" src="{{ page.img | asset_path }}" /></a>
                     {% endif %}
                 </div>
 
